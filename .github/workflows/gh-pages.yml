@@ -39,6 +39,9 @@ jobs:
           npm install -D --save autoprefixer
           npm install -D --save postcss-cli
 
+      - name: Fetch Submodules # Above action doesn't seem to do it properly for some reason
+        run: git submodule update --init --recursive
+
       - name: Build
         run: |
           ls -al themes/docsy/assets
