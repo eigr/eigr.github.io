@@ -18,7 +18,7 @@ jobs:
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: '0.79.1'
-          # extended: true
+          extended: true
 
       - name: Build
         run: hugo --minify
@@ -28,3 +28,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
+          allow_empty_commit: true
