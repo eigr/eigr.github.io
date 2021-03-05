@@ -35,9 +35,9 @@ jobs:
 
       - name: NPM
         run: |
-        npm ci
-        npm install -D --save autoprefixer
-        npm install -D --save postcss-cli
+          npm ci
+          npm install -D --save autoprefixer
+          npm install -D --save postcss-cli
 
       - name: Build
         run: hugo --minify
