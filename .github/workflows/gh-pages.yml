@@ -40,7 +40,10 @@ jobs:
           npm install -D --save postcss-cli
 
       - name: Build
-        run: hugo --minify
+        run: |
+          ls -al themes/docsy/assets
+          ls -al themes/docsy/assets/vendor
+          hugo --minify
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
