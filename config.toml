@@ -1,5 +1,5 @@
 baseURL = "/"
-title = "Goldydocs"
+title = "eigr.io"
 
 enableRobotsTXT = true
 
@@ -50,29 +50,28 @@ anchor = "smart"
 id = "UA-00000000-0"
 
 # Language configuration
-
 [languages]
 [languages.en]
-title = "Goldydocs"
-description = "A Docsy example site"
+title = "eigr.io"
+description = "eigr – reaching for the clouds"
 languageName ="English"
 # Weight used for sorting.
 weight = 1
-[languages.no]
-title = "Goldydocs"
-description = "Docsy er operativsystem for skyen"
-languageName ="Norsk"
-contentDir = "content/no"
-time_format_default = "02.01.2006"
-time_format_blog = "02.01.2006"
-
-[languages.fa]
-title = "اسناد گلدی"
-description = "یک نمونه برای پوسته داکسی"
-languageName ="فارسی"
-contentDir = "content/fa"
-time_format_default = "2006.01.02"
-time_format_blog = "2006.01.02"
+# [languages.no]
+# title = "Goldydocs"
+# description = "Docsy er operativsystem for skyen"
+# languageName ="Norsk"
+# contentDir = "content/no"
+# time_format_default = "02.01.2006"
+# time_format_blog = "02.01.2006"
+#
+# [languages.fa]
+# title = "اسناد گلدی"
+# description = "یک نمونه برای پوسته داکسی"
+# languageName ="فارسی"
+# contentDir = "content/fa"
+# time_format_default = "2006.01.02"
+# time_format_blog = "2006.01.02"
 
 [markup]
   [markup.goldmark]
@@ -91,7 +90,7 @@ time_format_blog = "2006.01.02"
 section = ["HTML", "print"]
 
 [params]
-copyright = "The Docsy Authors"
+copyright = "The eigr.io Authors"
 privacy_policy = "https://policies.google.com/privacy"
 
 # First one is picked as the Twitter card image if not set on page.
@@ -116,9 +115,9 @@ version = "0.0"
 url_latest_version = "https://example.com"
 
 # Repository configuration (URLs for in-page links to opening issues and suggesting changes)
-github_repo = "https://github.com/google/docsy-example"
+github_repo = "https://github.com/eigr/eigr.github.io"
 # An optional link to a related project repo. For example, the sibling repository where your product code lives.
-github_project_repo = "https://github.com/google/docsy"
+github_project_repo = "https://github.com/eigr"
 
 # Specify a value here if your content directory is not in your repo's root directory
 # github_subdir = ""
@@ -170,35 +169,35 @@ enable = false
 
 [params.links]
 # End user relevant links. These will show up on left side of footer and in the community page if you have one.
-[[params.links.user]]
-	name = "User mailing list"
-	url = "https://example.org/mail"
-	icon = "fa fa-envelope"
-        desc = "Discussion and help from your fellow users"
+# [[params.links.user]]
+# 	name = "User mailing list"
+# 	url = "https://example.org/mail"
+# 	icon = "fa fa-envelope"
+#         desc = "Discussion and help from your fellow users"
 [[params.links.user]]
 	name ="Twitter"
-	url = "https://example.org/twitter"
+	url = "https://twitter.com/eigr_io"
 	icon = "fab fa-twitter"
         desc = "Follow us on Twitter to get the latest news!"
-[[params.links.user]]
-	name = "Stack Overflow"
-	url = "https://example.org/stack"
-	icon = "fab fa-stack-overflow"
-        desc = "Practical questions and curated answers"
+# [[params.links.user]]
+# 	name = "Stack Overflow"
+# 	url = "https://example.org/stack"
+# 	icon = "fab fa-stack-overflow"
+#         desc = "Practical questions and curated answers"
 # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
 [[params.links.developer]]
 	name = "GitHub"
-	url = "https://github.com/google/docsy"
+	url = "https://github.com/eigr"
 	icon = "fab fa-github"
         desc = "Development takes place here!"
 [[params.links.developer]]
-	name = "Slack"
-	url = "https://example.org/slack"
-	icon = "fab fa-slack"
+	name = "Discord"
+	url = "https://discord.com/channels/825360651782193194/"
+	icon = "fab fa-discord"
         desc = "Chat with other project developers"
-[[params.links.developer]]
-	name = "Developer mailing list"
-	url = "https://example.org/mail"
-	icon = "fa fa-envelope"
-        desc = "Discuss development issues around the project"
+# [[params.links.developer]]
+# 	name = "Developer mailing list"
+# 	url = "https://example.org/mail"
+# 	icon = "fa fa-envelope"
+#         desc = "Discuss development issues around the project"
 
