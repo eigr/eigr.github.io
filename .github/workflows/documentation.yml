@@ -40,6 +40,7 @@ jobs:
           USE_SSH: false
           GIT_USER: git
           GIT_PASS: ${{ secrets.GITHUB_TOKEN }}
+          DEPLOYMENT_BRANCH: main
         run: |
           git config --global user.email "marcellanz@n-1.ch"
           git config --global user.name "marcellanz"
