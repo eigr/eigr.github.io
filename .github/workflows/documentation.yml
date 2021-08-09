@@ -1,9 +1,7 @@
 name: documentation
 on:
-  pull_request:
-    branches: [ feature/docusaurus ]
   push:
-    branches: [ feature/docusaurus ]
+    branches: [ main ]
 jobs:
   checks:
     if: github.event_name != 'push'
@@ -32,9 +30,6 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '12.x'
-#      - uses: webfactory/ssh-agent@v0.5.0
-#        with:
-#          ssh-private-key: ${{ secrets.GITHUB_TOKEN }}
       - name: Release to GitHub Pages
         env:
           USE_SSH: false
