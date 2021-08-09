@@ -94,13 +94,13 @@ module.exports = {
                     sidebarPath: require.resolve('./sidebars.js'),
                     // Please change this to your repo.
                     editUrl:
-                        'https://github.com/eigr/eigr.github.io/edit/master/website/',
+                        'https://github.com/eigr/eigr.github.io/edit/main/website/',
                 },
                 blog: {
                     showReadingTime: true,
                     // Please change this to your repo.
                     editUrl:
-                        'https://github.com/eigr/eigr.github.io/edit/master/website/blog/',
+                        'https://github.com/eigr/eigr.github.io/edit/main/website/blog/',
                 },
                 theme: {
                     customCss: require.resolve('./src/css/custom.css'),
