@@ -12,7 +12,7 @@ module.exports = {
     onBrokenMarkdownLinks: 'warn',
     favicon: 'img/favicon.ico',
     organizationName: 'eigr', // Usually your GitHub org/user name.
-    projectName: 'eigr',
+    projectName: 'eigr.github.io',
     trailingSlash: true,
     themeConfig: {
         navbar: {
