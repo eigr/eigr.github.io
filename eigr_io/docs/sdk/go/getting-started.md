@@ -42,10 +42,12 @@ import "github.com/eigr/permastate-go/cloudstate"
 
 ```go title="go.mod"
 module example.com/yourpackage
+
+go 1.14
+
 require (
     github.com/eigr/go-support 0.1.0
 )
-go 1.14
 ```
 
 ## Protobuf files
@@ -104,6 +106,7 @@ func main() {
 	if err != nil {
 		log.Fatalf("Cloudstate failed to run: %v", err)
 	}
+}
 ```
 
 We will see more details on registering entities in the coming pages.

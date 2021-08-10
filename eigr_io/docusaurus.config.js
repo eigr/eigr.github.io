@@ -16,6 +16,7 @@ module.exports = {
     trailingSlash: true,
     themeConfig: {
         navbar: {
+            // style: 'dark',
             title: '',
             logo: {
                 alt: 'eigr',
@@ -37,7 +38,7 @@ module.exports = {
             ],
         },
         footer: {
-            style: 'dark',
+            // style: 'dark',
             links: [
                 {
                     title: 'Docs',
@@ -51,10 +52,6 @@ module.exports = {
                 {
                     title: 'Community',
                     items: [
-                        // {
-                        //   label: 'Stack Overflow',
-                        //   href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-                        // },
                         {
                             label: 'Discord',
                             href: 'https://discord.com/channels/825360651782193194',
@@ -62,6 +59,10 @@ module.exports = {
                         {
                             label: 'Twitter',
                             href: 'https://twitter.com/eigr_io',
+                        },
+                        {
+                            label: 'Github Discussions',
+                            href: 'https://github.com/eigr/eigr-community/discussions',
                         },
                     ],
                 },
