@@ -15,12 +15,12 @@ The gRPC based "Cloudstate Protocol" and the sidecar-based proxy model, has foll
 proxy implementation. The protocol, on one side, enables a polyglot programming model for eigr – on the other side, it's
 the main driver for eigr.
 
-The decision to fork the Cloudstate project and go on with an implementation that differs technology wise is based on a
+The decision to fork the Cloudstate project and go on with an implementation that differs technology wise, is based on a
 shift in focus of the initiating organization [Lightbend Inc.](https://lightbend.com/) to pursue
 a [Serverless offering](https://www.lightbend.com/akka-serverless)
-of the Cloudstate technology. The members of the eigr.io Open-source project have been very supportive and engaged in
-many ways in contributions to the platform, as well as the so-called Language Support Libraries that makes the project
-attractive to a Cloud Native setting.
+of the Cloudstate technology. The members of the eigr.io Open-source project have been very supportive and engaged early on in
+many ways in contributions to the Cloudstate open source project. Also many of the so-called Language Support Libraries that makes the project
+attractive to a cloud native setting, have been initiated and implemented by that community. The eigr project will build on that work, enhance it and try to be an open and welcoming community going forward implementing the original vision of Cloudstate.
 
 ## Massa, a Cloudstate Compatible Proxy Implementation
 
