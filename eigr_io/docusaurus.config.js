@@ -25,7 +25,7 @@ module.exports = {
             items: [
                 {
                     type: 'doc',
-                    docId: 'intro',
+                    docId: 'overview',
                     position: 'left',
                     label: 'Documentation',
                 },
@@ -40,15 +40,15 @@ module.exports = {
         footer: {
             // style: 'dark',
             links: [
-                {
-                    title: 'Docs',
-                    items: [
-                        {
-                            label: 'eigr/serverless',
-                            to: '/docs/intro',
-                        },
-                    ],
-                },
+                // {
+                //     title: 'Docs',
+                //     items: [
+                //         {
+                //             label: 'eigr/serverless',
+                //             to: '/docs',
+                //         },
+                //     ],
+                // },
                 {
                     title: 'Community',
                     items: [

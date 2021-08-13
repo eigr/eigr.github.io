@@ -8,7 +8,7 @@ sidebar_position: 998
 
 ## Service
 
-## Service
+## Function
 
 ## Message
 
@@ -17,4 +17,3 @@ sidebar_position: 998
 ## State
 
 ## gRPC
-

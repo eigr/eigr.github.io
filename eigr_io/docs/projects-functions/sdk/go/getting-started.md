@@ -33,11 +33,11 @@ By using the Go module support your `go.mod` file will reference the latest vers
 define which version you like to use.
 
 ```bash title="go get"
-go get -u github.com/eigr/permastate-go/cloudstate
+go get -u github.com/eigr/functions-go-sdk/functions
 ```
 
 ```go title="go import"
-import "github.com/eigr/permastate-go/cloudstate"
+import "github.com/eigr/functions-go-sdk/functions"
 ```
 
 ```go title="go.mod"
@@ -46,7 +46,7 @@ module example.com/yourpackage
 go 1.14
 
 require (
-    github.com/eigr/go-support 0.1.0
+    github.com/eigr/functions-go-sdk 0.1.0
 )
 ```
 

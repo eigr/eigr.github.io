@@ -1,8 +1,8 @@
 ---
-sidebar_position: 60
+sidebar_position: 20
 ---
 
-# Massa Proxy
+# Service Proxy – eigr/massa
 
 ## Clone the repository
 
