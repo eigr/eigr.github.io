@@ -35,7 +35,7 @@ export default function HomepageFeatures() {
             Svg: require(isDarkTheme ? '../../static/img/protocol_dark.svg' : '../../static/img/protocol.svg').default,
             description: (
                 <>
-                    Eigr Functions is based on the <a href="/docs/projects-functions/functions-protocol/">Cloudstate
+                    Eigr Functions is based on the <a href="/protodocs/cloudstate/entity.proto/">Cloudstate
                     Protocol</a>.
                 </>
             ),
