@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="generator" content="Docusaurus v2.0.0-beta.4">
+<link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="eigr.io Blog RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="eigr.io Blog Atom Feed"><title data-react-helmet="true">http.proto | eigr.io</title><meta data-react-helmet="true" property="og:url" content="https://eigr.github.io/protodocs/google/api/http.proto/"><meta data-react-helmet="true" name="docusaurus_locale" content="en"><meta data-react-helmet="true" name="docusaurus_version" content="current"><meta data-react-helmet="true" name="docusaurus_tag" content="docs-protodocs-current"><meta data-react-helmet="true" property="og:title" content="http.proto | eigr.io"><meta data-react-helmet="true" name="description" content="http.proto"><meta data-react-helmet="true" property="og:description" content="http.proto"><link data-react-helmet="true" rel="shortcut icon" href="/img/favicon.ico"><link data-react-helmet="true" rel="canonical" href="https://eigr.github.io/protodocs/google/api/http.proto/"><link data-react-helmet="true" rel="alternate" href="https://eigr.github.io/protodocs/google/api/http.proto/" hreflang="en"><link data-react-helmet="true" rel="alternate" href="https://eigr.github.io/protodocs/google/api/http.proto/" hreflang="x-default"><link rel="stylesheet" href="/assets/css/styles.e53c0fd0.css">
+<link rel="preload" href="/assets/js/runtime~main.42987c5e.js" as="script">
+<link rel="preload" href="/assets/js/main.7a66a0a1.js" as="script">
+</head>
+<body>
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();t(null!==e?e:"light")}()</script><div id="__docusaurus">
+<div><a href="#" class="skipToContent_1oUP">Skip to main content</a></div><nav class="navbar navbar--fixed-top navbar--dark"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Navigation bar toggle" class="navbar__toggle clean-btn" type="button" tabindex="0"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><img src="/img/logo_001.png" alt="eigr" class="themedImage_1VuW themedImage--light_3UqQ navbar__logo"><img src="/img/logo_001.png" alt="eigr" class="themedImage_1VuW themedImage--dark_hz6m navbar__logo"><b class="navbar__title"></b></a><a class="navbar__item navbar__link" href="/docs/overview/">Documentation</a><a class="navbar__item navbar__link" href="/blog/">Blog</a><a class="navbar__item navbar__link" href="/protodocs/cloudstate/entity.proto/">gRPC Proxy-Protocol</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/eigr" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link"><span>GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_3J9K"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></span></a><div class="react-toggle toggle_3Zt9 react-toggle--disabled"><div class="react-toggle-track" role="button" tabindex="-1"><div class="react-toggle-track-check"><span class="toggle_71bT">🌜</span></div><div class="react-toggle-track-x"><span class="toggle_71bT">🌞</span></div><div class="react-toggle-thumb"></div></div><input type="checkbox" class="react-toggle-screenreader-only" aria-label="Switch between dark and light mode"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div class="main-wrapper docs-wrapper doc-page"><div class="docPage_31aa"><button class="clean-btn backToTopButton_35hR" type="button" title="Scroll to top"><svg viewBox="0 0 24 24" width="28"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" fill="currentColor"></path></svg></button><aside class="docSidebarContainer_3Kbt"><div class="sidebar_15mo"><nav class="menu thin-scrollbar menu_Bmed menuWithAnnouncementBar_2WvA"><ul class="menu__list"><li class="menu__list-item"><a class="menu__link menu__link--sublist menu__link--active" href="#">Proxy-Protocol v0.6.0</a><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="menu__list-item menu__list-item--collapsed"><a class="menu__link menu__link--sublist" href="#" tabindex="0">/cloudstate</a></li><li class="menu__list-item"><a class="menu__link menu__link--sublist menu__link--active" href="#" tabindex="0">/google/api</a><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="menu__list-item"><a class="menu__link" tabindex="0" href="/protodocs/google/api/annotations.proto/">annotations.proto</a></li><li class="menu__list-item"><a aria-current="page" class="menu__link menu__link--active active" tabindex="0" href="/protodocs/google/api/http.proto/">http.proto</a></li><li class="menu__list-item"><a class="menu__link" tabindex="0" href="/protodocs/google/api/httpbody.proto/">httpbody.proto</a></li></ul></li></ul></li></ul></nav></div></aside><main class="docMainContainer_3ufF"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_3FnS"><div class="docItemContainer_33ec"><article><div class="tocCollapsible_1PrD tocMobile_3Hoh"><button type="button" class="clean-btn tocCollapsibleButton_2O1e">On this page</button></div><div class="markdown"><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2LWZ" id="httpproto"></a><code>http.proto</code><a class="hash-link" href="#httpproto" title="Direct link to heading">#</a></h2><p><em><strong>path</strong> google/api/http.proto</em></p><p><em><strong>package</strong> google.api</em></p><hr><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2LWZ" id="messages"></a>Messages<a class="hash-link" href="#messages" title="Direct link to heading">#</a></h2><h3><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2LWZ" id="customhttppattern"></a><code>CustomHttpPattern</code><a class="hash-link" href="#customhttppattern" title="Direct link to heading">#</a></h3><p style="white-space:pre-wrap">A custom pattern is used for defining custom HTTP verb.</p><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>kind</code></td><td><code>string</code></td><td style="white-space:pre-wrap">The name of this custom HTTP verb.</td></tr><tr><td><code>path</code></td><td><code>string</code></td><td style="white-space:pre-wrap">The path matched by this custom verb.</td></tr></tbody></table><h3><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2LWZ" id="http"></a><code>Http</code><a class="hash-link" href="#http" title="Direct link to heading">#</a></h3><p style="white-space:pre-wrap">Defines the HTTP configuration for an API service. It contains a list of
+[HttpRule][google.api.HttpRule], each specifying the mapping of an RPC method
+to one or more HTTP REST API methods.</p><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>rules</code></td><td><a href="/protodocs/google/api/http.proto/#httprule"><code>HttpRule</code></a></td><td style="white-space:pre-wrap">A list of HTTP configuration rules that apply to individual API methods.
+
+**NOTE:** All service configuration rules follow &quot;last one wins&quot; order.</td></tr><tr><td><code>fully_decode_reserved_expansion</code></td><td><code>bool</code></td><td style="white-space:pre-wrap">When set to true, URL path parameters will be fully URI-decoded except in
+cases of single segment matches in reserved expansion, where &quot;%2F&quot; will be
+left encoded.
+
+The default behavior is to not decode RFC 6570 reserved characters in multi
+segment matches.</td></tr></tbody></table><h3><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2LWZ" id="httprule"></a><code>HttpRule</code><a class="hash-link" href="#httprule" title="Direct link to heading">#</a></h3><p style="white-space:pre-wrap"># gRPC Transcoding
+
+gRPC Transcoding is a feature for mapping between a gRPC method and one or
+more HTTP REST endpoints. It allows developers to build a single API service
+that supports both gRPC APIs and REST APIs. Many systems, including [Google
+APIs](https://github.com/googleapis/googleapis),
+[Cloud Endpoints](https://cloud.google.com/endpoints), [gRPC
+Gateway](https://github.com/grpc-ecosystem/grpc-gateway),
+and [Envoy](https://github.com/envoyproxy/envoy) proxy support this feature
+and use it for large scale production services.
+
+`HttpRule` defines the schema of the gRPC/REST mapping. The mapping specifies
+how different portions of the gRPC request message are mapped to the URL
+path, URL query parameters, and HTTP request body. It also controls how the
+gRPC response message is mapped to the HTTP response body. `HttpRule` is
+typically specified as an `google.api.http` annotation on the gRPC method.
+
+Each mapping specifies a URL path template and an HTTP method. The path
+template may refer to one or more fields in the gRPC request message, as long
+as each field is a non-repeated field with a primitive (non-message) type.
+The path template controls how fields of the request message are mapped to
+the URL path.
+
+Example:
+
+    service Messaging {
+      rpc GetMessage(GetMessageRequest) returns (Message) {
+        option (google.api.http) = {
+            get: &quot;/v1/{name=messages/*}&quot;
+        };
+      }
+    }
+    message GetMessageRequest {
+      string name = 1; // Mapped to URL path.
+    }
+    message Message {
+      string text = 1; // The resource content.
+    }
+
+This enables an HTTP REST to gRPC mapping as below:
+
+HTTP | gRPC
+-----|-----
+`GET /v1/messages/123456`  | `GetMessage(name: &quot;messages/123456&quot;)`
+
+Any fields in the request message which are not bound by the path template
+automatically become HTTP query parameters if there is no HTTP request body.
+For example:
+
+    service Messaging {
+      rpc GetMessage(GetMessageRequest) returns (Message) {
+        option (google.api.http) = {
+            get:&quot;/v1/messages/{message_id}&quot;
+        };
+      }
+    }
+    message GetMessageRequest {
+      message SubMessage {
+        string subfield = 1;
+      }
+      string message_id = 1; // Mapped to URL path.
+      int64 revision = 2;    // Mapped to URL query parameter `revision`.
+      SubMessage sub = 3;    // Mapped to URL query parameter `sub.subfield`.
+    }
+
+This enables a HTTP JSON to RPC mapping as below:
+
+HTTP | gRPC
+-----|-----
+`GET /v1/messages/123456?revision=2&amp;sub.subfield=foo` |
+`GetMessage(message_id: &quot;123456&quot; revision: 2 sub: SubMessage(subfield:
+&quot;foo&quot;))`
+
+Note that fields which are mapped to URL query parameters must have a
+primitive type or a repeated primitive type or a non-repeated message type.
+In the case of a repeated type, the parameter can be repeated in the URL
+as `...?param=A&amp;param=B`. In the case of a message type, each field of the
+message is mapped to a separate parameter, such as
+`...?foo.a=A&amp;foo.b=B&amp;foo.c=C`.
+
+For HTTP methods that allow a request body, the `body` field
+specifies the mapping. Consider a REST update method on the
+message resource collection:
+
+    service Messaging {
+      rpc UpdateMessage(UpdateMessageRequest) returns (Message) {
+        option (google.api.http) = {
+          patch: &quot;/v1/messages/{message_id}&quot;
+          body: &quot;message&quot;
+        };
+      }
+    }
+    message UpdateMessageRequest {
+      string message_id = 1; // mapped to the URL
+      Message message = 2;   // mapped to the body
+    }
+
+The following HTTP JSON to RPC mapping is enabled, where the
+representation of the JSON in the request body is determined by
+protos JSON encoding:
+
+HTTP | gRPC
+-----|-----
+`PATCH /v1/messages/123456 { &quot;text&quot;: &quot;Hi!&quot; }` | `UpdateMessage(message_id:
+&quot;123456&quot; message { text: &quot;Hi!&quot; })`
+
+The special name `*` can be used in the body mapping to define that
+every field not bound by the path template should be mapped to the
+request body.  This enables the following alternative definition of
+the update method:
+
+    service Messaging {
+      rpc UpdateMessage(Message) returns (Message) {
+        option (google.api.http) = {
+          patch: &quot;/v1/messages/{message_id}&quot;
+          body: &quot;*&quot;
+        };
+      }
+    }
+    message Message {
+      string message_id = 1;
+      string text = 2;
+    }
+
+
+The following HTTP JSON to RPC mapping is enabled:
+
+HTTP | gRPC
+-----|-----
+`PATCH /v1/messages/123456 { &quot;text&quot;: &quot;Hi!&quot; }` | `UpdateMessage(message_id:
+&quot;123456&quot; text: &quot;Hi!&quot;)`
+
+Note that when using `*` in the body mapping, it is not possible to
+have HTTP parameters, as all fields not bound by the path end in
+the body. This makes this option more rarely used in practice when
+defining REST APIs. The common usage of `*` is in custom methods
+which don&#x27;t use the URL at all for transferring data.
+
+It is possible to define multiple HTTP methods for one RPC by using
+the `additional_bindings` option. Example:
+
+    service Messaging {
+      rpc GetMessage(GetMessageRequest) returns (Message) {
+        option (google.api.http) = {
+          get: &quot;/v1/messages/{message_id}&quot;
+          additional_bindings {
+            get: &quot;/v1/users/{user_id}/messages/{message_id}&quot;
+          }
+        };
+      }
+    }
+    message GetMessageRequest {
+      string message_id = 1;
+      string user_id = 2;
+    }
+
+This enables the following two alternative HTTP JSON to RPC mappings:
+
+HTTP | gRPC
+-----|-----
+`GET /v1/messages/123456` | `GetMessage(message_id: &quot;123456&quot;)`
+`GET /v1/users/me/messages/123456` | `GetMessage(user_id: &quot;me&quot; message_id:
+&quot;123456&quot;)`
+
+## Rules for HTTP mapping
+
+1. Leaf request fields (recursive expansion nested messages in the request
+   message) are classified into three categories:
+   - Fields referred by the path template. They are passed via the URL path.
+   - Fields referred by the [HttpRule.body][google.api.HttpRule.body]. They are passed via the HTTP
+     request body.
+   - All other fields are passed via the URL query parameters, and the
+     parameter name is the field path in the request message. A repeated
+     field can be represented as multiple query parameters under the same
+     name.
+ 2. If [HttpRule.body][google.api.HttpRule.body] is &quot;*&quot;, there is no URL query parameter, all fields
+    are passed via URL path and HTTP request body.
+ 3. If [HttpRule.body][google.api.HttpRule.body] is omitted, there is no HTTP request body, all
+    fields are passed via URL path and URL query parameters.
+
+### Path template syntax
+
+    Template = &quot;/&quot; Segments [ Verb ] ;
+    Segments = Segment { &quot;/&quot; Segment } ;
+    Segment  = &quot;*&quot; | &quot;**&quot; | LITERAL | Variable ;
+    Variable = &quot;{&quot; FieldPath [ &quot;=&quot; Segments ] &quot;}&quot; ;
+    FieldPath = IDENT { &quot;.&quot; IDENT } ;
+    Verb     = &quot;:&quot; LITERAL ;
+
+The syntax `*` matches a single URL path segment. The syntax `**` matches
+zero or more URL path segments, which must be the last part of the URL path
+except the `Verb`.
+
+The syntax `Variable` matches part of the URL path as specified by its
+template. A variable template must not contain other variables. If a variable
+matches a single path segment, its template may be omitted, e.g. `{var}`
+is equivalent to `{var=*}`.
+
+The syntax `LITERAL` matches literal text in the URL path. If the `LITERAL`
+contains any reserved character, such characters should be percent-encoded
+before the matching.
+
+If a variable contains exactly one path segment, such as `&quot;{var}&quot;` or
+`&quot;{var=*}&quot;`, when such a variable is expanded into a URL path on the client
+side, all characters except `[-_.~0-9a-zA-Z]` are percent-encoded. The
+server side does the reverse decoding. Such variables show up in the
+[Discovery
+Document](https://developers.google.com/discovery/v1/reference/apis) as
+`{var}`.
+
+If a variable contains multiple path segments, such as `&quot;{var=foo/*}&quot;`
+or `&quot;{var=**}&quot;`, when such a variable is expanded into a URL path on the
+client side, all characters except `[-_.~/0-9a-zA-Z]` are percent-encoded.
+The server side does the reverse decoding, except &quot;%2F&quot; and &quot;%2f&quot; are left
+unchanged. Such variables show up in the
+[Discovery
+Document](https://developers.google.com/discovery/v1/reference/apis) as
+`{+var}`.
+
+## Using gRPC API Service Configuration
+
+gRPC API Service Configuration (service config) is a configuration language
+for configuring a gRPC service to become a user-facing product. The
+service config is simply the YAML representation of the `google.api.Service`
+proto message.
+
+As an alternative to annotating your proto file, you can configure gRPC
+transcoding in your service config YAML files. You do this by specifying a
+`HttpRule` that maps the gRPC method to a REST endpoint, achieving the same
+effect as the proto annotation. This can be particularly useful if you
+have a proto that is reused in multiple services. Note that any transcoding
+specified in the service config will override any matching transcoding
+configuration in the proto.
+
+Example:
+
+    http:
+      rules:
+        # Selects a gRPC method and applies HttpRule to it.
+        - selector: example.v1.Messaging.GetMessage
+          get: /v1/messages/{message_id}/{sub.subfield}
+
+## Special notes
+
+When gRPC Transcoding is used to map a gRPC to JSON REST endpoints, the
+proto to JSON conversion must follow the [proto3
+specification](https://developers.google.com/protocol-buffers/docs/proto3#json).
+
+While the single segment variable follows the semantics of
+[RFC 6570](https://tools.ietf.org/html/rfc6570) Section 3.2.2 Simple String
+Expansion, the multi segment variable **does not** follow RFC 6570 Section
+3.2.3 Reserved Expansion. The reason is that the Reserved Expansion
+does not expand special characters like `?` and `#`, which would lead
+to invalid URLs. As the result, gRPC Transcoding uses a custom encoding
+for multi segment variables.
+
+The path variables **must not** refer to any repeated or mapped field,
+because client libraries are not capable of handling such variable expansion.
+
+The path variables **must not** capture the leading &quot;/&quot; character. The reason
+is that the most common use case &quot;{var}&quot; does not capture the leading &quot;/&quot;
+character. For consistency, all path variables must share the same behavior.
+
+Repeated message fields must not be mapped to URL query parameters, because
+no client library can support such complicated mapping.
+
+If an API needs to use a JSON array for request or response body, it can map
+the request or response body to a repeated field. However, some gRPC
+Transcoding implementations may not support this feature.</p><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>selector</code></td><td><code>string</code></td><td style="white-space:pre-wrap">Selects a method to which this rule applies.
+
+Refer to [selector][google.api.DocumentationRule.selector] for syntax details.</td></tr><tr><td><code>get</code></td><td><code>string</code></td><td style="white-space:pre-wrap">Maps to HTTP GET. Used for listing and getting information about
+resources.</td></tr><tr><td><code>put</code></td><td><code>string</code></td><td style="white-space:pre-wrap">Maps to HTTP PUT. Used for replacing a resource.</td></tr><tr><td><code>post</code></td><td><code>string</code></td><td style="white-space:pre-wrap">Maps to HTTP POST. Used for creating a resource or performing an action.</td></tr><tr><td><code>delete</code></td><td><code>string</code></td><td style="white-space:pre-wrap">Maps to HTTP DELETE. Used for deleting a resource.</td></tr><tr><td><code>patch</code></td><td><code>string</code></td><td style="white-space:pre-wrap">Maps to HTTP PATCH. Used for updating a resource.</td></tr><tr><td><code>custom</code></td><td><a href="/protodocs/google/api/http.proto/#customhttppattern"><code>CustomHttpPattern</code></a></td><td style="white-space:pre-wrap">The custom pattern is used for specifying an HTTP method that is not
+included in the `pattern` field, such as HEAD, or &quot;*&quot; to leave the
+HTTP method unspecified for this rule. The wild-card rule is useful
+for services that provide content to Web (HTML) clients.</td></tr><tr><td><code>body</code></td><td><code>string</code></td><td style="white-space:pre-wrap">The name of the request field whose value is mapped to the HTTP request
+body, or `*` for mapping all request fields not captured by the path
+pattern to the HTTP body, or omitted for not having any HTTP request body.
+
+NOTE: the referred field must be present at the top-level of the request
+message type.</td></tr><tr><td><code>response_body</code></td><td><code>string</code></td><td style="white-space:pre-wrap">Optional. The name of the response field whose value is mapped to the HTTP
+response body. When omitted, the entire response message will be used
+as the HTTP response body.
+
+NOTE: The referred field must be present at the top-level of the response
+message type.</td></tr><tr><td><code>additional_bindings</code></td><td><a href="/protodocs/google/api/http.proto/#httprule"><code>HttpRule</code></a></td><td style="white-space:pre-wrap">Additional HTTP bindings for the selector. Nested bindings must
+not contain an `additional_bindings` field themselves (that is,
+the nesting may only be one level deep).</td></tr></tbody></table><hr></div></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages navigation"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/protodocs/google/api/annotations.proto/"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">« annotations.proto</div></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/protodocs/google/api/httpbody.proto/"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">httpbody.proto »</div></a></div></nav></div></div><div class="col col--3"><div class="tableOfContents_35-E thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#httpproto" class="table-of-contents__link"><code>http.proto</code></a></li><li><a href="#messages" class="table-of-contents__link">Messages</a><ul><li><a href="#customhttppattern" class="table-of-contents__link"><code>CustomHttpPattern</code></a></li><li><a href="#http" class="table-of-contents__link"><code>Http</code></a></li><li><a href="#httprule" class="table-of-contents__link"><code>HttpRule</code></a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer"><div class="container"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Community</div><ul class="footer__items"><li class="footer__item"><a href="https://discord.com/channels/825360651782193194" target="_blank" rel="noopener noreferrer" class="footer__link-item"><span>Discord<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_3J9K"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></span></a></li><li class="footer__item"><a href="https://twitter.com/eigr_io" target="_blank" rel="noopener noreferrer" class="footer__link-item"><span>Twitter<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_3J9K"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></span></a></li><li class="footer__item"><a href="https://github.com/eigr/eigr-community/discussions" target="_blank" rel="noopener noreferrer" class="footer__link-item"><span>Github Discussions<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_3J9K"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></span></a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" href="/blog/">Blog</a></li><li class="footer__item"><a href="https://github.com/eigr" target="_blank" rel="noopener noreferrer" class="footer__link-item"><span>GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_3J9K"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></span></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2021 – eigr.io | graphics design by <a href="https://ursulahitz.com">ursulahitz.com</a></div></div></div></footer></div>
+<script src="/assets/js/runtime~main.42987c5e.js"></script>
+<script src="/assets/js/main.7a66a0a1.js"></script>
+</body>
+</html>

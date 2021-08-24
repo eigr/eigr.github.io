@@ -4,22 +4,22 @@
         <title>eigr.io Blog</title>
         <link>https://eigr.github.io/blog</link>
         <description>eigr.io Blog</description>
-        <lastBuildDate>Sun, 08 Aug 2021 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 19 Aug 2021 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
-        <item>
-            <title><![CDATA[eigr/serverless Go SDK]]></title>
-            <link>https://eigr.github.io/blog/serverless-go-sdk</link>
-            <guid>serverless-go-sdk</guid>
-            <pubDate>Sun, 08 Aug 2021 00:00:00 GMT</pubDate>
-            <description><![CDATA[`]]></description>
-        </item>
         <item>
             <title><![CDATA[Erlang Workshop 2021 - ICFP 2021]]></title>
             <link>https://eigr.github.io/blog/ifcp-2021</link>
             <guid>ifcp-2021</guid>
-            <pubDate>Mon, 02 Aug 2021 00:00:00 GMT</pubDate>
-            <description><![CDATA[Serverless runtimes are often hidden in a cloud providers offering and exposed solely by their programming API and deployment procedures. In this talk, we'll explore an open-source Serverless runtime built for the cloud and on-premises, running on the BEAM with a polyglot programming model to build general purpose applications.]]></description>
+            <pubDate>Thu, 19 Aug 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[We're excited to be selected]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Eigr Functions Go SDK]]></title>
+            <link>https://eigr.github.io/blog/serverless-go-sdk</link>
+            <guid>serverless-go-sdk</guid>
+            <pubDate>Sun, 08 Aug 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[`]]></description>
         </item>
         <item>
             <title><![CDATA[Code BEAM America 2021]]></title>
