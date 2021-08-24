@@ -27,7 +27,7 @@ Cloudstate started with two promises to "pave the way for Serverless 2.0" to sol
 The decision to fork the Cloudstate project was based on a shift in focus since about mid 2020 of its initiating
 organization [Lightbend Inc.](https://lightbend.com/) to pursue
 a [Serverless offering](https://www.lightbend.com/akka-serverless) of the Cloudstate technology. This focus left the
-open source community with no clear roadmap and kept its further development locked where nothing but a fork was an
+open source project and its community in limbo with no clear roadmap and kept its further development locked where nothing but a fork was an
 option to further work on the vision Cloudstate promised to solve.
 
 Members of the eigr.io open-source project have been very supportive and engaged early on in the Cloudstate project.
@@ -53,7 +53,7 @@ future compatibility.
 
 The decision to switch technical grounds was mainly guided by the fact that Cloudstate went into hibernation mode, and
 it made no sense to re-implement the Cloudstate proxy in Scala and Akka Cluster itself again. Going with Go or Rust
-would have been an option. But we realized fast that competing in a way with the excellent work of the Akka team we
+would have been an option. But we realized early on, that competing in a way with the excellent work of the Akka team we
 would not come soon with a replacement of all what Akka and Akka Cluster provides in the context of this project.
 
 With a modern functional language like Elixir and the Erlang Ecosystem in general in its similar excellent shape these
@@ -61,6 +61,6 @@ days, it came to us, why not to use the BEAM, Elixir and Erlang/OTP as the techn
 Erlang or Elixir had been exotic languages to be used, the technology and especially the language in which the service
 proxy is written is irrelevant in the context that enables a cloud-native and therefore polyglot environment.
 
-With Eigr Funtions being based on Erlang/OTP and running on the BEAM its an excellent fit for a serverless runtime to be
-built on. The "message in, message out" pattern for a FaaS implementation, as well as the requirements to run actually
-virtual actors in a distributed system is right on point what OTP, the BEAM and Erlang are all about.
+With Eigr Funtions being based on Erlang/OTP and running on the BEAM its an excellent fit for a serverless runtime to
+be built on. The "message in, message out" pattern for a FaaS implementation, as well as the requirements to run
+actually virtual actors in a distributed system is right spot on what OTP, the BEAM and Erlang are all about.
