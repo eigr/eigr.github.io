@@ -1,0 +1,34 @@
+---
+title: eventing.proto
+hide_title: true
+---
+
+import { ProtoMessage, ProtoServiceMethod, ProtoEnum } from '@theme/ProtoFile';
+
+## `eventing.proto`
+_**path** cloudstate/eventing.proto_
+
+_**package** cloudstate_
+
+
+
+---
+
+## Messages
+
+
+### `EventDestination`
+<ProtoMessage key={0} message={{"name":"EventDestination","longName":"EventDestination","fullName":"cloudstate.EventDestination","description":"","hasExtensions":false,"hasFields":true,"hasOneofs":true,"extensions":[],"fields":[{"name":"topic","description":"","label":"","type":"string","longType":"string","fullType":"string","ismap":false,"isoneof":true,"oneofdecl":"destination","defaultValue":""}]}} />
+
+
+### `EventSource`
+<ProtoMessage key={1} message={{"name":"EventSource","longName":"EventSource","fullName":"cloudstate.EventSource","description":"Event source configuration","hasExtensions":false,"hasFields":true,"hasOneofs":true,"extensions":[],"fields":[{"name":"consumer_group","description":"The consumer group id.\n\nBy default, all rpc methods on a given service with the same source will be part of the same virtual consumer\ngroup, messages will be routed to the different methods by type. This can be used to override that, if you want\nmultiple methods to act as independent consumers of the same source (ie, if you want the same event to be\npublished to each consumer) then give each consumer a unique name.\n\nNote that this does depend on the event source supporting multiple consumer groups. Queue based event sources\nmay not support this.","label":"","type":"string","longType":"string","fullType":"string","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":""},{"name":"topic","description":"A topic source.\n\nThis will consume events from the given topic name.","label":"","type":"string","longType":"string","fullType":"string","ismap":false,"isoneof":true,"oneofdecl":"source","defaultValue":""},{"name":"event_log","description":"An event log source.\n\nThis will consume events from the given event log with the given persistence id.","label":"","type":"string","longType":"string","fullType":"string","ismap":false,"isoneof":true,"oneofdecl":"source","defaultValue":""}]}} />
+
+
+### `Eventing`
+<ProtoMessage key={2} message={{"name":"Eventing","longName":"Eventing","fullName":"cloudstate.Eventing","description":"Eventing configuration for a gRPC method.","hasExtensions":false,"hasFields":true,"hasOneofs":false,"extensions":[],"fields":[{"name":"in","description":"The event source in configuration.","label":"","type":"EventSource","longType":"EventSource","fullType":"cloudstate.EventSource","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":"","typeLink":"/protodocs/cloudstate/eventing.proto#eventsource"},{"name":"out","description":"The event destination out configuration.\n\nOptional, if unset, messages out will not be published anywhere.","label":"","type":"EventDestination","longType":"EventDestination","fullType":"cloudstate.EventDestination","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":"","typeLink":"/protodocs/cloudstate/eventing.proto#eventdestination"}]}} />
+
+---
+
+
+  

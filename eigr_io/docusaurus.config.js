@@ -16,7 +16,7 @@ module.exports = {
     trailingSlash: true,
     themeConfig: {
         navbar: {
-            // style: 'dark',
+            style: 'dark',
             title: '',
             logo: {
                 alt: 'eigr',
@@ -35,6 +35,12 @@ module.exports = {
                     label: 'GitHub',
                     position: 'right',
                 },
+                {
+                    to: 'protodocs/cloudstate/entity.proto',
+                    activeBasePath: './protodocs',
+                    label: 'gRPC Proxy-Protocol',
+                    position: 'left',
+                }
             ],
         },
         footer: {
@@ -80,13 +86,16 @@ module.exports = {
                     ],
                 },
             ],
-            copyright: `Copyright © ${new Date().getFullYear()} – eigr.io`,
+            copyright: `Copyright © ${new Date().getFullYear()} – eigr.io | graphics design by <a href="https://ursulahitz.com">ursulahitz.com</a>`,
         },
         prism: {
             theme: lightCodeTheme,
             darkTheme: darkCodeTheme,
         },
     },
+    themes: [
+        '@saucelabs/theme-github-codeblock'
+    ],
     presets: [
         [
             '@docusaurus/preset-classic',
@@ -107,6 +116,20 @@ module.exports = {
                     customCss: require.resolve('./src/css/custom.css'),
                 },
             },
+        ],
+        [
+            'docusaurus-protobuffet',
+            {
+                protobuffet: {
+                    fileDescriptorsPath: './cloudstate-protocols-0.6.0/fixtures/proto_workspace.json',
+                    protoDocsPath: './protodocs',
+                    sidebarPath: './sidebarsProtodocs.js'
+                },
+                // docs: {
+                //     routeBasePath: 'protodocs',
+                //     sidebarPath: require.resolve('./sidebarsProtodocs.js'),
+                // }
+            }
         ],
     ],
 };

@@ -1,6 +1,6 @@
 ---
 slug: "serverless-go-sdk"
-title: "eigr/serverless Go SDK"
+title: "Eigr Functions Go SDK"
 author: "Marcel Lanz"
 author_title: "eigr.io – Core Team"
 author_url: https://github.com/marcellanz

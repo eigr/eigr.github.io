@@ -1,0 +1,142 @@
+---
+title: crdt.proto
+hide_title: true
+---
+
+import { ProtoMessage, ProtoServiceMethod, ProtoEnum } from '@theme/ProtoFile';
+
+## `crdt.proto`
+_**path** cloudstate/crdt.proto_
+
+_**package** cloudstate.crdt_
+
+
+
+---
+
+## Messages
+
+
+### `CrdtDelete`
+<ProtoMessage key={0} message={{"name":"CrdtDelete","longName":"CrdtDelete","fullName":"cloudstate.crdt.CrdtDelete","description":"","hasExtensions":false,"hasFields":false,"hasOneofs":false,"extensions":[],"fields":[]}} />
+
+
+### `CrdtDelta`
+<ProtoMessage key={1} message={{"name":"CrdtDelta","longName":"CrdtDelta","fullName":"cloudstate.crdt.CrdtDelta","description":"A CRDT delta\n\nDeltas only carry the change in value to be applied to the current (possibly empty) state.","hasExtensions":false,"hasFields":true,"hasOneofs":true,"extensions":[],"fields":[{"name":"gcounter","description":"","label":"","type":"GCounterDelta","longType":"GCounterDelta","fullType":"cloudstate.crdt.GCounterDelta","ismap":false,"isoneof":true,"oneofdecl":"delta","defaultValue":"","typeLink":"/protodocs/cloudstate/crdt.proto#gcounterdelta"},{"name":"pncounter","description":"","label":"","type":"PNCounterDelta","longType":"PNCounterDelta","fullType":"cloudstate.crdt.PNCounterDelta","ismap":false,"isoneof":true,"oneofdecl":"delta","defaultValue":"","typeLink":"/protodocs/cloudstate/crdt.proto#pncounterdelta"},{"name":"gset","description":"","label":"","type":"GSetDelta","longType":"GSetDelta","fullType":"cloudstate.crdt.GSetDelta","ismap":false,"isoneof":true,"oneofdecl":"delta","defaultValue":"","typeLink":"/protodocs/cloudstate/crdt.proto#gsetdelta"},{"name":"orset","description":"","label":"","type":"ORSetDelta","longType":"ORSetDelta","fullType":"cloudstate.crdt.ORSetDelta","ismap":false,"isoneof":true,"oneofdecl":"delta","defaultValue":"","typeLink":"/protodocs/cloudstate/crdt.proto#orsetdelta"},{"name":"lwwregister","description":"","label":"","type":"LWWRegisterDelta","longType":"LWWRegisterDelta","fullType":"cloudstate.crdt.LWWRegisterDelta","ismap":false,"isoneof":true,"oneofdecl":"delta","defaultValue":"","typeLink":"/protodocs/cloudstate/crdt.proto#lwwregisterdelta"},{"name":"flag","description":"","label":"","type":"FlagDelta","longType":"FlagDelta","fullType":"cloudstate.crdt.FlagDelta","ismap":false,"isoneof":true,"oneofdecl":"delta","defaultValue":"","typeLink":"/protodocs/cloudstate/crdt.proto#flagdelta"},{"name":"ormap","description":"","label":"","type":"ORMapDelta","longType":"ORMapDelta","fullType":"cloudstate.crdt.ORMapDelta","ismap":false,"isoneof":true,"oneofdecl":"delta","defaultValue":"","typeLink":"/protodocs/cloudstate/crdt.proto#ormapdelta"},{"name":"vote","description":"","label":"","type":"VoteDelta","longType":"VoteDelta","fullType":"cloudstate.crdt.VoteDelta","ismap":false,"isoneof":true,"oneofdecl":"delta","defaultValue":"","typeLink":"/protodocs/cloudstate/crdt.proto#votedelta"}]}} />
+
+
+### `CrdtInit`
+<ProtoMessage key={2} message={{"name":"CrdtInit","longName":"CrdtInit","fullName":"cloudstate.crdt.CrdtInit","description":"","hasExtensions":false,"hasFields":true,"hasOneofs":false,"extensions":[],"fields":[{"name":"service_name","description":"","label":"","type":"string","longType":"string","fullType":"string","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":""},{"name":"entity_id","description":"","label":"","type":"string","longType":"string","fullType":"string","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":""},{"name":"delta","description":"","label":"","type":"CrdtDelta","longType":"CrdtDelta","fullType":"cloudstate.crdt.CrdtDelta","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":"","typeLink":"/protodocs/cloudstate/crdt.proto#crdtdelta"}]}} />
+
+
+### `CrdtReply`
+<ProtoMessage key={3} message={{"name":"CrdtReply","longName":"CrdtReply","fullName":"cloudstate.crdt.CrdtReply","description":"","hasExtensions":false,"hasFields":true,"hasOneofs":false,"extensions":[],"fields":[{"name":"command_id","description":"","label":"","type":"int64","longType":"int64","fullType":"int64","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":""},{"name":"client_action","description":"","label":"","type":"ClientAction","longType":"cloudstate.ClientAction","fullType":"cloudstate.ClientAction","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":"","typeLink":"/protodocs/cloudstate/entity.proto#clientaction"},{"name":"side_effects","description":"","label":"repeated","type":"SideEffect","longType":"cloudstate.SideEffect","fullType":"cloudstate.SideEffect","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":"","typeLink":"/protodocs/cloudstate/entity.proto#sideeffect"},{"name":"state_action","description":"","label":"","type":"CrdtStateAction","longType":"CrdtStateAction","fullType":"cloudstate.crdt.CrdtStateAction","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":"","typeLink":"/protodocs/cloudstate/crdt.proto#crdtstateaction"},{"name":"streamed","description":"If the request was streamed, setting this to true indicates that the command should\nbe handled as a stream. Subsequently, the user function may send CrdtStreamedMessage,\nand a CrdtStreamCancelled message will be sent if the stream is cancelled (though\nnot if the a CrdtStreamedMessage ends the stream first).","label":"","type":"bool","longType":"bool","fullType":"bool","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":""}]}} />
+
+
+### `CrdtStateAction`
+<ProtoMessage key={4} message={{"name":"CrdtStateAction","longName":"CrdtStateAction","fullName":"cloudstate.crdt.CrdtStateAction","description":"","hasExtensions":false,"hasFields":true,"hasOneofs":true,"extensions":[],"fields":[{"name":"update","description":"","label":"","type":"CrdtDelta","longType":"CrdtDelta","fullType":"cloudstate.crdt.CrdtDelta","ismap":false,"isoneof":true,"oneofdecl":"action","defaultValue":"","typeLink":"/protodocs/cloudstate/crdt.proto#crdtdelta"},{"name":"delete","description":"","label":"","type":"CrdtDelete","longType":"CrdtDelete","fullType":"cloudstate.crdt.CrdtDelete","ismap":false,"isoneof":true,"oneofdecl":"action","defaultValue":"","typeLink":"/protodocs/cloudstate/crdt.proto#crdtdelete"},{"name":"write_consistency","description":"","label":"","type":"CrdtWriteConsistency","longType":"CrdtWriteConsistency","fullType":"cloudstate.crdt.CrdtWriteConsistency","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":"","typeLink":"/protodocs/cloudstate/crdt.proto#crdtwriteconsistency"}]}} />
+
+
+### `CrdtStreamCancelledResponse`
+<ProtoMessage key={5} message={{"name":"CrdtStreamCancelledResponse","longName":"CrdtStreamCancelledResponse","fullName":"cloudstate.crdt.CrdtStreamCancelledResponse","description":"","hasExtensions":false,"hasFields":true,"hasOneofs":false,"extensions":[],"fields":[{"name":"command_id","description":"","label":"","type":"int64","longType":"int64","fullType":"int64","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":""},{"name":"side_effects","description":"","label":"repeated","type":"SideEffect","longType":"cloudstate.SideEffect","fullType":"cloudstate.SideEffect","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":"","typeLink":"/protodocs/cloudstate/entity.proto#sideeffect"},{"name":"state_action","description":"","label":"","type":"CrdtStateAction","longType":"CrdtStateAction","fullType":"cloudstate.crdt.CrdtStateAction","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":"","typeLink":"/protodocs/cloudstate/crdt.proto#crdtstateaction"}]}} />
+
+
+### `CrdtStreamIn`
+<ProtoMessage key={6} message={{"name":"CrdtStreamIn","longName":"CrdtStreamIn","fullName":"cloudstate.crdt.CrdtStreamIn","description":"Message for the Crdt handle stream in.","hasExtensions":false,"hasFields":true,"hasOneofs":true,"extensions":[],"fields":[{"name":"init","description":"Always sent first, and only once.","label":"","type":"CrdtInit","longType":"CrdtInit","fullType":"cloudstate.crdt.CrdtInit","ismap":false,"isoneof":true,"oneofdecl":"message","defaultValue":"","typeLink":"/protodocs/cloudstate/crdt.proto#crdtinit"},{"name":"delta","description":"A delta to be applied to the current state. May be sent at any time.","label":"","type":"CrdtDelta","longType":"CrdtDelta","fullType":"cloudstate.crdt.CrdtDelta","ismap":false,"isoneof":true,"oneofdecl":"message","defaultValue":"","typeLink":"/protodocs/cloudstate/crdt.proto#crdtdelta"},{"name":"delete","description":"Delete the entity. May be sent at any time. The user function should clear its state when it receives this.\nA proxy may decide to terminate the stream after sending this.","label":"","type":"CrdtDelete","longType":"CrdtDelete","fullType":"cloudstate.crdt.CrdtDelete","ismap":false,"isoneof":true,"oneofdecl":"message","defaultValue":"","typeLink":"/protodocs/cloudstate/crdt.proto#crdtdelete"},{"name":"command","description":"A command, may be sent at any time.","label":"","type":"Command","longType":"cloudstate.Command","fullType":"cloudstate.Command","ismap":false,"isoneof":true,"oneofdecl":"message","defaultValue":"","typeLink":"/protodocs/cloudstate/entity.proto#command"},{"name":"stream_cancelled","description":"A stream has been cancelled.","label":"","type":"StreamCancelled","longType":"cloudstate.StreamCancelled","fullType":"cloudstate.StreamCancelled","ismap":false,"isoneof":true,"oneofdecl":"message","defaultValue":"","typeLink":"/protodocs/cloudstate/entity.proto#streamcancelled"}]}} />
+
+
+### `CrdtStreamOut`
+<ProtoMessage key={7} message={{"name":"CrdtStreamOut","longName":"CrdtStreamOut","fullName":"cloudstate.crdt.CrdtStreamOut","description":"Message for the Crdt handle stream out.","hasExtensions":false,"hasFields":true,"hasOneofs":true,"extensions":[],"fields":[{"name":"reply","description":"A reply to an incoming command. Either one reply, or one failure, must be sent in response to each command.","label":"","type":"CrdtReply","longType":"CrdtReply","fullType":"cloudstate.crdt.CrdtReply","ismap":false,"isoneof":true,"oneofdecl":"message","defaultValue":"","typeLink":"/protodocs/cloudstate/crdt.proto#crdtreply"},{"name":"streamed_message","description":"A streamed message.","label":"","type":"CrdtStreamedMessage","longType":"CrdtStreamedMessage","fullType":"cloudstate.crdt.CrdtStreamedMessage","ismap":false,"isoneof":true,"oneofdecl":"message","defaultValue":"","typeLink":"/protodocs/cloudstate/crdt.proto#crdtstreamedmessage"},{"name":"stream_cancelled_response","description":"A stream cancelled response, may be sent in response to stream_cancelled.","label":"","type":"CrdtStreamCancelledResponse","longType":"CrdtStreamCancelledResponse","fullType":"cloudstate.crdt.CrdtStreamCancelledResponse","ismap":false,"isoneof":true,"oneofdecl":"message","defaultValue":"","typeLink":"/protodocs/cloudstate/crdt.proto#crdtstreamcancelledresponse"},{"name":"failure","description":"A failure. Either sent in response to a command, or sent if some other error occurs.","label":"","type":"Failure","longType":"cloudstate.Failure","fullType":"cloudstate.Failure","ismap":false,"isoneof":true,"oneofdecl":"message","defaultValue":"","typeLink":"/protodocs/cloudstate/entity.proto#failure"}]}} />
+
+
+### `CrdtStreamedMessage`
+<ProtoMessage key={8} message={{"name":"CrdtStreamedMessage","longName":"CrdtStreamedMessage","fullName":"cloudstate.crdt.CrdtStreamedMessage","description":"May be sent as often as liked if the first reply set streamed to true","hasExtensions":false,"hasFields":true,"hasOneofs":false,"extensions":[],"fields":[{"name":"command_id","description":"","label":"","type":"int64","longType":"int64","fullType":"int64","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":""},{"name":"client_action","description":"","label":"","type":"ClientAction","longType":"cloudstate.ClientAction","fullType":"cloudstate.ClientAction","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":"","typeLink":"/protodocs/cloudstate/entity.proto#clientaction"},{"name":"side_effects","description":"","label":"repeated","type":"SideEffect","longType":"cloudstate.SideEffect","fullType":"cloudstate.SideEffect","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":"","typeLink":"/protodocs/cloudstate/entity.proto#sideeffect"},{"name":"end_stream","description":"Indicates the stream should end, no messages may be sent for this command after this.","label":"","type":"bool","longType":"bool","fullType":"bool","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":""}]}} />
+
+
+### `FlagDelta`
+<ProtoMessage key={9} message={{"name":"FlagDelta","longName":"FlagDelta","fullName":"cloudstate.crdt.FlagDelta","description":"","hasExtensions":false,"hasFields":true,"hasOneofs":false,"extensions":[],"fields":[{"name":"value","description":"","label":"","type":"bool","longType":"bool","fullType":"bool","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":""}]}} />
+
+
+### `GCounterDelta`
+<ProtoMessage key={10} message={{"name":"GCounterDelta","longName":"GCounterDelta","fullName":"cloudstate.crdt.GCounterDelta","description":"","hasExtensions":false,"hasFields":true,"hasOneofs":false,"extensions":[],"fields":[{"name":"increment","description":"","label":"","type":"uint64","longType":"uint64","fullType":"uint64","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":""}]}} />
+
+
+### `GSetDelta`
+<ProtoMessage key={11} message={{"name":"GSetDelta","longName":"GSetDelta","fullName":"cloudstate.crdt.GSetDelta","description":"","hasExtensions":false,"hasFields":true,"hasOneofs":false,"extensions":[],"fields":[{"name":"added","description":"","label":"repeated","type":"Any","longType":"google.protobuf.Any","fullType":"google.protobuf.Any","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":""}]}} />
+
+
+### `LWWRegisterDelta`
+<ProtoMessage key={12} message={{"name":"LWWRegisterDelta","longName":"LWWRegisterDelta","fullName":"cloudstate.crdt.LWWRegisterDelta","description":"","hasExtensions":false,"hasFields":true,"hasOneofs":false,"extensions":[],"fields":[{"name":"value","description":"","label":"","type":"Any","longType":"google.protobuf.Any","fullType":"google.protobuf.Any","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":""},{"name":"clock","description":"","label":"","type":"CrdtClock","longType":"CrdtClock","fullType":"cloudstate.crdt.CrdtClock","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":"","typeLink":"/protodocs/cloudstate/crdt.proto#crdtclock"},{"name":"custom_clock_value","description":"","label":"","type":"int64","longType":"int64","fullType":"int64","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":""}]}} />
+
+
+### `ORMapDelta`
+<ProtoMessage key={13} message={{"name":"ORMapDelta","longName":"ORMapDelta","fullName":"cloudstate.crdt.ORMapDelta","description":"","hasExtensions":false,"hasFields":true,"hasOneofs":false,"extensions":[],"fields":[{"name":"cleared","description":"","label":"","type":"bool","longType":"bool","fullType":"bool","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":""},{"name":"removed","description":"","label":"repeated","type":"Any","longType":"google.protobuf.Any","fullType":"google.protobuf.Any","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":""},{"name":"updated","description":"","label":"repeated","type":"ORMapEntryDelta","longType":"ORMapEntryDelta","fullType":"cloudstate.crdt.ORMapEntryDelta","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":"","typeLink":"/protodocs/cloudstate/crdt.proto#ormapentrydelta"},{"name":"added","description":"","label":"repeated","type":"ORMapEntryDelta","longType":"ORMapEntryDelta","fullType":"cloudstate.crdt.ORMapEntryDelta","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":"","typeLink":"/protodocs/cloudstate/crdt.proto#ormapentrydelta"}]}} />
+
+
+### `ORMapEntryDelta`
+<ProtoMessage key={14} message={{"name":"ORMapEntryDelta","longName":"ORMapEntryDelta","fullName":"cloudstate.crdt.ORMapEntryDelta","description":"","hasExtensions":false,"hasFields":true,"hasOneofs":false,"extensions":[],"fields":[{"name":"key","description":"The entry key.","label":"","type":"Any","longType":"google.protobuf.Any","fullType":"google.protobuf.Any","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":""},{"name":"delta","description":"","label":"","type":"CrdtDelta","longType":"CrdtDelta","fullType":"cloudstate.crdt.CrdtDelta","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":"","typeLink":"/protodocs/cloudstate/crdt.proto#crdtdelta"}]}} />
+
+
+### `ORSetDelta`
+<ProtoMessage key={15} message={{"name":"ORSetDelta","longName":"ORSetDelta","fullName":"cloudstate.crdt.ORSetDelta","description":"","hasExtensions":false,"hasFields":true,"hasOneofs":false,"extensions":[],"fields":[{"name":"cleared","description":"If cleared is set, the set must be cleared before added is processed.","label":"","type":"bool","longType":"bool","fullType":"bool","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":""},{"name":"removed","description":"","label":"repeated","type":"Any","longType":"google.protobuf.Any","fullType":"google.protobuf.Any","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":""},{"name":"added","description":"","label":"repeated","type":"Any","longType":"google.protobuf.Any","fullType":"google.protobuf.Any","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":""}]}} />
+
+
+### `PNCounterDelta`
+<ProtoMessage key={16} message={{"name":"PNCounterDelta","longName":"PNCounterDelta","fullName":"cloudstate.crdt.PNCounterDelta","description":"","hasExtensions":false,"hasFields":true,"hasOneofs":false,"extensions":[],"fields":[{"name":"change","description":"","label":"","type":"sint64","longType":"sint64","fullType":"sint64","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":""}]}} />
+
+
+### `VoteDelta`
+<ProtoMessage key={17} message={{"name":"VoteDelta","longName":"VoteDelta","fullName":"cloudstate.crdt.VoteDelta","description":"","hasExtensions":false,"hasFields":true,"hasOneofs":false,"extensions":[],"fields":[{"name":"self_vote","description":"Set by the proxy initially or when the vote has changed.\nOnly set by the user function to change the node's current vote.","label":"","type":"bool","longType":"bool","fullType":"bool","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":""},{"name":"votes_for","description":"Only set by the proxy initially or when the vote has changed.\nIgnored by the proxy when set by the user function.","label":"","type":"int32","longType":"int32","fullType":"int32","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":""},{"name":"total_voters","description":"Only set by the proxy initially or when the vote has changed.\nIgnored by the proxy when set by the user function.","label":"","type":"int32","longType":"int32","fullType":"int32","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":""}]}} />
+
+---
+## Enums
+
+
+### `CrdtClock`
+<ProtoEnum key={0} enumb={{"name":"CrdtClock","longName":"CrdtClock","fullName":"cloudstate.crdt.CrdtClock","description":"","values":[{"name":"DEFAULT","number":"0","description":"Use the default clock for deciding the last write, which is the system clocks\nmilliseconds since epoch."},{"name":"REVERSE","number":"1","description":"Use the reverse semantics with the default clock, to enable first write wins."},{"name":"CUSTOM","number":"2","description":"Use a custom clock value, set using custom_clock_value."},{"name":"CUSTOM_AUTO_INCREMENT","number":"3","description":"Use a custom clock value, but automatically increment it by one if the clock\nvalue from the current value is equal to the custom_clock_value."}]}} />
+
+
+### `CrdtWriteConsistency`
+<ProtoEnum key={1} enumb={{"name":"CrdtWriteConsistency","longName":"CrdtWriteConsistency","fullName":"cloudstate.crdt.CrdtWriteConsistency","description":"","values":[{"name":"LOCAL","number":"0","description":""},{"name":"MAJORITY","number":"1","description":""},{"name":"ALL","number":"2","description":""}]}} />
+
+---
+## Services
+
+
+### `Crdt`
+
+CRDT Protocol
+
+Note that while this protocol provides support for CRDTs, the data types sent across the protocol are not CRDTs
+themselves. It is the responsibility of the CloudState proxy to implement the CRDTs, merge functions, vector clocks
+etc, not the user function. The user function need only hold the current value in memory, and this protocol sends
+deltas to the user function to update its in memory value as necessary. These deltas have no way of dealing with
+conflicts, hence it important that the CloudState proxy always know what the state of the user functions in memory
+value is before sending a delta. If the CloudState proxy is not sure what the value is, eg because it has just sent
+an operation to the user function may have updated its value as a result, the proxy should wait until it gets the
+result of the operation back, to ensure its in memory value is in sync with the user function so that it can
+calculate deltas that won't conflict.
+
+The user function is expected to update its value both as the result of receiving deltas from the proxy, as well as
+when it sends deltas. It must not update its value in any other circumstance, updating the value in response to any
+other stimuli risks the value becoming out of sync with the CloudState proxy. The user function will not be sent
+back deltas as a result of its own changes.
+
+An invocation of handle is made for each entity being handled. It may be kept alive and used to handle multiple
+commands, and may subsequently be terminated if that entity becomes idle, or if the entity is deleted. Shutdown is
+typically done for efficiency reasons, unless the entity is explicitly deleted, a terminated handle stream does not
+mean the proxy has stopped tracking the state of the entity in its memory.
+
+Special care must be taken when working with maps and sets. The keys/values are google.protobuf.Any, which encodes
+the value as binary protobuf, however, serialized protobufs are not stable, two semantically equal objects could
+encode to different bytes. It is the responsibility of the user function to ensure that stable encodings are used.
+
+
+#### `handle`
+<ProtoServiceMethod key={'handle-0'} method={{"name":"handle","description":"After invoking handle, the first message sent will always be a CrdtInit message, containing the entity ID, and,\nif it exists or is available, a delta for the inital state of the entity. After that, one or more commands may\nbe sent, as well as deltas as they arrive.\n\nThe user function must respond with one reply per command in. They do not necessarily have to be sent in the same\norder that the commands were sent, the command ID is used to correlate commands to replies.","requestType":"CrdtStreamIn","requestLongType":"CrdtStreamIn","requestFullType":"cloudstate.crdt.CrdtStreamIn","requestStreaming":true,"responseType":"CrdtStreamOut","responseLongType":"CrdtStreamOut","responseFullType":"cloudstate.crdt.CrdtStreamOut","responseStreaming":true,"requestTypeLink":"/protodocs/cloudstate/crdt.proto#crdtstreamin","responseTypeLink":"/protodocs/cloudstate/crdt.proto#crdtstreamout"}} />
+
+
+---
+
+
+  

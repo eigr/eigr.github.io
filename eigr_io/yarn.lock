@@ -1493,7 +1493,7 @@
     joi "^17.4.0"
     tslib "^2.1.0"
 
-"@docusaurus/utils@2.0.0-beta.4":
+"@docusaurus/utils@2.0.0-beta.4", "@docusaurus/utils@^2.0.0-alpha.72":
   version "2.0.0-beta.4"
   resolved "https://registry.yarnpkg.com/@docusaurus/utils/-/utils-2.0.0-beta.4.tgz#6e572371b0a59360b49102d014579f5364f1d8da"
   integrity sha512-6nI3ETBp0ZSt5yp5Fc5nthQjR1MmLgl2rXC3hcscrSUZx0QvzJFzTiRgD9EAIJtR/i2JkUK18eaFiBjMBoXEbQ==
@@ -3378,6 +3378,20 @@ dns-txt@^2.0.2:
   integrity sha1-uR2Ab10nGI5Ks+fRB9iBocxGQrY=
   dependencies:
     buffer-indexof "^1.0.0"
+
+docusaurus-protobuffet-plugin@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/docusaurus-protobuffet-plugin/-/docusaurus-protobuffet-plugin-0.3.0.tgz#c06879cded2ba38c0a69220041e6d84d74a5619c"
+  integrity sha512-tJw9rg7zRU6MJf2aQGxgXAGXNsX7Gr3hrVSRBG6PlFw/ky+6g9s9dK6ZV844w53beqHjK3lfdj6MKYaqjYMvDw==
+  dependencies:
+    "@docusaurus/utils" "^2.0.0-alpha.72"
+
+docusaurus-protobuffet@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/docusaurus-protobuffet/-/docusaurus-protobuffet-0.3.1.tgz#2f9c4abfe5d3b11992740794580b16e4bab0e452"
+  integrity sha512-eH/y/VXe6W16hq2xxjXvm6wUM/0S6h9qxuHWoEyWvIxi7kkioeml6XR94qqxjevnI3tyS7sp4Bjub0a0qGa+RA==
+  dependencies:
+    docusaurus-protobuffet-plugin "^0.3.0"
 
 dom-converter@^0.2.0:
   version "0.2.0"

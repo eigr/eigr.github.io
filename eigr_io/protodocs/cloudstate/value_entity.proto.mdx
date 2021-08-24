@@ -1,0 +1,67 @@
+---
+title: value_entity.proto
+hide_title: true
+---
+
+import { ProtoMessage, ProtoServiceMethod, ProtoEnum } from '@theme/ProtoFile';
+
+## `value_entity.proto`
+_**path** cloudstate/value_entity.proto_
+
+_**package** cloudstate.valueentity_
+
+
+
+---
+
+## Messages
+
+
+### `ValueEntityAction`
+<ProtoMessage key={0} message={{"name":"ValueEntityAction","longName":"ValueEntityAction","fullName":"cloudstate.valueentity.ValueEntityAction","description":"An action to take for changing the entity state.","hasExtensions":false,"hasFields":true,"hasOneofs":true,"extensions":[],"fields":[{"name":"update","description":"","label":"","type":"ValueEntityUpdate","longType":"ValueEntityUpdate","fullType":"cloudstate.valueentity.ValueEntityUpdate","ismap":false,"isoneof":true,"oneofdecl":"action","defaultValue":"","typeLink":"/protodocs/cloudstate/value_entity.proto#valueentityupdate"},{"name":"delete","description":"","label":"","type":"ValueEntityDelete","longType":"ValueEntityDelete","fullType":"cloudstate.valueentity.ValueEntityDelete","ismap":false,"isoneof":true,"oneofdecl":"action","defaultValue":"","typeLink":"/protodocs/cloudstate/value_entity.proto#valueentitydelete"}]}} />
+
+
+### `ValueEntityDelete`
+<ProtoMessage key={1} message={{"name":"ValueEntityDelete","longName":"ValueEntityDelete","fullName":"cloudstate.valueentity.ValueEntityDelete","description":"An action which deletes the persisted value of the Value entity.","hasExtensions":false,"hasFields":false,"hasOneofs":false,"extensions":[],"fields":[]}} />
+
+
+### `ValueEntityInit`
+<ProtoMessage key={2} message={{"name":"ValueEntityInit","longName":"ValueEntityInit","fullName":"cloudstate.valueentity.ValueEntityInit","description":"The init message. This will always be the first message sent to the entity when it is loaded.","hasExtensions":false,"hasFields":true,"hasOneofs":false,"extensions":[],"fields":[{"name":"service_name","description":"The name of the service that implements this entity.","label":"","type":"string","longType":"string","fullType":"string","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":""},{"name":"entity_id","description":"The id of the entity.","label":"","type":"string","longType":"string","fullType":"string","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":""},{"name":"state","description":"The initial state of the entity.","label":"","type":"ValueEntityInitState","longType":"ValueEntityInitState","fullType":"cloudstate.valueentity.ValueEntityInitState","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":"","typeLink":"/protodocs/cloudstate/value_entity.proto#valueentityinitstate"}]}} />
+
+
+### `ValueEntityInitState`
+<ProtoMessage key={3} message={{"name":"ValueEntityInitState","longName":"ValueEntityInitState","fullName":"cloudstate.valueentity.ValueEntityInitState","description":"The state of the entity when it is first activated.","hasExtensions":false,"hasFields":true,"hasOneofs":false,"extensions":[],"fields":[{"name":"value","description":"The value of the entity state, if the entity has already been created.","label":"","type":"Any","longType":"google.protobuf.Any","fullType":"google.protobuf.Any","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":""}]}} />
+
+
+### `ValueEntityReply`
+<ProtoMessage key={4} message={{"name":"ValueEntityReply","longName":"ValueEntityReply","fullName":"cloudstate.valueentity.ValueEntityReply","description":"A reply to a command.","hasExtensions":false,"hasFields":true,"hasOneofs":false,"extensions":[],"fields":[{"name":"command_id","description":"The command being replied to","label":"","type":"int64","longType":"int64","fullType":"int64","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":""},{"name":"client_action","description":"The action to take for the client response","label":"","type":"ClientAction","longType":"cloudstate.ClientAction","fullType":"cloudstate.ClientAction","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":"","typeLink":"/protodocs/cloudstate/entity.proto#clientaction"},{"name":"side_effects","description":"Any side effects to perform","label":"repeated","type":"SideEffect","longType":"cloudstate.SideEffect","fullType":"cloudstate.SideEffect","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":"","typeLink":"/protodocs/cloudstate/entity.proto#sideeffect"},{"name":"state_action","description":"The action to take on the value entity","label":"","type":"ValueEntityAction","longType":"ValueEntityAction","fullType":"cloudstate.valueentity.ValueEntityAction","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":"","typeLink":"/protodocs/cloudstate/value_entity.proto#valueentityaction"}]}} />
+
+
+### `ValueEntityStreamIn`
+<ProtoMessage key={5} message={{"name":"ValueEntityStreamIn","longName":"ValueEntityStreamIn","fullName":"cloudstate.valueentity.ValueEntityStreamIn","description":"Input message type for the gRPC stream in.","hasExtensions":false,"hasFields":true,"hasOneofs":true,"extensions":[],"fields":[{"name":"init","description":"","label":"","type":"ValueEntityInit","longType":"ValueEntityInit","fullType":"cloudstate.valueentity.ValueEntityInit","ismap":false,"isoneof":true,"oneofdecl":"message","defaultValue":"","typeLink":"/protodocs/cloudstate/value_entity.proto#valueentityinit"},{"name":"command","description":"","label":"","type":"Command","longType":"cloudstate.Command","fullType":"cloudstate.Command","ismap":false,"isoneof":true,"oneofdecl":"message","defaultValue":"","typeLink":"/protodocs/cloudstate/entity.proto#command"}]}} />
+
+
+### `ValueEntityStreamOut`
+<ProtoMessage key={6} message={{"name":"ValueEntityStreamOut","longName":"ValueEntityStreamOut","fullName":"cloudstate.valueentity.ValueEntityStreamOut","description":"Output message type for the gRPC stream out.","hasExtensions":false,"hasFields":true,"hasOneofs":true,"extensions":[],"fields":[{"name":"reply","description":"","label":"","type":"ValueEntityReply","longType":"ValueEntityReply","fullType":"cloudstate.valueentity.ValueEntityReply","ismap":false,"isoneof":true,"oneofdecl":"message","defaultValue":"","typeLink":"/protodocs/cloudstate/value_entity.proto#valueentityreply"},{"name":"failure","description":"","label":"","type":"Failure","longType":"cloudstate.Failure","fullType":"cloudstate.Failure","ismap":false,"isoneof":true,"oneofdecl":"message","defaultValue":"","typeLink":"/protodocs/cloudstate/entity.proto#failure"}]}} />
+
+
+### `ValueEntityUpdate`
+<ProtoMessage key={7} message={{"name":"ValueEntityUpdate","longName":"ValueEntityUpdate","fullName":"cloudstate.valueentity.ValueEntityUpdate","description":"An action which updates the persisted value of the Value entity. If the entity is not yet persisted, it will be created.","hasExtensions":false,"hasFields":true,"hasOneofs":false,"extensions":[],"fields":[{"name":"value","description":"The value to set.","label":"","type":"Any","longType":"google.protobuf.Any","fullType":"google.protobuf.Any","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":""}]}} />
+
+---
+## Services
+
+
+### `ValueEntity`
+
+The Value Entity service
+
+
+#### `handle`
+<ProtoServiceMethod key={'handle-0'} method={{"name":"handle","description":"One stream will be established per active entity.\nOnce established, the first message sent will be Init, which contains the entity ID, and,\na state if the entity has previously persisted one. Once the Init message is sent, one to\nmany commands are sent to the entity. Each request coming in leads to a new command being sent\nto the entity. The entity is expected to reply to each command with exactly one reply message.\nThe entity should process commands and reply to commands in the order they came\nin. When processing a command the entity can read and persist (update or delete) the state.","requestType":"ValueEntityStreamIn","requestLongType":"ValueEntityStreamIn","requestFullType":"cloudstate.valueentity.ValueEntityStreamIn","requestStreaming":true,"responseType":"ValueEntityStreamOut","responseLongType":"ValueEntityStreamOut","responseFullType":"cloudstate.valueentity.ValueEntityStreamOut","responseStreaming":true,"requestTypeLink":"/protodocs/cloudstate/value_entity.proto#valueentitystreamin","responseTypeLink":"/protodocs/cloudstate/value_entity.proto#valueentitystreamout"}} />
+
+
+---
+
+
+  

@@ -1,0 +1,3289 @@
+{
+  "files": [
+    {
+      "name": "cloudstate/entity_key.proto",
+      "description": "",
+      "package": "cloudstate",
+      "hasEnums": false,
+      "hasExtensions": true,
+      "hasMessages": false,
+      "hasServices": false,
+      "enums": [],
+      "extensions": [
+        {
+          "name": "entity_key",
+          "longName": ".google.protobuf.FieldOptions.entity_key",
+          "fullName": ".google.protobuf.FieldOptions.entity_key",
+          "description": "",
+          "label": "",
+          "type": "bool",
+          "longType": "bool",
+          "fullType": "bool",
+          "number": 1080,
+          "defaultValue": "",
+          "containingType": "FieldOptions",
+          "containingLongType": ".google.protobuf.FieldOptions",
+          "containingFullType": "google.protobuf.FieldOptions"
+        }
+      ],
+      "messages": [],
+      "services": []
+    },
+    {
+      "name": "cloudstate/eventing.proto",
+      "description": "",
+      "package": "cloudstate",
+      "hasEnums": false,
+      "hasExtensions": true,
+      "hasMessages": true,
+      "hasServices": false,
+      "enums": [],
+      "extensions": [
+        {
+          "name": "eventing",
+          "longName": ".google.protobuf.MethodOptions.eventing",
+          "fullName": ".google.protobuf.MethodOptions.eventing",
+          "description": "",
+          "label": "",
+          "type": "Eventing",
+          "longType": "Eventing",
+          "fullType": "cloudstate.Eventing",
+          "number": 1081,
+          "defaultValue": "",
+          "containingType": "MethodOptions",
+          "containingLongType": ".google.protobuf.MethodOptions",
+          "containingFullType": "google.protobuf.MethodOptions"
+        }
+      ],
+      "messages": [
+        {
+          "name": "EventDestination",
+          "longName": "EventDestination",
+          "fullName": "cloudstate.EventDestination",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "topic",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "destination",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "EventSource",
+          "longName": "EventSource",
+          "fullName": "cloudstate.EventSource",
+          "description": "Event source configuration",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "consumer_group",
+              "description": "The consumer group id.\n\nBy default, all rpc methods on a given service with the same source will be part of the same virtual consumer\ngroup, messages will be routed to the different methods by type. This can be used to override that, if you want\nmultiple methods to act as independent consumers of the same source (ie, if you want the same event to be\npublished to each consumer) then give each consumer a unique name.\n\nNote that this does depend on the event source supporting multiple consumer groups. Queue based event sources\nmay not support this.",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "topic",
+              "description": "A topic source.\n\nThis will consume events from the given topic name.",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "source",
+              "defaultValue": ""
+            },
+            {
+              "name": "event_log",
+              "description": "An event log source.\n\nThis will consume events from the given event log with the given persistence id.",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "source",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "Eventing",
+          "longName": "Eventing",
+          "fullName": "cloudstate.Eventing",
+          "description": "Eventing configuration for a gRPC method.",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "in",
+              "description": "The event source in configuration.",
+              "label": "",
+              "type": "EventSource",
+              "longType": "EventSource",
+              "fullType": "cloudstate.EventSource",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "out",
+              "description": "The event destination out configuration.\n\nOptional, if unset, messages out will not be published anywhere.",
+              "label": "",
+              "type": "EventDestination",
+              "longType": "EventDestination",
+              "fullType": "cloudstate.EventDestination",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        }
+      ],
+      "services": []
+    },
+    {
+      "name": "cloudstate/legacy_entity_key.proto",
+      "description": "",
+      "package": "cloudstate",
+      "hasEnums": false,
+      "hasExtensions": true,
+      "hasMessages": false,
+      "hasServices": false,
+      "enums": [],
+      "extensions": [
+        {
+          "name": "legacy_entity_key",
+          "longName": ".google.protobuf.FieldOptions.legacy_entity_key",
+          "fullName": ".google.protobuf.FieldOptions.legacy_entity_key",
+          "description": "",
+          "label": "",
+          "type": "bool",
+          "longType": "bool",
+          "fullType": "bool",
+          "number": 50002,
+          "defaultValue": "",
+          "containingType": "FieldOptions",
+          "containingLongType": ".google.protobuf.FieldOptions",
+          "containingFullType": "google.protobuf.FieldOptions"
+        }
+      ],
+      "messages": [],
+      "services": []
+    },
+    {
+      "name": "google/api/annotations.proto",
+      "description": "",
+      "package": "google.api",
+      "hasEnums": false,
+      "hasExtensions": true,
+      "hasMessages": false,
+      "hasServices": false,
+      "enums": [],
+      "extensions": [
+        {
+          "name": "http",
+          "longName": ".google.protobuf.MethodOptions.http",
+          "fullName": ".google.protobuf.MethodOptions.http",
+          "description": "See `HttpRule`.",
+          "label": "",
+          "type": "HttpRule",
+          "longType": "HttpRule",
+          "fullType": "google.api.HttpRule",
+          "number": 72295728,
+          "defaultValue": "",
+          "containingType": "MethodOptions",
+          "containingLongType": ".google.protobuf.MethodOptions",
+          "containingFullType": "google.protobuf.MethodOptions"
+        }
+      ],
+      "messages": [],
+      "services": []
+    },
+    {
+      "name": "google/api/http.proto",
+      "description": "",
+      "package": "google.api",
+      "hasEnums": false,
+      "hasExtensions": false,
+      "hasMessages": true,
+      "hasServices": false,
+      "enums": [],
+      "extensions": [],
+      "messages": [
+        {
+          "name": "CustomHttpPattern",
+          "longName": "CustomHttpPattern",
+          "fullName": "google.api.CustomHttpPattern",
+          "description": "A custom pattern is used for defining custom HTTP verb.",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "kind",
+              "description": "The name of this custom HTTP verb.",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "path",
+              "description": "The path matched by this custom verb.",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "Http",
+          "longName": "Http",
+          "fullName": "google.api.Http",
+          "description": "Defines the HTTP configuration for an API service. It contains a list of\n[HttpRule][google.api.HttpRule], each specifying the mapping of an RPC method\nto one or more HTTP REST API methods.",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "rules",
+              "description": "A list of HTTP configuration rules that apply to individual API methods.\n\n**NOTE:** All service configuration rules follow \"last one wins\" order.",
+              "label": "repeated",
+              "type": "HttpRule",
+              "longType": "HttpRule",
+              "fullType": "google.api.HttpRule",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "fully_decode_reserved_expansion",
+              "description": "When set to true, URL path parameters will be fully URI-decoded except in\ncases of single segment matches in reserved expansion, where \"%2F\" will be\nleft encoded.\n\nThe default behavior is to not decode RFC 6570 reserved characters in multi\nsegment matches.",
+              "label": "",
+              "type": "bool",
+              "longType": "bool",
+              "fullType": "bool",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "HttpRule",
+          "longName": "HttpRule",
+          "fullName": "google.api.HttpRule",
+          "description": "# gRPC Transcoding\n\ngRPC Transcoding is a feature for mapping between a gRPC method and one or\nmore HTTP REST endpoints. It allows developers to build a single API service\nthat supports both gRPC APIs and REST APIs. Many systems, including [Google\nAPIs](https://github.com/googleapis/googleapis),\n[Cloud Endpoints](https://cloud.google.com/endpoints), [gRPC\nGateway](https://github.com/grpc-ecosystem/grpc-gateway),\nand [Envoy](https://github.com/envoyproxy/envoy) proxy support this feature\nand use it for large scale production services.\n\n`HttpRule` defines the schema of the gRPC/REST mapping. The mapping specifies\nhow different portions of the gRPC request message are mapped to the URL\npath, URL query parameters, and HTTP request body. It also controls how the\ngRPC response message is mapped to the HTTP response body. `HttpRule` is\ntypically specified as an `google.api.http` annotation on the gRPC method.\n\nEach mapping specifies a URL path template and an HTTP method. The path\ntemplate may refer to one or more fields in the gRPC request message, as long\nas each field is a non-repeated field with a primitive (non-message) type.\nThe path template controls how fields of the request message are mapped to\nthe URL path.\n\nExample:\n\n    service Messaging {\n      rpc GetMessage(GetMessageRequest) returns (Message) {\n        option (google.api.http) = {\n            get: \"/v1/{name=messages/*}\"\n        };\n      }\n    }\n    message GetMessageRequest {\n      string name = 1; // Mapped to URL path.\n    }\n    message Message {\n      string text = 1; // The resource content.\n    }\n\nThis enables an HTTP REST to gRPC mapping as below:\n\nHTTP | gRPC\n-----|-----\n`GET /v1/messages/123456`  | `GetMessage(name: \"messages/123456\")`\n\nAny fields in the request message which are not bound by the path template\nautomatically become HTTP query parameters if there is no HTTP request body.\nFor example:\n\n    service Messaging {\n      rpc GetMessage(GetMessageRequest) returns (Message) {\n        option (google.api.http) = {\n            get:\"/v1/messages/{message_id}\"\n        };\n      }\n    }\n    message GetMessageRequest {\n      message SubMessage {\n        string subfield = 1;\n      }\n      string message_id = 1; // Mapped to URL path.\n      int64 revision = 2;    // Mapped to URL query parameter `revision`.\n      SubMessage sub = 3;    // Mapped to URL query parameter `sub.subfield`.\n    }\n\nThis enables a HTTP JSON to RPC mapping as below:\n\nHTTP | gRPC\n-----|-----\n`GET /v1/messages/123456?revision=2\u0026sub.subfield=foo` |\n`GetMessage(message_id: \"123456\" revision: 2 sub: SubMessage(subfield:\n\"foo\"))`\n\nNote that fields which are mapped to URL query parameters must have a\nprimitive type or a repeated primitive type or a non-repeated message type.\nIn the case of a repeated type, the parameter can be repeated in the URL\nas `...?param=A\u0026param=B`. In the case of a message type, each field of the\nmessage is mapped to a separate parameter, such as\n`...?foo.a=A\u0026foo.b=B\u0026foo.c=C`.\n\nFor HTTP methods that allow a request body, the `body` field\nspecifies the mapping. Consider a REST update method on the\nmessage resource collection:\n\n    service Messaging {\n      rpc UpdateMessage(UpdateMessageRequest) returns (Message) {\n        option (google.api.http) = {\n          patch: \"/v1/messages/{message_id}\"\n          body: \"message\"\n        };\n      }\n    }\n    message UpdateMessageRequest {\n      string message_id = 1; // mapped to the URL\n      Message message = 2;   // mapped to the body\n    }\n\nThe following HTTP JSON to RPC mapping is enabled, where the\nrepresentation of the JSON in the request body is determined by\nprotos JSON encoding:\n\nHTTP | gRPC\n-----|-----\n`PATCH /v1/messages/123456 { \"text\": \"Hi!\" }` | `UpdateMessage(message_id:\n\"123456\" message { text: \"Hi!\" })`\n\nThe special name `*` can be used in the body mapping to define that\nevery field not bound by the path template should be mapped to the\nrequest body.  This enables the following alternative definition of\nthe update method:\n\n    service Messaging {\n      rpc UpdateMessage(Message) returns (Message) {\n        option (google.api.http) = {\n          patch: \"/v1/messages/{message_id}\"\n          body: \"*\"\n        };\n      }\n    }\n    message Message {\n      string message_id = 1;\n      string text = 2;\n    }\n\n\nThe following HTTP JSON to RPC mapping is enabled:\n\nHTTP | gRPC\n-----|-----\n`PATCH /v1/messages/123456 { \"text\": \"Hi!\" }` | `UpdateMessage(message_id:\n\"123456\" text: \"Hi!\")`\n\nNote that when using `*` in the body mapping, it is not possible to\nhave HTTP parameters, as all fields not bound by the path end in\nthe body. This makes this option more rarely used in practice when\ndefining REST APIs. The common usage of `*` is in custom methods\nwhich don't use the URL at all for transferring data.\n\nIt is possible to define multiple HTTP methods for one RPC by using\nthe `additional_bindings` option. Example:\n\n    service Messaging {\n      rpc GetMessage(GetMessageRequest) returns (Message) {\n        option (google.api.http) = {\n          get: \"/v1/messages/{message_id}\"\n          additional_bindings {\n            get: \"/v1/users/{user_id}/messages/{message_id}\"\n          }\n        };\n      }\n    }\n    message GetMessageRequest {\n      string message_id = 1;\n      string user_id = 2;\n    }\n\nThis enables the following two alternative HTTP JSON to RPC mappings:\n\nHTTP | gRPC\n-----|-----\n`GET /v1/messages/123456` | `GetMessage(message_id: \"123456\")`\n`GET /v1/users/me/messages/123456` | `GetMessage(user_id: \"me\" message_id:\n\"123456\")`\n\n## Rules for HTTP mapping\n\n1. Leaf request fields (recursive expansion nested messages in the request\n   message) are classified into three categories:\n   - Fields referred by the path template. They are passed via the URL path.\n   - Fields referred by the [HttpRule.body][google.api.HttpRule.body]. They are passed via the HTTP\n     request body.\n   - All other fields are passed via the URL query parameters, and the\n     parameter name is the field path in the request message. A repeated\n     field can be represented as multiple query parameters under the same\n     name.\n 2. If [HttpRule.body][google.api.HttpRule.body] is \"*\", there is no URL query parameter, all fields\n    are passed via URL path and HTTP request body.\n 3. If [HttpRule.body][google.api.HttpRule.body] is omitted, there is no HTTP request body, all\n    fields are passed via URL path and URL query parameters.\n\n### Path template syntax\n\n    Template = \"/\" Segments [ Verb ] ;\n    Segments = Segment { \"/\" Segment } ;\n    Segment  = \"*\" | \"**\" | LITERAL | Variable ;\n    Variable = \"{\" FieldPath [ \"=\" Segments ] \"}\" ;\n    FieldPath = IDENT { \".\" IDENT } ;\n    Verb     = \":\" LITERAL ;\n\nThe syntax `*` matches a single URL path segment. The syntax `**` matches\nzero or more URL path segments, which must be the last part of the URL path\nexcept the `Verb`.\n\nThe syntax `Variable` matches part of the URL path as specified by its\ntemplate. A variable template must not contain other variables. If a variable\nmatches a single path segment, its template may be omitted, e.g. `{var}`\nis equivalent to `{var=*}`.\n\nThe syntax `LITERAL` matches literal text in the URL path. If the `LITERAL`\ncontains any reserved character, such characters should be percent-encoded\nbefore the matching.\n\nIf a variable contains exactly one path segment, such as `\"{var}\"` or\n`\"{var=*}\"`, when such a variable is expanded into a URL path on the client\nside, all characters except `[-_.~0-9a-zA-Z]` are percent-encoded. The\nserver side does the reverse decoding. Such variables show up in the\n[Discovery\nDocument](https://developers.google.com/discovery/v1/reference/apis) as\n`{var}`.\n\nIf a variable contains multiple path segments, such as `\"{var=foo/*}\"`\nor `\"{var=**}\"`, when such a variable is expanded into a URL path on the\nclient side, all characters except `[-_.~/0-9a-zA-Z]` are percent-encoded.\nThe server side does the reverse decoding, except \"%2F\" and \"%2f\" are left\nunchanged. Such variables show up in the\n[Discovery\nDocument](https://developers.google.com/discovery/v1/reference/apis) as\n`{+var}`.\n\n## Using gRPC API Service Configuration\n\ngRPC API Service Configuration (service config) is a configuration language\nfor configuring a gRPC service to become a user-facing product. The\nservice config is simply the YAML representation of the `google.api.Service`\nproto message.\n\nAs an alternative to annotating your proto file, you can configure gRPC\ntranscoding in your service config YAML files. You do this by specifying a\n`HttpRule` that maps the gRPC method to a REST endpoint, achieving the same\neffect as the proto annotation. This can be particularly useful if you\nhave a proto that is reused in multiple services. Note that any transcoding\nspecified in the service config will override any matching transcoding\nconfiguration in the proto.\n\nExample:\n\n    http:\n      rules:\n        # Selects a gRPC method and applies HttpRule to it.\n        - selector: example.v1.Messaging.GetMessage\n          get: /v1/messages/{message_id}/{sub.subfield}\n\n## Special notes\n\nWhen gRPC Transcoding is used to map a gRPC to JSON REST endpoints, the\nproto to JSON conversion must follow the [proto3\nspecification](https://developers.google.com/protocol-buffers/docs/proto3#json).\n\nWhile the single segment variable follows the semantics of\n[RFC 6570](https://tools.ietf.org/html/rfc6570) Section 3.2.2 Simple String\nExpansion, the multi segment variable **does not** follow RFC 6570 Section\n3.2.3 Reserved Expansion. The reason is that the Reserved Expansion\ndoes not expand special characters like `?` and `#`, which would lead\nto invalid URLs. As the result, gRPC Transcoding uses a custom encoding\nfor multi segment variables.\n\nThe path variables **must not** refer to any repeated or mapped field,\nbecause client libraries are not capable of handling such variable expansion.\n\nThe path variables **must not** capture the leading \"/\" character. The reason\nis that the most common use case \"{var}\" does not capture the leading \"/\"\ncharacter. For consistency, all path variables must share the same behavior.\n\nRepeated message fields must not be mapped to URL query parameters, because\nno client library can support such complicated mapping.\n\nIf an API needs to use a JSON array for request or response body, it can map\nthe request or response body to a repeated field. However, some gRPC\nTranscoding implementations may not support this feature.",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "selector",
+              "description": "Selects a method to which this rule applies.\n\nRefer to [selector][google.api.DocumentationRule.selector] for syntax details.",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "get",
+              "description": "Maps to HTTP GET. Used for listing and getting information about\nresources.",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "pattern",
+              "defaultValue": ""
+            },
+            {
+              "name": "put",
+              "description": "Maps to HTTP PUT. Used for replacing a resource.",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "pattern",
+              "defaultValue": ""
+            },
+            {
+              "name": "post",
+              "description": "Maps to HTTP POST. Used for creating a resource or performing an action.",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "pattern",
+              "defaultValue": ""
+            },
+            {
+              "name": "delete",
+              "description": "Maps to HTTP DELETE. Used for deleting a resource.",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "pattern",
+              "defaultValue": ""
+            },
+            {
+              "name": "patch",
+              "description": "Maps to HTTP PATCH. Used for updating a resource.",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "pattern",
+              "defaultValue": ""
+            },
+            {
+              "name": "custom",
+              "description": "The custom pattern is used for specifying an HTTP method that is not\nincluded in the `pattern` field, such as HEAD, or \"*\" to leave the\nHTTP method unspecified for this rule. The wild-card rule is useful\nfor services that provide content to Web (HTML) clients.",
+              "label": "",
+              "type": "CustomHttpPattern",
+              "longType": "CustomHttpPattern",
+              "fullType": "google.api.CustomHttpPattern",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "pattern",
+              "defaultValue": ""
+            },
+            {
+              "name": "body",
+              "description": "The name of the request field whose value is mapped to the HTTP request\nbody, or `*` for mapping all request fields not captured by the path\npattern to the HTTP body, or omitted for not having any HTTP request body.\n\nNOTE: the referred field must be present at the top-level of the request\nmessage type.",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "response_body",
+              "description": "Optional. The name of the response field whose value is mapped to the HTTP\nresponse body. When omitted, the entire response message will be used\nas the HTTP response body.\n\nNOTE: The referred field must be present at the top-level of the response\nmessage type.",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "additional_bindings",
+              "description": "Additional HTTP bindings for the selector. Nested bindings must\nnot contain an `additional_bindings` field themselves (that is,\nthe nesting may only be one level deep).",
+              "label": "repeated",
+              "type": "HttpRule",
+              "longType": "HttpRule",
+              "fullType": "google.api.HttpRule",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        }
+      ],
+      "services": []
+    },
+    {
+      "name": "google/api/httpbody.proto",
+      "description": "",
+      "package": "google.api",
+      "hasEnums": false,
+      "hasExtensions": false,
+      "hasMessages": true,
+      "hasServices": false,
+      "enums": [],
+      "extensions": [],
+      "messages": [
+        {
+          "name": "HttpBody",
+          "longName": "HttpBody",
+          "fullName": "google.api.HttpBody",
+          "description": "Message that represents an arbitrary HTTP body. It should only be used for\npayload formats that can't be represented as JSON, such as raw binary or\nan HTML page.\n\n\nThis message can be used both in streaming and non-streaming API methods in\nthe request as well as the response.\n\nIt can be used as a top-level request field, which is convenient if one\nwants to extract parameters from either the URL or HTTP template into the\nrequest fields and also want access to the raw HTTP body.\n\nExample:\n\n    message GetResourceRequest {\n      // A unique request id.\n      string request_id = 1;\n\n      // The raw HTTP body is bound to this field.\n      google.api.HttpBody http_body = 2;\n    }\n\n    service ResourceService {\n      rpc GetResource(GetResourceRequest) returns (google.api.HttpBody);\n      rpc UpdateResource(google.api.HttpBody) returns\n      (google.protobuf.Empty);\n    }\n\nExample with streaming methods:\n\n    service CaldavService {\n      rpc GetCalendar(stream google.api.HttpBody)\n        returns (stream google.api.HttpBody);\n      rpc UpdateCalendar(stream google.api.HttpBody)\n        returns (stream google.api.HttpBody);\n    }\n\nUse of this type only changes how the request and response bodies are\nhandled, all other features will continue to work unchanged.",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "content_type",
+              "description": "The HTTP Content-Type header value specifying the content type of the body.",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "data",
+              "description": "The HTTP request/response body as raw binary.",
+              "label": "",
+              "type": "bytes",
+              "longType": "bytes",
+              "fullType": "bytes",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "extensions",
+              "description": "Application specific response metadata. Must be set in the first response\nfor streaming APIs.",
+              "label": "repeated",
+              "type": "Any",
+              "longType": "google.protobuf.Any",
+              "fullType": "google.protobuf.Any",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        }
+      ],
+      "services": []
+    },
+    {
+      "name": "cloudstate/action.proto",
+      "description": "",
+      "package": "cloudstate.action",
+      "hasEnums": false,
+      "hasExtensions": false,
+      "hasMessages": true,
+      "hasServices": true,
+      "enums": [],
+      "extensions": [],
+      "messages": [
+        {
+          "name": "ActionCommand",
+          "longName": "ActionCommand",
+          "fullName": "cloudstate.action.ActionCommand",
+          "description": "An action command.\n\nFor unary and streamed out calls, the service name, command name and payload will always be set.\n\nFor streamed in and duplex streamed calls, the first command sent will just contain the service\nname and command name, but no payload. This will indicate that the action has been invoked.\nSubsequent commands on the stream will only have the payload set, the service name and command\nname will not be set.",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "service_name",
+              "description": "The name of the service this action is on.",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "name",
+              "description": "Command name",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "payload",
+              "description": "The command payload.",
+              "label": "",
+              "type": "Any",
+              "longType": "google.protobuf.Any",
+              "fullType": "google.protobuf.Any",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "metadata",
+              "description": "Metadata",
+              "label": "",
+              "type": "Metadata",
+              "longType": "cloudstate.Metadata",
+              "fullType": "cloudstate.Metadata",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "ActionResponse",
+          "longName": "ActionResponse",
+          "fullName": "cloudstate.action.ActionResponse",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "failure",
+              "description": "",
+              "label": "",
+              "type": "Failure",
+              "longType": "cloudstate.Failure",
+              "fullType": "cloudstate.Failure",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "response",
+              "defaultValue": ""
+            },
+            {
+              "name": "reply",
+              "description": "",
+              "label": "",
+              "type": "Reply",
+              "longType": "cloudstate.Reply",
+              "fullType": "cloudstate.Reply",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "response",
+              "defaultValue": ""
+            },
+            {
+              "name": "forward",
+              "description": "",
+              "label": "",
+              "type": "Forward",
+              "longType": "cloudstate.Forward",
+              "fullType": "cloudstate.Forward",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "response",
+              "defaultValue": ""
+            },
+            {
+              "name": "side_effects",
+              "description": "",
+              "label": "repeated",
+              "type": "SideEffect",
+              "longType": "cloudstate.SideEffect",
+              "fullType": "cloudstate.SideEffect",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        }
+      ],
+      "services": [
+        {
+          "name": "ActionProtocol",
+          "longName": "ActionProtocol",
+          "fullName": "cloudstate.action.ActionProtocol",
+          "description": "",
+          "methods": [
+            {
+              "name": "handleUnary",
+              "description": "Handle a unary command.\n\nThe input command will contain the service name, command name, request metadata and the command\npayload. The reply may contain a direct reply, a forward or a failure, and it may contain many\nside effects.",
+              "requestType": "ActionCommand",
+              "requestLongType": "ActionCommand",
+              "requestFullType": "cloudstate.action.ActionCommand",
+              "requestStreaming": false,
+              "responseType": "ActionResponse",
+              "responseLongType": "ActionResponse",
+              "responseFullType": "cloudstate.action.ActionResponse",
+              "responseStreaming": false
+            },
+            {
+              "name": "handleStreamedIn",
+              "description": "Handle a streamed in command.\n\nThe first message in will contain the request metadata, including the service name and command\nname. It will not have an associated payload set. This will be followed by zero to many messages\nin with a payload, but no service name or command name set.\n\nIf the underlying transport supports per stream metadata, rather than per message metadata, then\nthat metadata will only be included in the metadata of the first message. In contrast, if the\nunderlying transport supports per message metadata, there will be no metadata on the first message,\nthe metadata will instead be found on each subsequent message.\n\nThe semantics of stream closure in this protocol map 1:1 with the semantics of gRPC stream closure,\nthat is, when the client closes the stream, the stream is considered half closed, and the server\nshould eventually, but not necessarily immediately, send a response message with a status code and\ntrailers.\n\nIf however the server sends a response message before the client closes the stream, the stream is\ncompletely closed, and the client should handle this and stop sending more messages.\n\nEither the client or the server may cancel the stream at any time, cancellation is indicated\nthrough an HTTP2 stream RST message.",
+              "requestType": "ActionCommand",
+              "requestLongType": "ActionCommand",
+              "requestFullType": "cloudstate.action.ActionCommand",
+              "requestStreaming": true,
+              "responseType": "ActionResponse",
+              "responseLongType": "ActionResponse",
+              "responseFullType": "cloudstate.action.ActionResponse",
+              "responseStreaming": false
+            },
+            {
+              "name": "handleStreamedOut",
+              "description": "Handle a streamed out command.\n\nThe input command will contain the service name, command name, request metadata and the command\npayload. Zero or more replies may be sent, each containing either a direct reply, a forward or a\nfailure, and each may contain many side effects. The stream to the client will be closed when the\nthis stream is closed, with the same status as this stream is closed with.\n\nEither the client or the server may cancel the stream at any time, cancellation is indicated\nthrough an HTTP2 stream RST message.",
+              "requestType": "ActionCommand",
+              "requestLongType": "ActionCommand",
+              "requestFullType": "cloudstate.action.ActionCommand",
+              "requestStreaming": false,
+              "responseType": "ActionResponse",
+              "responseLongType": "ActionResponse",
+              "responseFullType": "cloudstate.action.ActionResponse",
+              "responseStreaming": true
+            },
+            {
+              "name": "handleStreamed",
+              "description": "Handle a full duplex streamed command.\n\nThe first message in will contain the request metadata, including the service name and command\nname. It will not have an associated payload set. This will be followed by zero to many messages\nin with a payload, but no service name or command name set.\n\nZero or more replies may be sent, each containing either a direct reply, a forward or a failure,\nand each may contain many side effects.\n\nIf the underlying transport supports per stream metadata, rather than per message metadata, then\nthat metadata will only be included in the metadata of the first message. In contrast, if the\nunderlying transport supports per message metadata, there will be no metadata on the first message,\nthe metadata will instead be found on each subsequent message.\n\nThe semantics of stream closure in this protocol map 1:1 with the semantics of gRPC stream closure,\nthat is, when the client closes the stream, the stream is considered half closed, and the server\nshould eventually, but not necessarily immediately, close the stream with a status code and\ntrailers.\n\nIf however the server closes the stream with a status code and trailers, the stream is immediately\nconsidered completely closed, and no further messages sent by the client will be handled by the\nserver.\n\nEither the client or the server may cancel the stream at any time, cancellation is indicated\nthrough an HTTP2 stream RST message.",
+              "requestType": "ActionCommand",
+              "requestLongType": "ActionCommand",
+              "requestFullType": "cloudstate.action.ActionCommand",
+              "requestStreaming": true,
+              "responseType": "ActionResponse",
+              "responseLongType": "ActionResponse",
+              "responseFullType": "cloudstate.action.ActionResponse",
+              "responseStreaming": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "cloudstate/crdt.proto",
+      "description": "",
+      "package": "cloudstate.crdt",
+      "hasEnums": true,
+      "hasExtensions": false,
+      "hasMessages": true,
+      "hasServices": true,
+      "enums": [
+        {
+          "name": "CrdtClock",
+          "longName": "CrdtClock",
+          "fullName": "cloudstate.crdt.CrdtClock",
+          "description": "",
+          "values": [
+            {
+              "name": "DEFAULT",
+              "number": "0",
+              "description": "Use the default clock for deciding the last write, which is the system clocks\nmilliseconds since epoch."
+            },
+            {
+              "name": "REVERSE",
+              "number": "1",
+              "description": "Use the reverse semantics with the default clock, to enable first write wins."
+            },
+            {
+              "name": "CUSTOM",
+              "number": "2",
+              "description": "Use a custom clock value, set using custom_clock_value."
+            },
+            {
+              "name": "CUSTOM_AUTO_INCREMENT",
+              "number": "3",
+              "description": "Use a custom clock value, but automatically increment it by one if the clock\nvalue from the current value is equal to the custom_clock_value."
+            }
+          ]
+        },
+        {
+          "name": "CrdtWriteConsistency",
+          "longName": "CrdtWriteConsistency",
+          "fullName": "cloudstate.crdt.CrdtWriteConsistency",
+          "description": "",
+          "values": [
+            {
+              "name": "LOCAL",
+              "number": "0",
+              "description": ""
+            },
+            {
+              "name": "MAJORITY",
+              "number": "1",
+              "description": ""
+            },
+            {
+              "name": "ALL",
+              "number": "2",
+              "description": ""
+            }
+          ]
+        }
+      ],
+      "extensions": [],
+      "messages": [
+        {
+          "name": "CrdtDelete",
+          "longName": "CrdtDelete",
+          "fullName": "cloudstate.crdt.CrdtDelete",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": false,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": []
+        },
+        {
+          "name": "CrdtDelta",
+          "longName": "CrdtDelta",
+          "fullName": "cloudstate.crdt.CrdtDelta",
+          "description": "A CRDT delta\n\nDeltas only carry the change in value to be applied to the current (possibly empty) state.",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "gcounter",
+              "description": "",
+              "label": "",
+              "type": "GCounterDelta",
+              "longType": "GCounterDelta",
+              "fullType": "cloudstate.crdt.GCounterDelta",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "delta",
+              "defaultValue": ""
+            },
+            {
+              "name": "pncounter",
+              "description": "",
+              "label": "",
+              "type": "PNCounterDelta",
+              "longType": "PNCounterDelta",
+              "fullType": "cloudstate.crdt.PNCounterDelta",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "delta",
+              "defaultValue": ""
+            },
+            {
+              "name": "gset",
+              "description": "",
+              "label": "",
+              "type": "GSetDelta",
+              "longType": "GSetDelta",
+              "fullType": "cloudstate.crdt.GSetDelta",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "delta",
+              "defaultValue": ""
+            },
+            {
+              "name": "orset",
+              "description": "",
+              "label": "",
+              "type": "ORSetDelta",
+              "longType": "ORSetDelta",
+              "fullType": "cloudstate.crdt.ORSetDelta",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "delta",
+              "defaultValue": ""
+            },
+            {
+              "name": "lwwregister",
+              "description": "",
+              "label": "",
+              "type": "LWWRegisterDelta",
+              "longType": "LWWRegisterDelta",
+              "fullType": "cloudstate.crdt.LWWRegisterDelta",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "delta",
+              "defaultValue": ""
+            },
+            {
+              "name": "flag",
+              "description": "",
+              "label": "",
+              "type": "FlagDelta",
+              "longType": "FlagDelta",
+              "fullType": "cloudstate.crdt.FlagDelta",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "delta",
+              "defaultValue": ""
+            },
+            {
+              "name": "ormap",
+              "description": "",
+              "label": "",
+              "type": "ORMapDelta",
+              "longType": "ORMapDelta",
+              "fullType": "cloudstate.crdt.ORMapDelta",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "delta",
+              "defaultValue": ""
+            },
+            {
+              "name": "vote",
+              "description": "",
+              "label": "",
+              "type": "VoteDelta",
+              "longType": "VoteDelta",
+              "fullType": "cloudstate.crdt.VoteDelta",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "delta",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "CrdtInit",
+          "longName": "CrdtInit",
+          "fullName": "cloudstate.crdt.CrdtInit",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "service_name",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "entity_id",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "delta",
+              "description": "",
+              "label": "",
+              "type": "CrdtDelta",
+              "longType": "CrdtDelta",
+              "fullType": "cloudstate.crdt.CrdtDelta",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "CrdtReply",
+          "longName": "CrdtReply",
+          "fullName": "cloudstate.crdt.CrdtReply",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "command_id",
+              "description": "",
+              "label": "",
+              "type": "int64",
+              "longType": "int64",
+              "fullType": "int64",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "client_action",
+              "description": "",
+              "label": "",
+              "type": "ClientAction",
+              "longType": "cloudstate.ClientAction",
+              "fullType": "cloudstate.ClientAction",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "side_effects",
+              "description": "",
+              "label": "repeated",
+              "type": "SideEffect",
+              "longType": "cloudstate.SideEffect",
+              "fullType": "cloudstate.SideEffect",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "state_action",
+              "description": "",
+              "label": "",
+              "type": "CrdtStateAction",
+              "longType": "CrdtStateAction",
+              "fullType": "cloudstate.crdt.CrdtStateAction",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "streamed",
+              "description": "If the request was streamed, setting this to true indicates that the command should\nbe handled as a stream. Subsequently, the user function may send CrdtStreamedMessage,\nand a CrdtStreamCancelled message will be sent if the stream is cancelled (though\nnot if the a CrdtStreamedMessage ends the stream first).",
+              "label": "",
+              "type": "bool",
+              "longType": "bool",
+              "fullType": "bool",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "CrdtStateAction",
+          "longName": "CrdtStateAction",
+          "fullName": "cloudstate.crdt.CrdtStateAction",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "update",
+              "description": "",
+              "label": "",
+              "type": "CrdtDelta",
+              "longType": "CrdtDelta",
+              "fullType": "cloudstate.crdt.CrdtDelta",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "action",
+              "defaultValue": ""
+            },
+            {
+              "name": "delete",
+              "description": "",
+              "label": "",
+              "type": "CrdtDelete",
+              "longType": "CrdtDelete",
+              "fullType": "cloudstate.crdt.CrdtDelete",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "action",
+              "defaultValue": ""
+            },
+            {
+              "name": "write_consistency",
+              "description": "",
+              "label": "",
+              "type": "CrdtWriteConsistency",
+              "longType": "CrdtWriteConsistency",
+              "fullType": "cloudstate.crdt.CrdtWriteConsistency",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "CrdtStreamCancelledResponse",
+          "longName": "CrdtStreamCancelledResponse",
+          "fullName": "cloudstate.crdt.CrdtStreamCancelledResponse",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "command_id",
+              "description": "",
+              "label": "",
+              "type": "int64",
+              "longType": "int64",
+              "fullType": "int64",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "side_effects",
+              "description": "",
+              "label": "repeated",
+              "type": "SideEffect",
+              "longType": "cloudstate.SideEffect",
+              "fullType": "cloudstate.SideEffect",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "state_action",
+              "description": "",
+              "label": "",
+              "type": "CrdtStateAction",
+              "longType": "CrdtStateAction",
+              "fullType": "cloudstate.crdt.CrdtStateAction",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "CrdtStreamIn",
+          "longName": "CrdtStreamIn",
+          "fullName": "cloudstate.crdt.CrdtStreamIn",
+          "description": "Message for the Crdt handle stream in.",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "init",
+              "description": "Always sent first, and only once.",
+              "label": "",
+              "type": "CrdtInit",
+              "longType": "CrdtInit",
+              "fullType": "cloudstate.crdt.CrdtInit",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "message",
+              "defaultValue": ""
+            },
+            {
+              "name": "delta",
+              "description": "A delta to be applied to the current state. May be sent at any time.",
+              "label": "",
+              "type": "CrdtDelta",
+              "longType": "CrdtDelta",
+              "fullType": "cloudstate.crdt.CrdtDelta",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "message",
+              "defaultValue": ""
+            },
+            {
+              "name": "delete",
+              "description": "Delete the entity. May be sent at any time. The user function should clear its state when it receives this.\nA proxy may decide to terminate the stream after sending this.",
+              "label": "",
+              "type": "CrdtDelete",
+              "longType": "CrdtDelete",
+              "fullType": "cloudstate.crdt.CrdtDelete",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "message",
+              "defaultValue": ""
+            },
+            {
+              "name": "command",
+              "description": "A command, may be sent at any time.",
+              "label": "",
+              "type": "Command",
+              "longType": "cloudstate.Command",
+              "fullType": "cloudstate.Command",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "message",
+              "defaultValue": ""
+            },
+            {
+              "name": "stream_cancelled",
+              "description": "A stream has been cancelled.",
+              "label": "",
+              "type": "StreamCancelled",
+              "longType": "cloudstate.StreamCancelled",
+              "fullType": "cloudstate.StreamCancelled",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "message",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "CrdtStreamOut",
+          "longName": "CrdtStreamOut",
+          "fullName": "cloudstate.crdt.CrdtStreamOut",
+          "description": "Message for the Crdt handle stream out.",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "reply",
+              "description": "A reply to an incoming command. Either one reply, or one failure, must be sent in response to each command.",
+              "label": "",
+              "type": "CrdtReply",
+              "longType": "CrdtReply",
+              "fullType": "cloudstate.crdt.CrdtReply",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "message",
+              "defaultValue": ""
+            },
+            {
+              "name": "streamed_message",
+              "description": "A streamed message.",
+              "label": "",
+              "type": "CrdtStreamedMessage",
+              "longType": "CrdtStreamedMessage",
+              "fullType": "cloudstate.crdt.CrdtStreamedMessage",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "message",
+              "defaultValue": ""
+            },
+            {
+              "name": "stream_cancelled_response",
+              "description": "A stream cancelled response, may be sent in response to stream_cancelled.",
+              "label": "",
+              "type": "CrdtStreamCancelledResponse",
+              "longType": "CrdtStreamCancelledResponse",
+              "fullType": "cloudstate.crdt.CrdtStreamCancelledResponse",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "message",
+              "defaultValue": ""
+            },
+            {
+              "name": "failure",
+              "description": "A failure. Either sent in response to a command, or sent if some other error occurs.",
+              "label": "",
+              "type": "Failure",
+              "longType": "cloudstate.Failure",
+              "fullType": "cloudstate.Failure",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "message",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "CrdtStreamedMessage",
+          "longName": "CrdtStreamedMessage",
+          "fullName": "cloudstate.crdt.CrdtStreamedMessage",
+          "description": "May be sent as often as liked if the first reply set streamed to true",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "command_id",
+              "description": "",
+              "label": "",
+              "type": "int64",
+              "longType": "int64",
+              "fullType": "int64",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "client_action",
+              "description": "",
+              "label": "",
+              "type": "ClientAction",
+              "longType": "cloudstate.ClientAction",
+              "fullType": "cloudstate.ClientAction",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "side_effects",
+              "description": "",
+              "label": "repeated",
+              "type": "SideEffect",
+              "longType": "cloudstate.SideEffect",
+              "fullType": "cloudstate.SideEffect",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "end_stream",
+              "description": "Indicates the stream should end, no messages may be sent for this command after this.",
+              "label": "",
+              "type": "bool",
+              "longType": "bool",
+              "fullType": "bool",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "FlagDelta",
+          "longName": "FlagDelta",
+          "fullName": "cloudstate.crdt.FlagDelta",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "value",
+              "description": "",
+              "label": "",
+              "type": "bool",
+              "longType": "bool",
+              "fullType": "bool",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "GCounterDelta",
+          "longName": "GCounterDelta",
+          "fullName": "cloudstate.crdt.GCounterDelta",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "increment",
+              "description": "",
+              "label": "",
+              "type": "uint64",
+              "longType": "uint64",
+              "fullType": "uint64",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "GSetDelta",
+          "longName": "GSetDelta",
+          "fullName": "cloudstate.crdt.GSetDelta",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "added",
+              "description": "",
+              "label": "repeated",
+              "type": "Any",
+              "longType": "google.protobuf.Any",
+              "fullType": "google.protobuf.Any",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "LWWRegisterDelta",
+          "longName": "LWWRegisterDelta",
+          "fullName": "cloudstate.crdt.LWWRegisterDelta",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "value",
+              "description": "",
+              "label": "",
+              "type": "Any",
+              "longType": "google.protobuf.Any",
+              "fullType": "google.protobuf.Any",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "clock",
+              "description": "",
+              "label": "",
+              "type": "CrdtClock",
+              "longType": "CrdtClock",
+              "fullType": "cloudstate.crdt.CrdtClock",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "custom_clock_value",
+              "description": "",
+              "label": "",
+              "type": "int64",
+              "longType": "int64",
+              "fullType": "int64",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "ORMapDelta",
+          "longName": "ORMapDelta",
+          "fullName": "cloudstate.crdt.ORMapDelta",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "cleared",
+              "description": "",
+              "label": "",
+              "type": "bool",
+              "longType": "bool",
+              "fullType": "bool",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "removed",
+              "description": "",
+              "label": "repeated",
+              "type": "Any",
+              "longType": "google.protobuf.Any",
+              "fullType": "google.protobuf.Any",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "updated",
+              "description": "",
+              "label": "repeated",
+              "type": "ORMapEntryDelta",
+              "longType": "ORMapEntryDelta",
+              "fullType": "cloudstate.crdt.ORMapEntryDelta",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "added",
+              "description": "",
+              "label": "repeated",
+              "type": "ORMapEntryDelta",
+              "longType": "ORMapEntryDelta",
+              "fullType": "cloudstate.crdt.ORMapEntryDelta",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "ORMapEntryDelta",
+          "longName": "ORMapEntryDelta",
+          "fullName": "cloudstate.crdt.ORMapEntryDelta",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "key",
+              "description": "The entry key.",
+              "label": "",
+              "type": "Any",
+              "longType": "google.protobuf.Any",
+              "fullType": "google.protobuf.Any",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "delta",
+              "description": "",
+              "label": "",
+              "type": "CrdtDelta",
+              "longType": "CrdtDelta",
+              "fullType": "cloudstate.crdt.CrdtDelta",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "ORSetDelta",
+          "longName": "ORSetDelta",
+          "fullName": "cloudstate.crdt.ORSetDelta",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "cleared",
+              "description": "If cleared is set, the set must be cleared before added is processed.",
+              "label": "",
+              "type": "bool",
+              "longType": "bool",
+              "fullType": "bool",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "removed",
+              "description": "",
+              "label": "repeated",
+              "type": "Any",
+              "longType": "google.protobuf.Any",
+              "fullType": "google.protobuf.Any",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "added",
+              "description": "",
+              "label": "repeated",
+              "type": "Any",
+              "longType": "google.protobuf.Any",
+              "fullType": "google.protobuf.Any",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "PNCounterDelta",
+          "longName": "PNCounterDelta",
+          "fullName": "cloudstate.crdt.PNCounterDelta",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "change",
+              "description": "",
+              "label": "",
+              "type": "sint64",
+              "longType": "sint64",
+              "fullType": "sint64",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "VoteDelta",
+          "longName": "VoteDelta",
+          "fullName": "cloudstate.crdt.VoteDelta",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "self_vote",
+              "description": "Set by the proxy initially or when the vote has changed.\nOnly set by the user function to change the node's current vote.",
+              "label": "",
+              "type": "bool",
+              "longType": "bool",
+              "fullType": "bool",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "votes_for",
+              "description": "Only set by the proxy initially or when the vote has changed.\nIgnored by the proxy when set by the user function.",
+              "label": "",
+              "type": "int32",
+              "longType": "int32",
+              "fullType": "int32",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "total_voters",
+              "description": "Only set by the proxy initially or when the vote has changed.\nIgnored by the proxy when set by the user function.",
+              "label": "",
+              "type": "int32",
+              "longType": "int32",
+              "fullType": "int32",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        }
+      ],
+      "services": [
+        {
+          "name": "Crdt",
+          "longName": "Crdt",
+          "fullName": "cloudstate.crdt.Crdt",
+          "description": "CRDT Protocol\n\nNote that while this protocol provides support for CRDTs, the data types sent across the protocol are not CRDTs\nthemselves. It is the responsibility of the CloudState proxy to implement the CRDTs, merge functions, vector clocks\netc, not the user function. The user function need only hold the current value in memory, and this protocol sends\ndeltas to the user function to update its in memory value as necessary. These deltas have no way of dealing with\nconflicts, hence it important that the CloudState proxy always know what the state of the user functions in memory\nvalue is before sending a delta. If the CloudState proxy is not sure what the value is, eg because it has just sent\nan operation to the user function may have updated its value as a result, the proxy should wait until it gets the\nresult of the operation back, to ensure its in memory value is in sync with the user function so that it can\ncalculate deltas that won't conflict.\n\nThe user function is expected to update its value both as the result of receiving deltas from the proxy, as well as\nwhen it sends deltas. It must not update its value in any other circumstance, updating the value in response to any\nother stimuli risks the value becoming out of sync with the CloudState proxy. The user function will not be sent\nback deltas as a result of its own changes.\n\nAn invocation of handle is made for each entity being handled. It may be kept alive and used to handle multiple\ncommands, and may subsequently be terminated if that entity becomes idle, or if the entity is deleted. Shutdown is\ntypically done for efficiency reasons, unless the entity is explicitly deleted, a terminated handle stream does not\nmean the proxy has stopped tracking the state of the entity in its memory.\n\nSpecial care must be taken when working with maps and sets. The keys/values are google.protobuf.Any, which encodes\nthe value as binary protobuf, however, serialized protobufs are not stable, two semantically equal objects could\nencode to different bytes. It is the responsibility of the user function to ensure that stable encodings are used.",
+          "methods": [
+            {
+              "name": "handle",
+              "description": "After invoking handle, the first message sent will always be a CrdtInit message, containing the entity ID, and,\nif it exists or is available, a delta for the inital state of the entity. After that, one or more commands may\nbe sent, as well as deltas as they arrive.\n\nThe user function must respond with one reply per command in. They do not necessarily have to be sent in the same\norder that the commands were sent, the command ID is used to correlate commands to replies.",
+              "requestType": "CrdtStreamIn",
+              "requestLongType": "CrdtStreamIn",
+              "requestFullType": "cloudstate.crdt.CrdtStreamIn",
+              "requestStreaming": true,
+              "responseType": "CrdtStreamOut",
+              "responseLongType": "CrdtStreamOut",
+              "responseFullType": "cloudstate.crdt.CrdtStreamOut",
+              "responseStreaming": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "cloudstate/entity.proto",
+      "description": "",
+      "package": "cloudstate",
+      "hasEnums": false,
+      "hasExtensions": false,
+      "hasMessages": true,
+      "hasServices": true,
+      "enums": [],
+      "extensions": [],
+      "messages": [
+        {
+          "name": "ClientAction",
+          "longName": "ClientAction",
+          "fullName": "cloudstate.ClientAction",
+          "description": "An action for the client",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "reply",
+              "description": "Send a reply",
+              "label": "",
+              "type": "Reply",
+              "longType": "Reply",
+              "fullType": "cloudstate.Reply",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "action",
+              "defaultValue": ""
+            },
+            {
+              "name": "forward",
+              "description": "Forward to another entity",
+              "label": "",
+              "type": "Forward",
+              "longType": "Forward",
+              "fullType": "cloudstate.Forward",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "action",
+              "defaultValue": ""
+            },
+            {
+              "name": "failure",
+              "description": "Send a failure to the client",
+              "label": "",
+              "type": "Failure",
+              "longType": "Failure",
+              "fullType": "cloudstate.Failure",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "action",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "Command",
+          "longName": "Command",
+          "fullName": "cloudstate.Command",
+          "description": "A command. For each command received, a reply must be sent with a matching command id.",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "entity_id",
+              "description": "The ID of the entity.",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "id",
+              "description": "A command id.",
+              "label": "",
+              "type": "int64",
+              "longType": "int64",
+              "fullType": "int64",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "name",
+              "description": "Command name",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "payload",
+              "description": "The command payload.",
+              "label": "",
+              "type": "Any",
+              "longType": "google.protobuf.Any",
+              "fullType": "google.protobuf.Any",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "streamed",
+              "description": "Whether the command is streamed or not.",
+              "label": "",
+              "type": "bool",
+              "longType": "bool",
+              "fullType": "bool",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "metadata",
+              "description": "The command metadata.\n\nNot all transports support per message metadata, for example, gRPC doesn't. The Cloudstate proxy MAY include\nmetadata from other locations in this case, for example, in gRPC, a unary call MAY have the HTTP request headers\nattached to the command, while a streamed call MAY have the HTTP request headers attached as the metadata for\neither the first command, or every command. This specification leaves this behavior undefined.",
+              "label": "",
+              "type": "Metadata",
+              "longType": "Metadata",
+              "fullType": "cloudstate.Metadata",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "Entity",
+          "longName": "Entity",
+          "fullName": "cloudstate.Entity",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "entity_type",
+              "description": "The type of entity. By convention, this should be a fully qualified entity protocol grpc\nservice name, for example, cloudstate.eventsourced.EventSourced.",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "service_name",
+              "description": "The name of the service to load from the protobuf file.",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "persistence_id",
+              "description": "The ID to namespace state by. How this is used depends on the type of entity, for example,\nevent sourced entities will prefix this to the persistence id.",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "passivation_strategy",
+              "description": "The passivation strategy for the entity.",
+              "label": "",
+              "type": "EntityPassivationStrategy",
+              "longType": "EntityPassivationStrategy",
+              "fullType": "cloudstate.EntityPassivationStrategy",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "EntityPassivationStrategy",
+          "longName": "EntityPassivationStrategy",
+          "fullName": "cloudstate.EntityPassivationStrategy",
+          "description": "The semantics is to provide a flexible way for entity user functions to configure the passivation strategy.\nThis strategy is sent to the proxy at discovery time allowing the proxy to configure the corresponding entities.\nThe only passivation strategy supported is the timeout strategy and configuring this is optional for the entity.\nIf an entity user function does not configure the passivation strategy the proxy uses its fallback default value.\n\nThe passivation strategy for the entity user function.",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "timeout",
+              "description": "the timeout passivation strategy.",
+              "label": "",
+              "type": "TimeoutPassivationStrategy",
+              "longType": "TimeoutPassivationStrategy",
+              "fullType": "cloudstate.TimeoutPassivationStrategy",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "strategy",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "EntitySpec",
+          "longName": "EntitySpec",
+          "fullName": "cloudstate.EntitySpec",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "proto",
+              "description": "This should be the Descriptors.FileDescriptorSet in proto serialized from as generated by:\nprotoc --include_imports \\\n--proto_path=\u003cproto file directory\u003e \\\n--descriptor_set_out=user-function.desc \\\n\u003cpath to .proto files\u003e",
+              "label": "",
+              "type": "bytes",
+              "longType": "bytes",
+              "fullType": "bytes",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "entities",
+              "description": "The entities being served.",
+              "label": "repeated",
+              "type": "Entity",
+              "longType": "Entity",
+              "fullType": "cloudstate.Entity",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "service_info",
+              "description": "Optional information about the service.",
+              "label": "",
+              "type": "ServiceInfo",
+              "longType": "ServiceInfo",
+              "fullType": "cloudstate.ServiceInfo",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "Failure",
+          "longName": "Failure",
+          "fullName": "cloudstate.Failure",
+          "description": "A failure reply. If this is returned, it will be translated into a gRPC unknown\nerror with the corresponding description if supplied.",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "command_id",
+              "description": "The id of the command being replied to. Must match the input command.",
+              "label": "",
+              "type": "int64",
+              "longType": "int64",
+              "fullType": "int64",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "description",
+              "description": "A description of the error.",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "restart",
+              "description": "Whether this failure should trigger an entity restart.",
+              "label": "",
+              "type": "bool",
+              "longType": "bool",
+              "fullType": "bool",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "Forward",
+          "longName": "Forward",
+          "fullName": "cloudstate.Forward",
+          "description": "Forwards handling of this request to another entity.",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "service_name",
+              "description": "The name of the service to forward to.",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "command_name",
+              "description": "The name of the command.",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "payload",
+              "description": "The payload.",
+              "label": "",
+              "type": "Any",
+              "longType": "google.protobuf.Any",
+              "fullType": "google.protobuf.Any",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "metadata",
+              "description": "The metadata to include with the forward",
+              "label": "",
+              "type": "Metadata",
+              "longType": "Metadata",
+              "fullType": "cloudstate.Metadata",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "Metadata",
+          "longName": "Metadata",
+          "fullName": "cloudstate.Metadata",
+          "description": "Transport-specific metadata associated with a message.\n\nThe semantics of the metadata are not defined in this protocol, but rather, depend on the transport on which a\nparticular instance of the metadata maps to. What keys or values are allowed or disallowed, whether duplicate values\nfor the same key are allowed and how they are handled, and whether key names are case sensitive or not, are all\nundefined in the context of the Cloudstate protocol.\n\nIf a metadata entry associated with a message can't be expressed in an underlying transport, for example, due to\ninvalid characters in a key or value, the behavior of the proxy is undefined. This is because metadata is transport\nspecific, so if the user function chooses to use metadata, it is choosing to be specific to a particular transport,\nwhich is beyond the scope of the Cloudstate protocol, and it's therefore the user function's responsibility to adhere\nto the semantics of that transport. The proxy MAY decide to drop metadata entries if it knows they are invalid or\nunsupported. If a metadata entry is dropped, the proxy MAY inform the user function that the entry was dropped by\nsending an error message to the EntityDiscovery.ReportError gRPC call.\n\nThe metadata MAY also contain CloudEvent metadata. If a message comes from a Cloudstate event source, the Cloudstate\nproxy MUST attach CloudEvent metadata to it if the event doesn't already have CloudEvent metadata attached to it.\nThis metadata SHALL be encoded according to the binary mode of the CloudEvent HTTP protocol binding, which can be\nfound here:\n\nhttps://github.com/cloudevents/spec/blob/master/http-protocol-binding.md\n\nThe Cloudstate proxy MAY synthesize appropriate values for Cloudstate metadata if no equivalent metadata exists in\nthe event source, for example, if there is no type, the Cloudstate proxy MAY use the name of the gRPC message as the\nCloudEvent type, and if there is no source, the Cloudstate proxy MAY use the name of the topic as the source.\n\nIf an incoming message does have CloudEvent metadata attached to it, the Cloudstate proxy MUST transcode that\nCloudEvent metadata to the HTTP protocol binding as described above.\n\nMessages sent from the user function to an event destination MAY include CloudEvent metadata. If they include any\nCloudEvent metadata, they MUST include all required CloudEvent attributes, including id, source, specversion and\ntype. The behavior of the proxy is undefined if some of these attributes, but not others, are included - the proxy\nMAY ignore them all, or MAY generate values itself, but SHOULD NOT fail sending the message. If the destination for\nthe message is an event destination, the Cloudstate proxy MUST transcode the supplied Cloudstate metadata to a\nbinding appropriate for the underlying transport for that event destination, it MUST NOT pass the CloudEvent\nmetadata as is unless the transport uses the same binding rules.",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "entries",
+              "description": "The metadata entries.",
+              "label": "repeated",
+              "type": "MetadataEntry",
+              "longType": "MetadataEntry",
+              "fullType": "cloudstate.MetadataEntry",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "MetadataEntry",
+          "longName": "MetadataEntry",
+          "fullName": "cloudstate.MetadataEntry",
+          "description": "A metadata entry.",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "key",
+              "description": "Key for the entry. Valid keys depend on the transport from or to which this metadata is sent.",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "string_value",
+              "description": "A string value. Valid values depend on the transport from or which this metadata is sent.\n\nIf the transport does not support string values, the behavior of the Cloudstate proxy is undefined from the\npoint of view of this protocol. If there is a convention in the protocol for encoding string values as\nUTF-8 bytes, then the Cloudstate proxy MAY do that.",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "value",
+              "defaultValue": ""
+            },
+            {
+              "name": "bytes_value",
+              "description": "A bytes value. Valid values depend on the transport from or which this metadata is sent.\n\nIf the transport does not support bytes values, the behavior of the Cloudstate proxy is undefined from the\npoint of view of this protocol. If there is a convention in the protocol for encoding bytes values as\nBase64 encoded strings, then the Cloudstate proxy MAY do that.",
+              "label": "",
+              "type": "bytes",
+              "longType": "bytes",
+              "fullType": "bytes",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "value",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "ProxyInfo",
+          "longName": "ProxyInfo",
+          "fullName": "cloudstate.ProxyInfo",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "protocol_major_version",
+              "description": "",
+              "label": "",
+              "type": "int32",
+              "longType": "int32",
+              "fullType": "int32",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "protocol_minor_version",
+              "description": "",
+              "label": "",
+              "type": "int32",
+              "longType": "int32",
+              "fullType": "int32",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "proxy_name",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "proxy_version",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "supported_entity_types",
+              "description": "",
+              "label": "repeated",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "Reply",
+          "longName": "Reply",
+          "fullName": "cloudstate.Reply",
+          "description": "A reply to the sender.",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "payload",
+              "description": "The reply payload",
+              "label": "",
+              "type": "Any",
+              "longType": "google.protobuf.Any",
+              "fullType": "google.protobuf.Any",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "metadata",
+              "description": "Metadata for the reply\n\nNot all transports support per message metadata, for example, gRPC doesn't. The Cloudstate proxy MAY ignore the\nmetadata in this case, or it MAY lift the metadata into another place, for example, in gRPC, a unary call MAY\nhave its reply metadata placed in the headers of the HTTP response, or the first reply to a streamed call MAY\nhave its metadata placed in the headers of the HTTP response.\n\nIf the metadata is ignored, the Cloudstate proxy MAY notify the user function by sending an error message to the\nEntityDiscovery.ReportError gRPC call.",
+              "label": "",
+              "type": "Metadata",
+              "longType": "Metadata",
+              "fullType": "cloudstate.Metadata",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "ServiceInfo",
+          "longName": "ServiceInfo",
+          "fullName": "cloudstate.ServiceInfo",
+          "description": "Information about the service that proxy is proxying to.\nAll of the information in here is optional. It may be useful for debug purposes.",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "service_name",
+              "description": "The name of the service, eg, \"shopping-cart\".",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "service_version",
+              "description": "The version of the service.",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "service_runtime",
+              "description": "A description of the runtime for the service. Can be anything, but examples might be:\n- node v10.15.2\n- OpenJDK Runtime Environment 1.8.0_192-b12",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "support_library_name",
+              "description": "If using a support library, the name of that library, eg \"cloudstate\"",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "support_library_version",
+              "description": "The version of the support library being used.",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "protocol_major_version",
+              "description": "Cloudstate protocol major version accepted by the support library.",
+              "label": "",
+              "type": "int32",
+              "longType": "int32",
+              "fullType": "int32",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "protocol_minor_version",
+              "description": "Cloudstate protocol minor version accepted by the support library.",
+              "label": "",
+              "type": "int32",
+              "longType": "int32",
+              "fullType": "int32",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "SideEffect",
+          "longName": "SideEffect",
+          "fullName": "cloudstate.SideEffect",
+          "description": "A side effect to be done after this command is handled.",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "service_name",
+              "description": "The name of the service to perform the side effect on.",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "command_name",
+              "description": "The name of the command.",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "payload",
+              "description": "The payload of the command.",
+              "label": "",
+              "type": "Any",
+              "longType": "google.protobuf.Any",
+              "fullType": "google.protobuf.Any",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "synchronous",
+              "description": "Whether this side effect should be performed synchronously, ie, before the reply is eventually\nsent, or not.",
+              "label": "",
+              "type": "bool",
+              "longType": "bool",
+              "fullType": "bool",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "metadata",
+              "description": "The metadata to include with the side effect",
+              "label": "",
+              "type": "Metadata",
+              "longType": "Metadata",
+              "fullType": "cloudstate.Metadata",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "StreamCancelled",
+          "longName": "StreamCancelled",
+          "fullName": "cloudstate.StreamCancelled",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "entity_id",
+              "description": "The ID of the entity",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "id",
+              "description": "The command id",
+              "label": "",
+              "type": "int64",
+              "longType": "int64",
+              "fullType": "int64",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "TimeoutPassivationStrategy",
+          "longName": "TimeoutPassivationStrategy",
+          "fullName": "cloudstate.TimeoutPassivationStrategy",
+          "description": "A passivation strategy based on a timeout. The idle timeout after which a user function's entity is passivated.",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "timeout",
+              "description": "The timeout in millis",
+              "label": "",
+              "type": "int64",
+              "longType": "int64",
+              "fullType": "int64",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "UserFunctionError",
+          "longName": "UserFunctionError",
+          "fullName": "cloudstate.UserFunctionError",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "message",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        }
+      ],
+      "services": [
+        {
+          "name": "EntityDiscovery",
+          "longName": "EntityDiscovery",
+          "fullName": "cloudstate.EntityDiscovery",
+          "description": "Entity discovery service.",
+          "methods": [
+            {
+              "name": "discover",
+              "description": "Discover what entities the user function wishes to serve.",
+              "requestType": "ProxyInfo",
+              "requestLongType": "ProxyInfo",
+              "requestFullType": "cloudstate.ProxyInfo",
+              "requestStreaming": false,
+              "responseType": "EntitySpec",
+              "responseLongType": "EntitySpec",
+              "responseFullType": "cloudstate.EntitySpec",
+              "responseStreaming": false
+            },
+            {
+              "name": "reportError",
+              "description": "Report an error back to the user function. This will only be invoked to tell the user function\nthat it has done something wrong, eg, violated the protocol, tried to use an entity type that\nisn't supported, or attempted to forward to an entity that doesn't exist, etc. These messages\nshould be logged clearly for debugging purposes.",
+              "requestType": "UserFunctionError",
+              "requestLongType": "UserFunctionError",
+              "requestFullType": "cloudstate.UserFunctionError",
+              "requestStreaming": false,
+              "responseType": "Empty",
+              "responseLongType": ".google.protobuf.Empty",
+              "responseFullType": "google.protobuf.Empty",
+              "responseStreaming": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "cloudstate/event_sourced.proto",
+      "description": "",
+      "package": "cloudstate.eventsourced",
+      "hasEnums": false,
+      "hasExtensions": false,
+      "hasMessages": true,
+      "hasServices": true,
+      "enums": [],
+      "extensions": [],
+      "messages": [
+        {
+          "name": "EventSourcedEvent",
+          "longName": "EventSourcedEvent",
+          "fullName": "cloudstate.eventsourced.EventSourcedEvent",
+          "description": "An event. These will be sent to the entity when the entity starts up.",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "sequence",
+              "description": "The sequence number of the event.",
+              "label": "",
+              "type": "int64",
+              "longType": "int64",
+              "fullType": "int64",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "payload",
+              "description": "The event payload.",
+              "label": "",
+              "type": "Any",
+              "longType": "google.protobuf.Any",
+              "fullType": "google.protobuf.Any",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "EventSourcedInit",
+          "longName": "EventSourcedInit",
+          "fullName": "cloudstate.eventsourced.EventSourcedInit",
+          "description": "The init message. This will always be the first message sent to the entity when\nit is loaded.",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "service_name",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "entity_id",
+              "description": "The ID of the entity.",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "snapshot",
+              "description": "If present the entity should initialise its state using this snapshot.",
+              "label": "",
+              "type": "EventSourcedSnapshot",
+              "longType": "EventSourcedSnapshot",
+              "fullType": "cloudstate.eventsourced.EventSourcedSnapshot",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "EventSourcedReply",
+          "longName": "EventSourcedReply",
+          "fullName": "cloudstate.eventsourced.EventSourcedReply",
+          "description": "A reply to a command.",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "command_id",
+              "description": "The id of the command being replied to. Must match the input command.",
+              "label": "",
+              "type": "int64",
+              "longType": "int64",
+              "fullType": "int64",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "client_action",
+              "description": "The action to take",
+              "label": "",
+              "type": "ClientAction",
+              "longType": "cloudstate.ClientAction",
+              "fullType": "cloudstate.ClientAction",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "side_effects",
+              "description": "Any side effects to perform",
+              "label": "repeated",
+              "type": "SideEffect",
+              "longType": "cloudstate.SideEffect",
+              "fullType": "cloudstate.SideEffect",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "events",
+              "description": "A list of events to persist - these will be persisted before the reply\nis sent.",
+              "label": "repeated",
+              "type": "Any",
+              "longType": "google.protobuf.Any",
+              "fullType": "google.protobuf.Any",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "snapshot",
+              "description": "An optional snapshot to persist. It is assumed that this snapshot will have\nthe state of any events in the events field applied to it. It is illegal to\nsend a snapshot without sending any events.",
+              "label": "",
+              "type": "Any",
+              "longType": "google.protobuf.Any",
+              "fullType": "google.protobuf.Any",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "EventSourcedSnapshot",
+          "longName": "EventSourcedSnapshot",
+          "fullName": "cloudstate.eventsourced.EventSourcedSnapshot",
+          "description": "A snapshot",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "snapshot_sequence",
+              "description": "The sequence number when the snapshot was taken.",
+              "label": "",
+              "type": "int64",
+              "longType": "int64",
+              "fullType": "int64",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "snapshot",
+              "description": "The snapshot.",
+              "label": "",
+              "type": "Any",
+              "longType": "google.protobuf.Any",
+              "fullType": "google.protobuf.Any",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "EventSourcedStreamIn",
+          "longName": "EventSourcedStreamIn",
+          "fullName": "cloudstate.eventsourced.EventSourcedStreamIn",
+          "description": "Input message type for the gRPC stream in.",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "init",
+              "description": "",
+              "label": "",
+              "type": "EventSourcedInit",
+              "longType": "EventSourcedInit",
+              "fullType": "cloudstate.eventsourced.EventSourcedInit",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "message",
+              "defaultValue": ""
+            },
+            {
+              "name": "event",
+              "description": "",
+              "label": "",
+              "type": "EventSourcedEvent",
+              "longType": "EventSourcedEvent",
+              "fullType": "cloudstate.eventsourced.EventSourcedEvent",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "message",
+              "defaultValue": ""
+            },
+            {
+              "name": "command",
+              "description": "",
+              "label": "",
+              "type": "Command",
+              "longType": "cloudstate.Command",
+              "fullType": "cloudstate.Command",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "message",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "EventSourcedStreamOut",
+          "longName": "EventSourcedStreamOut",
+          "fullName": "cloudstate.eventsourced.EventSourcedStreamOut",
+          "description": "Output message type for the gRPC stream out.",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "reply",
+              "description": "",
+              "label": "",
+              "type": "EventSourcedReply",
+              "longType": "EventSourcedReply",
+              "fullType": "cloudstate.eventsourced.EventSourcedReply",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "message",
+              "defaultValue": ""
+            },
+            {
+              "name": "failure",
+              "description": "",
+              "label": "",
+              "type": "Failure",
+              "longType": "cloudstate.Failure",
+              "fullType": "cloudstate.Failure",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "message",
+              "defaultValue": ""
+            }
+          ]
+        }
+      ],
+      "services": [
+        {
+          "name": "EventSourced",
+          "longName": "EventSourced",
+          "fullName": "cloudstate.eventsourced.EventSourced",
+          "description": "The Entity service",
+          "methods": [
+            {
+              "name": "handle",
+              "description": "The stream. One stream will be established per active entity.\nOnce established, the first message sent will be Init, which contains the entity ID, and,\nif the entity has previously persisted a snapshot, it will contain that snapshot. It will\nthen send zero to many event messages, one for each event previously persisted. The entity\nis expected to apply these to its state in a deterministic fashion. Once all the events\nare sent, one to many commands are sent, with new commands being sent as new requests for\nthe entity come in. The entity is expected to reply to each command with exactly one reply\nmessage. The entity should reply in order, and any events that the entity requests to be\npersisted the entity should handle itself, applying them to its own state, as if they had\narrived as events when the event stream was being replayed on load.",
+              "requestType": "EventSourcedStreamIn",
+              "requestLongType": "EventSourcedStreamIn",
+              "requestFullType": "cloudstate.eventsourced.EventSourcedStreamIn",
+              "requestStreaming": true,
+              "responseType": "EventSourcedStreamOut",
+              "responseLongType": "EventSourcedStreamOut",
+              "responseFullType": "cloudstate.eventsourced.EventSourcedStreamOut",
+              "responseStreaming": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "cloudstate/value_entity.proto",
+      "description": "",
+      "package": "cloudstate.valueentity",
+      "hasEnums": false,
+      "hasExtensions": false,
+      "hasMessages": true,
+      "hasServices": true,
+      "enums": [],
+      "extensions": [],
+      "messages": [
+        {
+          "name": "ValueEntityAction",
+          "longName": "ValueEntityAction",
+          "fullName": "cloudstate.valueentity.ValueEntityAction",
+          "description": "An action to take for changing the entity state.",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "update",
+              "description": "",
+              "label": "",
+              "type": "ValueEntityUpdate",
+              "longType": "ValueEntityUpdate",
+              "fullType": "cloudstate.valueentity.ValueEntityUpdate",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "action",
+              "defaultValue": ""
+            },
+            {
+              "name": "delete",
+              "description": "",
+              "label": "",
+              "type": "ValueEntityDelete",
+              "longType": "ValueEntityDelete",
+              "fullType": "cloudstate.valueentity.ValueEntityDelete",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "action",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "ValueEntityDelete",
+          "longName": "ValueEntityDelete",
+          "fullName": "cloudstate.valueentity.ValueEntityDelete",
+          "description": "An action which deletes the persisted value of the Value entity.",
+          "hasExtensions": false,
+          "hasFields": false,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": []
+        },
+        {
+          "name": "ValueEntityInit",
+          "longName": "ValueEntityInit",
+          "fullName": "cloudstate.valueentity.ValueEntityInit",
+          "description": "The init message. This will always be the first message sent to the entity when it is loaded.",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "service_name",
+              "description": "The name of the service that implements this entity.",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "entity_id",
+              "description": "The id of the entity.",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "state",
+              "description": "The initial state of the entity.",
+              "label": "",
+              "type": "ValueEntityInitState",
+              "longType": "ValueEntityInitState",
+              "fullType": "cloudstate.valueentity.ValueEntityInitState",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "ValueEntityInitState",
+          "longName": "ValueEntityInitState",
+          "fullName": "cloudstate.valueentity.ValueEntityInitState",
+          "description": "The state of the entity when it is first activated.",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "value",
+              "description": "The value of the entity state, if the entity has already been created.",
+              "label": "",
+              "type": "Any",
+              "longType": "google.protobuf.Any",
+              "fullType": "google.protobuf.Any",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "ValueEntityReply",
+          "longName": "ValueEntityReply",
+          "fullName": "cloudstate.valueentity.ValueEntityReply",
+          "description": "A reply to a command.",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "command_id",
+              "description": "The command being replied to",
+              "label": "",
+              "type": "int64",
+              "longType": "int64",
+              "fullType": "int64",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "client_action",
+              "description": "The action to take for the client response",
+              "label": "",
+              "type": "ClientAction",
+              "longType": "cloudstate.ClientAction",
+              "fullType": "cloudstate.ClientAction",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "side_effects",
+              "description": "Any side effects to perform",
+              "label": "repeated",
+              "type": "SideEffect",
+              "longType": "cloudstate.SideEffect",
+              "fullType": "cloudstate.SideEffect",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "state_action",
+              "description": "The action to take on the value entity",
+              "label": "",
+              "type": "ValueEntityAction",
+              "longType": "ValueEntityAction",
+              "fullType": "cloudstate.valueentity.ValueEntityAction",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "ValueEntityStreamIn",
+          "longName": "ValueEntityStreamIn",
+          "fullName": "cloudstate.valueentity.ValueEntityStreamIn",
+          "description": "Input message type for the gRPC stream in.",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "init",
+              "description": "",
+              "label": "",
+              "type": "ValueEntityInit",
+              "longType": "ValueEntityInit",
+              "fullType": "cloudstate.valueentity.ValueEntityInit",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "message",
+              "defaultValue": ""
+            },
+            {
+              "name": "command",
+              "description": "",
+              "label": "",
+              "type": "Command",
+              "longType": "cloudstate.Command",
+              "fullType": "cloudstate.Command",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "message",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "ValueEntityStreamOut",
+          "longName": "ValueEntityStreamOut",
+          "fullName": "cloudstate.valueentity.ValueEntityStreamOut",
+          "description": "Output message type for the gRPC stream out.",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "reply",
+              "description": "",
+              "label": "",
+              "type": "ValueEntityReply",
+              "longType": "ValueEntityReply",
+              "fullType": "cloudstate.valueentity.ValueEntityReply",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "message",
+              "defaultValue": ""
+            },
+            {
+              "name": "failure",
+              "description": "",
+              "label": "",
+              "type": "Failure",
+              "longType": "cloudstate.Failure",
+              "fullType": "cloudstate.Failure",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "message",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "ValueEntityUpdate",
+          "longName": "ValueEntityUpdate",
+          "fullName": "cloudstate.valueentity.ValueEntityUpdate",
+          "description": "An action which updates the persisted value of the Value entity. If the entity is not yet persisted, it will be created.",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "value",
+              "description": "The value to set.",
+              "label": "",
+              "type": "Any",
+              "longType": "google.protobuf.Any",
+              "fullType": "google.protobuf.Any",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        }
+      ],
+      "services": [
+        {
+          "name": "ValueEntity",
+          "longName": "ValueEntity",
+          "fullName": "cloudstate.valueentity.ValueEntity",
+          "description": "The Value Entity service",
+          "methods": [
+            {
+              "name": "handle",
+              "description": "One stream will be established per active entity.\nOnce established, the first message sent will be Init, which contains the entity ID, and,\na state if the entity has previously persisted one. Once the Init message is sent, one to\nmany commands are sent to the entity. Each request coming in leads to a new command being sent\nto the entity. The entity is expected to reply to each command with exactly one reply message.\nThe entity should process commands and reply to commands in the order they came\nin. When processing a command the entity can read and persist (update or delete) the state.",
+              "requestType": "ValueEntityStreamIn",
+              "requestLongType": "ValueEntityStreamIn",
+              "requestFullType": "cloudstate.valueentity.ValueEntityStreamIn",
+              "requestStreaming": true,
+              "responseType": "ValueEntityStreamOut",
+              "responseLongType": "ValueEntityStreamOut",
+              "responseFullType": "cloudstate.valueentity.ValueEntityStreamOut",
+              "responseStreaming": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "scalarValueTypes": [
+    {
+      "protoType": "double",
+      "notes": "",
+      "cppType": "double",
+      "csType": "double",
+      "goType": "float64",
+      "javaType": "double",
+      "phpType": "float",
+      "pythonType": "float",
+      "rubyType": "Float"
+    },
+    {
+      "protoType": "float",
+      "notes": "",
+      "cppType": "float",
+      "csType": "float",
+      "goType": "float32",
+      "javaType": "float",
+      "phpType": "float",
+      "pythonType": "float",
+      "rubyType": "Float"
+    },
+    {
+      "protoType": "int32",
+      "notes": "Uses variable-length encoding. Inefficient for encoding negative numbers – if your field is likely to have negative values, use sint32 instead.",
+      "cppType": "int32",
+      "csType": "int",
+      "goType": "int32",
+      "javaType": "int",
+      "phpType": "integer",
+      "pythonType": "int",
+      "rubyType": "Bignum or Fixnum (as required)"
+    },
+    {
+      "protoType": "int64",
+      "notes": "Uses variable-length encoding. Inefficient for encoding negative numbers – if your field is likely to have negative values, use sint64 instead.",
+      "cppType": "int64",
+      "csType": "long",
+      "goType": "int64",
+      "javaType": "long",
+      "phpType": "integer/string",
+      "pythonType": "int/long",
+      "rubyType": "Bignum"
+    },
+    {
+      "protoType": "uint32",
+      "notes": "Uses variable-length encoding.",
+      "cppType": "uint32",
+      "csType": "uint",
+      "goType": "uint32",
+      "javaType": "int",
+      "phpType": "integer",
+      "pythonType": "int/long",
+      "rubyType": "Bignum or Fixnum (as required)"
+    },
+    {
+      "protoType": "uint64",
+      "notes": "Uses variable-length encoding.",
+      "cppType": "uint64",
+      "csType": "ulong",
+      "goType": "uint64",
+      "javaType": "long",
+      "phpType": "integer/string",
+      "pythonType": "int/long",
+      "rubyType": "Bignum or Fixnum (as required)"
+    },
+    {
+      "protoType": "sint32",
+      "notes": "Uses variable-length encoding. Signed int value. These more efficiently encode negative numbers than regular int32s.",
+      "cppType": "int32",
+      "csType": "int",
+      "goType": "int32",
+      "javaType": "int",
+      "phpType": "integer",
+      "pythonType": "int",
+      "rubyType": "Bignum or Fixnum (as required)"
+    },
+    {
+      "protoType": "sint64",
+      "notes": "Uses variable-length encoding. Signed int value. These more efficiently encode negative numbers than regular int64s.",
+      "cppType": "int64",
+      "csType": "long",
+      "goType": "int64",
+      "javaType": "long",
+      "phpType": "integer/string",
+      "pythonType": "int/long",
+      "rubyType": "Bignum"
+    },
+    {
+      "protoType": "fixed32",
+      "notes": "Always four bytes. More efficient than uint32 if values are often greater than 2^28.",
+      "cppType": "uint32",
+      "csType": "uint",
+      "goType": "uint32",
+      "javaType": "int",
+      "phpType": "integer",
+      "pythonType": "int",
+      "rubyType": "Bignum or Fixnum (as required)"
+    },
+    {
+      "protoType": "fixed64",
+      "notes": "Always eight bytes. More efficient than uint64 if values are often greater than 2^56.",
+      "cppType": "uint64",
+      "csType": "ulong",
+      "goType": "uint64",
+      "javaType": "long",
+      "phpType": "integer/string",
+      "pythonType": "int/long",
+      "rubyType": "Bignum"
+    },
+    {
+      "protoType": "sfixed32",
+      "notes": "Always four bytes.",
+      "cppType": "int32",
+      "csType": "int",
+      "goType": "int32",
+      "javaType": "int",
+      "phpType": "integer",
+      "pythonType": "int",
+      "rubyType": "Bignum or Fixnum (as required)"
+    },
+    {
+      "protoType": "sfixed64",
+      "notes": "Always eight bytes.",
+      "cppType": "int64",
+      "csType": "long",
+      "goType": "int64",
+      "javaType": "long",
+      "phpType": "integer/string",
+      "pythonType": "int/long",
+      "rubyType": "Bignum"
+    },
+    {
+      "protoType": "bool",
+      "notes": "",
+      "cppType": "bool",
+      "csType": "bool",
+      "goType": "bool",
+      "javaType": "boolean",
+      "phpType": "boolean",
+      "pythonType": "boolean",
+      "rubyType": "TrueClass/FalseClass"
+    },
+    {
+      "protoType": "string",
+      "notes": "A string must always contain UTF-8 encoded or 7-bit ASCII text.",
+      "cppType": "string",
+      "csType": "string",
+      "goType": "string",
+      "javaType": "String",
+      "phpType": "string",
+      "pythonType": "str/unicode",
+      "rubyType": "String (UTF-8)"
+    },
+    {
+      "protoType": "bytes",
+      "notes": "May contain any arbitrary sequence of bytes.",
+      "cppType": "string",
+      "csType": "ByteString",
+      "goType": "[]byte",
+      "javaType": "ByteString",
+      "phpType": "string",
+      "pythonType": "str",
+      "rubyType": "String (ASCII-8BIT)"
+    }
+  ]
+}
