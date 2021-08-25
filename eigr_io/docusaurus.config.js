@@ -84,9 +84,6 @@ module.exports = {
             darkTheme: darkCodeTheme,
         },
     },
-    // themes: [
-    //     '@saucelabs/theme-github-codeblock'
-    // ],
     presets: [
         [
             '@docusaurus/preset-classic',
