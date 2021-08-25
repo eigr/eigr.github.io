@@ -46,15 +46,6 @@ module.exports = {
         footer: {
             // style: 'dark',
             links: [
-                // {
-                //     title: 'Docs',
-                //     items: [
-                //         {
-                //             label: 'eigr/serverless',
-                //             to: '/docs',
-                //         },
-                //     ],
-                // },
                 {
                     title: 'Community',
                     items: [
