@@ -20,7 +20,7 @@ module.exports = {
             title: '',
             logo: {
                 alt: 'eigr',
-                src: 'img/logo_001.png',
+                src: 'img/sc_logo_002_1.png',
             },
             items: [
                 {
@@ -60,7 +60,7 @@ module.exports = {
                     items: [
                         {
                             label: 'Discord',
-                            href: 'https://discord.com/channels/825360651782193194',
+                            href: 'https://eigr.io/discord-invite',
                         },
                         {
                             label: 'Twitter',
