@@ -51,7 +51,7 @@ module.exports = {
                     items: [
                         {
                             label: 'Discord',
-                            href: 'https://eigr.io/discord-invite',
+                            href: 'https://discord.eigr.io/invite',
                         },
                         {
                             label: 'Twitter',
