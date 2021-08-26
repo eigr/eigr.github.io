@@ -57,10 +57,10 @@ module.exports = {
                             label: 'Twitter',
                             href: 'https://twitter.com/eigr_io',
                         },
-                        {
-                            label: 'Github Discussions',
-                            href: 'https://github.com/eigr/eigr-community/discussions',
-                        },
+                        // {
+                        //     label: 'Github Discussions',
+                        //     href: 'https://github.com/eigr/eigr-community/discussions',
+                        // },
                     ],
                 },
                 {
