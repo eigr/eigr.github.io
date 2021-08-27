@@ -5,13 +5,12 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 module.exports = {
     title: 'eigr.io',
     tagline: 'A Serverless Runtime on the BEAM',
-    // url: 'https://eigr.io',
-    url: 'https://eigr.github.io',
+    url: 'https://eigr.io',
     baseUrl: '/',
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
     favicon: 'img/favicon.ico',
-    organizationName: 'eigr', // Usually your GitHub org/user name.
+    organizationName: 'eigr',
     projectName: 'eigr.github.io',
     trailingSlash: true,
     themeConfig: {
