@@ -2,15 +2,15 @@
 <rss version="2.0">
     <channel>
         <title>eigr.io Blog</title>
-        <link>https://eigr.github.io/blog</link>
+        <link>https://eigr.io/blog</link>
         <description>eigr.io Blog</description>
         <lastBuildDate>Thu, 19 Aug 2021 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <item>
-            <title><![CDATA[Erlang Workshop 2021 - ICFP 2021]]></title>
-            <link>https://eigr.github.io/blog/ifcp-2021</link>
-            <guid>ifcp-2021</guid>
+            <title><![CDATA[ACM SIGPLAN, ICFP Erlang Workshop 2021]]></title>
+            <link>https://eigr.io/blog/acm-ifcp-2021</link>
+            <guid>acm-ifcp-2021</guid>
             <pubDate>Thu, 19 Aug 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[We're excited to be selected]]></description>
         </item>

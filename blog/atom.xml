@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://eigr.github.io/blog</id>
+    <id>https://eigr.io/blog</id>
     <title>eigr.io Blog</title>
     <updated>2021-08-19T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://eigr.github.io/blog"/>
+    <link rel="alternate" href="https://eigr.io/blog"/>
     <subtitle>eigr.io Blog</subtitle>
-    <icon>https://eigr.github.io/img/favicon.ico</icon>
+    <icon>https://eigr.io/img/favicon.ico</icon>
     <entry>
-        <title type="html"><![CDATA[Erlang Workshop 2021 - ICFP 2021]]></title>
-        <id>ifcp-2021</id>
-        <link href="https://eigr.github.io/blog/ifcp-2021"/>
+        <title type="html"><![CDATA[ACM SIGPLAN, ICFP Erlang Workshop 2021]]></title>
+        <id>acm-ifcp-2021</id>
+        <link href="https://eigr.io/blog/acm-ifcp-2021"/>
         <updated>2021-08-19T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[We're excited to be selected]]></summary>
     </entry>
