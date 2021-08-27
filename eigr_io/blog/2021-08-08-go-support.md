@@ -6,6 +6,7 @@ author_title: "eigr.io – Core Team"
 author_url: https://github.com/marcellanz
 author_image_url: https://avatars.githubusercontent.com/u/12616445?v=4
 tags: [serverless, golang]
+draft: "true"
 ---
 
 ```
