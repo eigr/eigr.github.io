@@ -14,12 +14,5 @@
             <pubDate>Thu, 19 Aug 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[We're excited to be selected]]></description>
         </item>
-        <item>
-            <title><![CDATA[Eigr Functions Go SDK]]></title>
-            <link>https://eigr.github.io/blog/serverless-go-sdk</link>
-            <guid>serverless-go-sdk</guid>
-            <pubDate>Sun, 08 Aug 2021 00:00:00 GMT</pubDate>
-            <description><![CDATA[`]]></description>
-        </item>
     </channel>
 </rss>

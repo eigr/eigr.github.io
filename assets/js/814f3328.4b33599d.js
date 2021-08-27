@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkeigr_io=self.webpackChunkeigr_io||[]).push([[2535],{5641:function(e){e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Erlang Workshop 2021 - ICFP 2021","permalink":"/blog/ifcp-2021"}]}')}}]);

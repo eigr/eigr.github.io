@@ -14,11 +14,4 @@
         <updated>2021-08-19T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[We're excited to be selected]]></summary>
     </entry>
-    <entry>
-        <title type="html"><![CDATA[Eigr Functions Go SDK]]></title>
-        <id>serverless-go-sdk</id>
-        <link href="https://eigr.github.io/blog/serverless-go-sdk"/>
-        <updated>2021-08-08T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[`]]></summary>
-    </entry>
 </feed>
