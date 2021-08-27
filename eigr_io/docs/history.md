@@ -31,19 +31,19 @@ open source project and its community in limbo with no clear roadmap and kept it
 option to further work on the vision Cloudstate promised to solve.
 
 Members of the eigr.io open-source project have been very supportive and engaged early on in the Cloudstate project.
-Also, many of the Cloudstate "User Language Support
+Also, the majority of the Cloudstate "User Language Support
 Libraries" [have been initiated and implemented by that community](https://github.com/cloudstateio?q=support). The Eigr
-Funtions project will build on that work, enhance it, be an open and welcoming community and going forward implementing
+Functions project will build on that work, enhance it, be an open and welcoming community and going forward implementing
 the original vision of Cloudstate.
 
 ## Protocol Compatibility and its future
 
-As long as possible, project eigr will try to be compatible with the Cloudstate protocol. Project eigr has forked the
+As long as possible, Eigr Functions will try to be compatible with the Cloudstate protocol. Our project has forked the
 "User Language Support Libraries" of Cloudstate to further work on their implementations. Similarly the original TCK, as
-envisioned, will be used to verify compatibility with the protocol and new polyglot language SDKs of eigr.
+envisioned, will be used to verify compatibility with the protocol and new polyglot language SDKs of Eigr Functions.
 
 A prerequisite to keep the compatibility intact is, that the currently stale Cloudstate project is willing to adopt
-change in the future if needed. Its use in Akka Serverless, while being developed as a commercial product, has long
+change in the future if needed. Its use in Akka Serverless, while being developed as a proprietary and commercial product, has long
 broken with the Cloudstate protocol. It is unknown if the Akka Serverless SDKs, that are open-sourced, will ever be
 compatible with Cloudstate again. Nevertheless project eigr
 would [welcome](https://github.com/cloudstateio/cloudstate/issues/541)
@@ -52,15 +52,15 @@ future compatibility.
 ## Why on the BEAM?
 
 The decision to switch technical grounds was mainly guided by the fact that Cloudstate went into hibernation mode, and
-it made no sense to re-implement the Cloudstate proxy in Scala and Akka Cluster itself again. Going with Go or Rust
+it made no sense to re-implement the Cloudstate proxy in Scala and use Akka Cluster itself again. Going with Go or Rust
 would have been an option. But we realized early on, that competing in a way with the excellent work of the Akka team we
-would not come soon with a replacement of all what Akka and Akka Cluster provides in the context of this project.
+would not come soon with a replacement of all what Akka and Akka Cluster provide in the context of this project.
 
-With a modern functional language like Elixir and the Erlang Ecosystem in general in its similar excellent shape these
+With a modern functional language like Elixir and the Erlang Ecosystem in general in its excellent shape these
 days, it came to us, why not to use the BEAM, Elixir and Erlang/OTP as the technical ground for our new project. Even if
 Erlang or Elixir had been exotic languages to be used, the technology and especially the language in which the service
-proxy is written is irrelevant in the context that enables a cloud-native and therefore polyglot environment.
+proxy is written, is irrelevant in the context that enables a cloud-native and therefore polyglot serverless runtime.
 
-With Eigr Funtions being based on Erlang/OTP and running on the BEAM its an excellent fit for a serverless runtime to
+Eigr Functions being based on Erlang/OTP and running on the BEAM is an excellent fit for a serverless runtime to
 be built on. The "message in, message out" pattern for a FaaS implementation, as well as the requirements to run
 actually virtual actors in a distributed system is right spot on what OTP, the BEAM and Erlang are all about.
