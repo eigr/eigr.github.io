@@ -1,10 +1,7 @@
 ---
-slug: "acm-ifcp-2021"
+slug: "acm-sigplan-ifcp-erlang-workshop-2021"
 title: "ACM SIGPLAN, ICFP Erlang Workshop 2021"
-author: "Marcel Lanz"
-author_title: "eigr.io – Core Team"
-author_url: "https://github.com/marcellanz"
-author_image_url: "https://avatars.githubusercontent.com/u/12616445?v=4"
+authors: [marcellanz]
 tags: [serverless, eigr]
 ---
 
