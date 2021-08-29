@@ -8,8 +8,7 @@ tags: [serverless, eigr]
 We're excited to be selected
 for [one of the Lightning Talks](https://icfp21.sigplan.org/details/erlang-2021-papers/13/Lightning-Talk-eigr-io-A-Serverless-Runtime-on-the-BEAM)
 right after the Erlang Keynote at the ACM
-SIGPLAN, [ICFP Erlang Workshop 2021](https://icfp21.sigplan.org/home/erlang-2021)
-.
+SIGPLAN, [ICFP Erlang Workshop 2021](https://icfp21.sigplan.org/home/erlang-2021).
 
 ## Abstract
 
@@ -31,5 +30,6 @@ languages supported like Go, JavaScript, JVM-languages, Python and many more.
 **Event:**
 https://icfp21.sigplan.org/details/erlang-2021-papers/13/Lightning-Talk-eigr-io-A-Serverless-Runtime-on-the-BEAM
 
-**Slides:**
-https://www.slideshare.net/MarcelLanz/eigrio-a-serverless-runtime-on-the-beam-acm-sigplan-icfp-2021-erlang-workshop
+**
+Slides:** [Slideshare](https://www.slideshare.net/MarcelLanz/eigrio-a-serverless-runtime-on-the-beam-acm-sigplan-icfp-2021-erlang-workshop)
+, [Google Slides](https://docs.google.com/presentation/d/1mLmSFY0z6gxoG88-phcFTwyVBMv8R9myBA5MZOWoJso/edit#slide=id.p1)

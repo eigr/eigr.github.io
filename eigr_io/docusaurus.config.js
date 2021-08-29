@@ -14,6 +14,17 @@ module.exports = {
     projectName: 'eigr.github.io',
     trailingSlash: true,
     themeConfig: {
+        colorMode: {
+            "defaultMode": "light",
+            "disableSwitch": false,
+            "respectPrefersColorScheme": false,
+            "switchConfig": {
+                "darkIcon": "🌜",
+                "darkIconStyle": {},
+                "lightIcon": "🌞",
+                "lightIconStyle": {}
+            }
+        },
         navbar: {
             style: 'dark',
             title: '',
