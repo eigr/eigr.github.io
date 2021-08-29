@@ -9,9 +9,13 @@
     <icon>https://eigr.io/icon/favicon.ico?v=2</icon>
     <entry>
         <title type="html"><![CDATA[ACM SIGPLAN, ICFP Erlang Workshop 2021]]></title>
-        <id>acm-ifcp-2021</id>
-        <link href="https://eigr.io/blog/acm-ifcp-2021"/>
+        <id>acm-sigplan-ifcp-erlang-workshop-2021</id>
+        <link href="https://eigr.io/blog/acm-sigplan-ifcp-erlang-workshop-2021"/>
         <updated>2021-08-19T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[We're excited to be selected]]></summary>
+        <author>
+            <name>Marcel Lanz</name>
+            <uri>https://github.com/marcellanz</uri>
+        </author>
     </entry>
 </feed>
