@@ -30,13 +30,13 @@ a [Serverless offering](https://www.lightbend.com/akka-serverless) of the Clouds
 open source project and its community in limbo with no clear roadmap and kept its further development locked where nothing but a fork was an
 option to further work on the vision Cloudstate promised to solve.
 
-Members of the eigr.io open-source project have been very supportive and engaged early on in the Cloudstate project.
+The members of the eigr.io open-source project have been very supportive and engaged early on in the Cloudstate project.
 Also, the majority of the Cloudstate "User Language Support
 Libraries" [have been initiated and implemented by that community](https://github.com/cloudstateio?q=support). The Eigr
 Functions project will build on that work, enhance it, be an open and welcoming community and going forward implementing
 the original vision of Cloudstate.
 
-## Protocol Compatibility and its future
+## Protocol compatibility and its future
 
 As long as possible, Eigr Functions will try to be compatible with the Cloudstate protocol. Our project has forked the
 "User Language Support Libraries" of Cloudstate to further work on their implementations. Similarly the original TCK, as
