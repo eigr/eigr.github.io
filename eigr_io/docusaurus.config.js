@@ -14,6 +14,11 @@ module.exports = {
     projectName: 'eigr.github.io',
     trailingSlash: true,
     themeConfig: {
+        metadata: [
+            {name: 'twitter:card', content: 'summary'},
+            {name: 'twitter:title', content: 'eigr.io – A Serverless Runtime on the BEAM'},
+        ],
+        image: 'icon/eigr_flat.svg',
         colorMode: {
             "defaultMode": "light",
             "disableSwitch": false,
