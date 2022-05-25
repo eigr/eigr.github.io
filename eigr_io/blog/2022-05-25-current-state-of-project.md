@@ -34,7 +34,7 @@ In addition to these projects we also work on several other R&D projects that al
 
 * [Steinadler](https://github.com/eigr-labs/steinadler): A high-level alternative to Erlang Distribution. While we are aware of the incredible capabilities of the Erlang Distribution, we also know that there are numerous deficiencies in this protocol that we are trying to address. Its development is currently at a standstill.
 
-* [Spawn](https://github.com/eigr-labs/spawn): The **Actor Mesh Framework** is based on the sidecar proxy pattern to provide the multi-language Actor Model framework. Spawn's technology stack on top of BEAM VM (Erlang's virtual machine) provides support for different languages ​​from its native Actor model. Spawn is made up of the following components:
+* [Spawn](https://github.com/eigr-labs/spawn): The **Actor Mesh Framework** is based on the [sidecar proxy pattern](https://dzone.com/articles/sidecar-design-pattern-in-your-microservices-ecosy-1) to provide the multi-language Actor Model framework. Spawn's technology stack on top of BEAM VM (Erlang's virtual machine) provides support for different languages ​​from its native Actor model. Spawn is made up of the following components:
 
     1. A semantic protocol based on Protocol Buffers.
 
