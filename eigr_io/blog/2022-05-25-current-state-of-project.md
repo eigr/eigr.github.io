@@ -3,7 +3,7 @@ slug: "current-status-of-the-project"
 title: "Current Status of the Project"
 authors: [sleipnir]
 tags: [serverless, cloudstate, eigr-functions, project, status]
-draft: "true"
+draft: "false"
 ---
 
 #  Hello Comunity
