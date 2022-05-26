@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkeigr_io=self.webpackChunkeigr_io||[]).push([[2535],{5641:function(e){e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"ACM SIGPLAN, ICFP Erlang Workshop 2021","permalink":"/blog/acm-sigplan-ifcp-erlang-workshop-2021"}]}')}}]);
