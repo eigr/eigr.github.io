@@ -21,7 +21,7 @@ module.exports = {
         image: 'icon/eigr_flat.svg',
         colorMode: {
             defaultMode: 'light',
-            disableSwitch: true,
+            disableSwitch: false,
             respectPrefersColorScheme: false,
         },
         navbar: {

@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import styles from './HomepageFeatures.module.css';
 import {
     useThemeConfig,
+    useColorMode,
 } from '@docusaurus/theme-common';
 
 function Feature({Svg, title, description}) {
@@ -20,12 +21,11 @@ function Feature({Svg, title, description}) {
 }
 
 export default function HomepageFeatures() {
-    // const {isDarkTheme, setLightTheme, setDarkTheme} = useThemeConfig();
-    const {colorMode} = useThemeConfig();
+    const {colorMode} = useColorMode();
     const FeatureList = [
         {
             title: 'Inversion of State',
-            Svg: require(colorMode.defaultMode === 'dark' ? '../../static/img/state_dark.svg' : '../../static/img/state.svg').default,
+            Svg: require(colorMode === 'dark' ? '../../static/img/state_dark.svg' : '../../static/img/state.svg').default,
             description: (
                 <>
                     Eigr Functions embraces a model of <a
@@ -36,7 +36,7 @@ export default function HomepageFeatures() {
         },
         {
             title: 'Protocol',
-            Svg: require(colorMode.defaultMode === 'dark' ? '../../static/img/protocol_dark.svg' : '../../static/img/protocol.svg').default,
+            Svg: require(colorMode === 'dark' ? '../../static/img/protocol_dark.svg' : '../../static/img/protocol.svg').default,
             description: (
                 <>
                     Eigr Functions is based on the <a
@@ -47,7 +47,7 @@ export default function HomepageFeatures() {
         },
         {
             title: 'Polyglot Programming Model',
-            Svg: require(colorMode.defaultMode === 'dark' ? '../../static/img/polyglot_dark.svg' : '../../static/img/polyglot.svg').default,
+            Svg: require(colorMode === 'dark' ? '../../static/img/polyglot_dark.svg' : '../../static/img/polyglot.svg').default,
             description: (
                 <>
                     While Eigr Functions is implemented in <a
