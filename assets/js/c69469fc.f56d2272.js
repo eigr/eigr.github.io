@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkeigr_io=self.webpackChunkeigr_io||[]).push([[480],{2845:function(e){e.exports=JSON.parse('{"label":"cloudstate","permalink":"/blog/tags/cloudstate","allTagsPath":"/blog/tags","count":1}')}}]);
