@@ -8,7 +8,7 @@ draft: "false"
 
 #  Hello Community
 
-My name is [Adriano](https://github.com/sleipnir), I'm a software engineer, I'm 40 years old, I'm Brazilian, and I've been in the technology area for over 20 years on different fronts and having worked in a long list of companies, I'm also the co-founder of the Eigr project together with [@marcellanz](https://github.com/marcellanz) and [@guyso](https://github.com/ralphlaude), previously the three of us were core members of the [Cloudstate](https://cloudstate.io/) project and mainly worked on the supporting SDKs, but we also participated in the central development of Cloudstate technology and collaborated a lot on the development mainly of its protocol.
+My name is Adriano, I'm a software engineer, I'm 40 years old, I'm Brazilian, and I've been in the technology area for over 20 years on different fronts and having worked in a long list of companies, I'm also the co-founder of the Eigr project together with [@marcellanz](https://github.com/marcellanz) and [@guyso](https://github.com/ralphlaude), previously the three of us were core members of the [Cloudstate](https://cloudstate.io/) project and mainly worked on the supporting SDKs, but we also participated in the central development of Cloudstate technology and collaborated a lot on the development mainly of its protocol.
 
 I see that many of you have just arrived here and that's why I think it's important to give an overview of what we do and talk a little about the current status of the project.
 

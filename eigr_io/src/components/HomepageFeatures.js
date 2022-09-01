@@ -1,7 +1,9 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './HomepageFeatures.module.css';
-import useThemeContext from '@theme/hooks/useThemeContext';
+import {
+    useThemeConfig,
+} from '@docusaurus/theme-common';
 
 function Feature({Svg, title, description}) {
     return (
@@ -18,36 +20,42 @@ function Feature({Svg, title, description}) {
 }
 
 export default function HomepageFeatures() {
-    const {isDarkTheme, setLightTheme, setDarkTheme} = useThemeContext();
+    // const {isDarkTheme, setLightTheme, setDarkTheme} = useThemeConfig();
+    const {colorMode} = useThemeConfig();
     const FeatureList = [
         {
             title: 'Inversion of State',
-            Svg: require(isDarkTheme ? '../../static/img/state_dark.svg' : '../../static/img/state.svg').default,
+            Svg: require(colorMode.defaultMode === 'dark' ? '../../static/img/state_dark.svg' : '../../static/img/state.svg').default,
             description: (
                 <>
-                    Eigr Functions embraces a model of <a href="/docs/concepts/inversion-of-state/">'Inversion of
+                    Eigr Functions embraces a model of <a
+                    href="/docs/concepts/inversion-of-state/">'Inversion of
                     State'</a>.
                 </>
             ),
         },
         {
             title: 'Protocol',
-            Svg: require(isDarkTheme ? '../../static/img/protocol_dark.svg' : '../../static/img/protocol.svg').default,
+            Svg: require(colorMode.defaultMode === 'dark' ? '../../static/img/protocol_dark.svg' : '../../static/img/protocol.svg').default,
             description: (
                 <>
-                    Eigr Functions is based on the <a href="/protodocs/cloudstate/entity.proto/">Cloudstate
+                    Eigr Functions is based on the <a
+                    href="/protodocs/cloudstate/entity.proto/">Cloudstate
                     Protocol</a>.
                 </>
             ),
         },
         {
             title: 'Polyglot Programming Model',
-            Svg: require(isDarkTheme ? '../../static/img/polyglot_dark.svg' : '../../static/img/polyglot.svg').default,
+            Svg: require(colorMode.defaultMode === 'dark' ? '../../static/img/polyglot_dark.svg' : '../../static/img/polyglot.svg').default,
             description: (
                 <>
-                    While Eigr Functions is implemented in <a href="https://elixir-lang.org">Elixir</a> and running on
-                    the <a href="https://erlang.org">BEAM</a>, functions can be implemented
-                    in <a href="/docs/concepts/polyglot-programming/">many well known Languages</a>.
+                    While Eigr Functions is implemented in <a
+                    href="https://elixir-lang.org">Elixir</a> and running on
+                    the <a href="https://erlang.org">BEAM</a>, functions can be
+                    implemented
+                    in <a href="/docs/concepts/polyglot-programming/">many well
+                    known Languages</a>.
                 </>
             ),
         },
