@@ -20,15 +20,9 @@ module.exports = {
         ],
         image: 'icon/eigr_flat.svg',
         colorMode: {
-            "defaultMode": "light",
-            "disableSwitch": false,
-            "respectPrefersColorScheme": false,
-            "switchConfig": {
-                "darkIcon": "🌜",
-                "darkIconStyle": {},
-                "lightIcon": "🌞",
-                "lightIconStyle": {}
-            }
+            defaultMode: 'light',
+            disableSwitch: false,
+            respectPrefersColorScheme: false,
         },
         navbar: {
             style: 'dark',
