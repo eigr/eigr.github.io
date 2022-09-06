@@ -29,7 +29,7 @@ module.exports = {
             title: '',
             logo: {
                 alt: 'eigr',
-                src: 'img/sc_logo_002_1.png',
+                src: 'img/eigr_one_square_no_bg_001.svg',
             },
             items: [
                 {
