@@ -9,7 +9,7 @@
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <item>
-            <title><![CDATA[May 2022 – Current Status of the Project]]></title>
+            <title><![CDATA[May 2022 – Status of the Project]]></title>
             <link>https://eigr.io/blog/current-status-of-the-project</link>
             <guid>current-status-of-the-project</guid>
             <pubDate>Wed, 25 May 2022 00:00:00 GMT</pubDate>
@@ -35,6 +35,26 @@ collaboration in any way, with code, with good discussions, answering doubts, or
             <category>eigr-functions</category>
             <category>project</category>
             <category>status</category>
+        </item>
+        <item>
+            <title><![CDATA[CodeBEAM Europe, Stockholm 2022]]></title>
+            <link>https://eigr.io/blog/codebeam-sto-2022</link>
+            <guid>codebeam-sto-2022</guid>
+            <pubDate>Thu, 19 May 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[We're excited to be selected]]></description>
+            <content:encoded><![CDATA[<p>We're excited to be selected
+for <a href="https://codesync.global/speaker/marcel-lanz/#947a-serverless-runtime-on-the-beam" target="_blank" rel="noopener noreferrer">one of the main talks</a> at the
+CodeBEAM Europe conference in Stockholm in May
+2022 <a href="https://codesync.global/conferences/code-beam-sto-2022/" target="_blank" rel="noopener noreferrer">CodeBEAM Europe</a>.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="abstract">Abstract<a class="hash-link" href="#abstract" title="Direct link to heading">​</a></h2><p>Serverless runtimes are often hidden in cloud providers offering and exposed solely by their programming API and
+deployment procedures. In this talk, we'll explore an open-source Serverless runtime built for the cloud and
+on-premises, running on the BEAM with a polyglot programming model to build general-purpose applications.</p><p>In this talk, we'll present how the BEAM and OTP are an ideal fit to build a Serverless runtime. After an introduction
+about Serverless and a polyglot programming model, we'll present the open-source project at eigr.io where we implemented
+the core of our runtime based on Erlang/OTP and written in Elixir.</p><p><strong>Event:</strong>
+<a href="https://codesync.global/speaker/marcel-lanz/#947a-serverless-runtime-on-the-beam" target="_blank" rel="noopener noreferrer">https://codesync.global/speaker/marcel-lanz/#947a-serverless-runtime-on-the-beam</a></p><p><strong>
+Slides:</strong> <a href="https://www.slideshare.net/MarcelLanz/v13eigrioaserverlessruntimeonthebeampptx/MarcelLanz/v13eigrioaserverlessruntimeonthebeampptx" target="_blank" rel="noopener noreferrer">Slideshare</a>
+, <a href="https://docs.google.com/presentation/d/1Km-zh2rItr-setoUJjJV9W43tNZVNJmQtXb3_va_vRQ/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Google Slides</a></p>]]></content:encoded>
+            <category>serverless</category>
+            <category>eigr</category>
         </item>
         <item>
             <title><![CDATA[ACM SIGPLAN, ICFP Erlang Workshop 2021]]></title>

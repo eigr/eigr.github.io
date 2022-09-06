@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkeigr_io=self.webpackChunkeigr_io||[]).push([[2414],{8548:function(e){e.exports=JSON.parse('{"label":"eigr","permalink":"/blog/tags/eigr","allTagsPath":"/blog/tags","count":2}')}}]);
