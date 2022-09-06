@@ -1,0 +1,1142 @@
+{
+  "files": [
+    {
+      "name": "eigr/functions/protocol/actors/actor.proto",
+      "description": "",
+      "package": "eigr.functions.protocol.actors",
+      "hasEnums": false,
+      "hasExtensions": false,
+      "hasMessages": true,
+      "hasServices": false,
+      "enums": [],
+      "extensions": [],
+      "messages": [
+        {
+          "name": "Actor",
+          "longName": "Actor",
+          "fullName": "eigr.functions.protocol.actors.Actor",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "name",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "persistent",
+              "description": "",
+              "label": "",
+              "type": "bool",
+              "longType": "bool",
+              "fullType": "bool",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "state",
+              "description": "",
+              "label": "",
+              "type": "ActorState",
+              "longType": "ActorState",
+              "fullType": "eigr.functions.protocol.actors.ActorState",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "snapshot_strategy",
+              "description": "",
+              "label": "",
+              "type": "ActorSnapshotStrategy",
+              "longType": "ActorSnapshotStrategy",
+              "fullType": "eigr.functions.protocol.actors.ActorSnapshotStrategy",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "deactivate_strategy",
+              "description": "",
+              "label": "",
+              "type": "ActorDeactivateStrategy",
+              "longType": "ActorDeactivateStrategy",
+              "fullType": "eigr.functions.protocol.actors.ActorDeactivateStrategy",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "ActorDeactivateStrategy",
+          "longName": "ActorDeactivateStrategy",
+          "fullName": "eigr.functions.protocol.actors.ActorDeactivateStrategy",
+          "description": "A strategy which a user function's entity is passivated.",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "timeout",
+              "description": "the timeout strategy.",
+              "label": "",
+              "type": "TimeoutStrategy",
+              "longType": "TimeoutStrategy",
+              "fullType": "eigr.functions.protocol.actors.TimeoutStrategy",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "strategy",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "ActorSnapshotStrategy",
+          "longName": "ActorSnapshotStrategy",
+          "fullName": "eigr.functions.protocol.actors.ActorSnapshotStrategy",
+          "description": "A strategy for save state.",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "timeout",
+              "description": "the timeout strategy.",
+              "label": "",
+              "type": "TimeoutStrategy",
+              "longType": "TimeoutStrategy",
+              "fullType": "eigr.functions.protocol.actors.TimeoutStrategy",
+              "ismap": false,
+              "isoneof": true,
+              "oneofdecl": "strategy",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "ActorState",
+          "longName": "ActorState",
+          "fullName": "eigr.functions.protocol.actors.ActorState",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "tags",
+              "description": "",
+              "label": "repeated",
+              "type": "TagsEntry",
+              "longType": "ActorState.TagsEntry",
+              "fullType": "eigr.functions.protocol.actors.ActorState.TagsEntry",
+              "ismap": true,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "state",
+              "description": "",
+              "label": "",
+              "type": "Any",
+              "longType": "google.protobuf.Any",
+              "fullType": "google.protobuf.Any",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "TagsEntry",
+          "longName": "ActorState.TagsEntry",
+          "fullName": "eigr.functions.protocol.actors.ActorState.TagsEntry",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "key",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "value",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "ActorSystem",
+          "longName": "ActorSystem",
+          "fullName": "eigr.functions.protocol.actors.ActorSystem",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "name",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "registry",
+              "description": "",
+              "label": "",
+              "type": "Registry",
+              "longType": "Registry",
+              "fullType": "eigr.functions.protocol.actors.Registry",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "Registry",
+          "longName": "Registry",
+          "fullName": "eigr.functions.protocol.actors.Registry",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "actors",
+              "description": "",
+              "label": "repeated",
+              "type": "ActorsEntry",
+              "longType": "Registry.ActorsEntry",
+              "fullType": "eigr.functions.protocol.actors.Registry.ActorsEntry",
+              "ismap": true,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "ActorsEntry",
+          "longName": "Registry.ActorsEntry",
+          "fullName": "eigr.functions.protocol.actors.Registry.ActorsEntry",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "key",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "value",
+              "description": "",
+              "label": "",
+              "type": "Actor",
+              "longType": "Actor",
+              "fullType": "eigr.functions.protocol.actors.Actor",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "TimeoutStrategy",
+          "longName": "TimeoutStrategy",
+          "fullName": "eigr.functions.protocol.actors.TimeoutStrategy",
+          "description": "A strategy based on a timeout.",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "timeout",
+              "description": "The timeout in millis",
+              "label": "",
+              "type": "int64",
+              "longType": "int64",
+              "fullType": "int64",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        }
+      ],
+      "services": []
+    },
+    {
+      "name": "eigr/functions/protocol/actors/protocol.proto",
+      "description": "",
+      "package": "eigr.functions.protocol",
+      "hasEnums": true,
+      "hasExtensions": false,
+      "hasMessages": true,
+      "hasServices": false,
+      "enums": [
+        {
+          "name": "Status",
+          "longName": "Status",
+          "fullName": "eigr.functions.protocol.Status",
+          "description": "",
+          "values": [
+            {
+              "name": "UNKNOWN",
+              "number": "0",
+              "description": ""
+            },
+            {
+              "name": "OK",
+              "number": "1",
+              "description": ""
+            },
+            {
+              "name": "ACTOR_NOT_FOUND",
+              "number": "2",
+              "description": ""
+            },
+            {
+              "name": "ERROR",
+              "number": "3",
+              "description": ""
+            }
+          ]
+        }
+      ],
+      "extensions": [],
+      "messages": [
+        {
+          "name": "ActorInvocation",
+          "longName": "ActorInvocation",
+          "fullName": "eigr.functions.protocol.ActorInvocation",
+          "description": "ActorInvocation is a translation message between a local invocation made via InvocationRequest\nand the real Actor that intends to respond to this invocation and that can be located anywhere in the cluster.\n\nParams:\n  actor_name: The name of the Actor handling the InvocationRequest request, also called the target Actor.\n  actor_system: The name of ActorSystem registered in Registration step.\n  command_name: The function or method on the target Actor that will receive this request\n                and perform some useful computation with the sent data.\n  current_context: The current Context with current state value of the target Actor.\n                   That is, the same as found via matching in %Actor{name: target_actor, state: %ActorState{state: value} = actor_state}.\n                   In this case, the Context type will contain in the value attribute the same `value` as the matching above.\n  value: The value to be passed to the function or method corresponding to command_name.",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "actor_name",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "actor_system",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "command_name",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "current_context",
+              "description": "",
+              "label": "",
+              "type": "Context",
+              "longType": "Context",
+              "fullType": "eigr.functions.protocol.Context",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "value",
+              "description": "",
+              "label": "",
+              "type": "Any",
+              "longType": "google.protobuf.Any",
+              "fullType": "google.protobuf.Any",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "ActorInvocationResponse",
+          "longName": "ActorInvocationResponse",
+          "fullName": "eigr.functions.protocol.ActorInvocationResponse",
+          "description": "The user function's response after executing the action originated by the local proxy request via ActorInvocation.\n\nParams:\n  actor_name: The name of the Actor handling the InvocationRequest request, also called the target Actor.\n  actor_system: The name of ActorSystem registered in Registration step.\n  updated_context: The Context with updated state value of the target Actor after user function has processed a request.\n  value: The value that the original request proxy will forward in response to the InvocationRequest type request.\n         This is the final response from the point of view of the user who invoked the Actor call and its subsequent processing.",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "actor_name",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "actor_system",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "updated_context",
+              "description": "",
+              "label": "",
+              "type": "Context",
+              "longType": "Context",
+              "fullType": "eigr.functions.protocol.Context",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "value",
+              "description": "",
+              "label": "",
+              "type": "Any",
+              "longType": "google.protobuf.Any",
+              "fullType": "google.protobuf.Any",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "Context",
+          "longName": "Context",
+          "fullName": "eigr.functions.protocol.Context",
+          "description": "Context is where current and/or updated state is stored\nto be transmitted to/from proxy and user function\n\nParams:\n  * state: Actor state passed back and forth between proxy and user function.",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "state",
+              "description": "",
+              "label": "",
+              "type": "Any",
+              "longType": "google.protobuf.Any",
+              "fullType": "google.protobuf.Any",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "InvocationRequest",
+          "longName": "InvocationRequest",
+          "fullName": "eigr.functions.protocol.InvocationRequest",
+          "description": "The user function when it wants to send a message to an Actor uses the InvocationRequest message type.\n\nParams:\n  * system: See ActorStstem message.\n  * actor: The target Actor, i.e. the one that the user function is calling to perform some computation.\n  * command_name: The function or method on the target Actor that will receive this request\n    and perform some useful computation with the sent data.\n  * value: This is the value sent by the user function to be computed by the request's target Actor command.\n  * async: Indicates whether the command should be processed synchronously, where a response should be sent back to the user function,\n           or whether the command should be processed asynchronously, i.e. no response sent to the caller and no waiting.",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "system",
+              "description": "",
+              "label": "",
+              "type": "ActorSystem",
+              "longType": "actors.ActorSystem",
+              "fullType": "eigr.functions.protocol.actors.ActorSystem",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "actor",
+              "description": "",
+              "label": "",
+              "type": "Actor",
+              "longType": "actors.Actor",
+              "fullType": "eigr.functions.protocol.actors.Actor",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "command_name",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "value",
+              "description": "",
+              "label": "",
+              "type": "Any",
+              "longType": "google.protobuf.Any",
+              "fullType": "google.protobuf.Any",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "async",
+              "description": "",
+              "label": "",
+              "type": "bool",
+              "longType": "bool",
+              "fullType": "bool",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "InvocationResponse",
+          "longName": "InvocationResponse",
+          "fullName": "eigr.functions.protocol.InvocationResponse",
+          "description": "InvocationResponse is the response that the proxy that received the InvocationRequest request will forward to the request's original user function.\n\nParams:\n  status: Status of request. Could be one of [UNKNOWN, OK, ACTOR_NOT_FOUND, ERROR].\n  sytem: The original ActorSystem of the InvocationRequest request.\n  actor: The target Actor originally sent in the InvocationRequest message.\n  value: The value resulting from the request processing that the target Actor made.\n         This value must be passed by the user function to the one who requested the initial request in InvocationRequest.",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "status",
+              "description": "",
+              "label": "",
+              "type": "RequestStatus",
+              "longType": "RequestStatus",
+              "fullType": "eigr.functions.protocol.RequestStatus",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "system",
+              "description": "",
+              "label": "",
+              "type": "ActorSystem",
+              "longType": "actors.ActorSystem",
+              "fullType": "eigr.functions.protocol.actors.ActorSystem",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "actor",
+              "description": "",
+              "label": "",
+              "type": "Actor",
+              "longType": "actors.Actor",
+              "fullType": "eigr.functions.protocol.actors.Actor",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "value",
+              "description": "",
+              "label": "",
+              "type": "Any",
+              "longType": "google.protobuf.Any",
+              "fullType": "google.protobuf.Any",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "ProxyInfo",
+          "longName": "ProxyInfo",
+          "fullName": "eigr.functions.protocol.ProxyInfo",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "protocol_major_version",
+              "description": "",
+              "label": "",
+              "type": "int32",
+              "longType": "int32",
+              "fullType": "int32",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "protocol_minor_version",
+              "description": "",
+              "label": "",
+              "type": "int32",
+              "longType": "int32",
+              "fullType": "int32",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "proxy_name",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "proxy_version",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "RegistrationRequest",
+          "longName": "RegistrationRequest",
+          "fullName": "eigr.functions.protocol.RegistrationRequest",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "service_info",
+              "description": "",
+              "label": "",
+              "type": "ServiceInfo",
+              "longType": "ServiceInfo",
+              "fullType": "eigr.functions.protocol.ServiceInfo",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "actor_system",
+              "description": "",
+              "label": "",
+              "type": "ActorSystem",
+              "longType": "actors.ActorSystem",
+              "fullType": "eigr.functions.protocol.actors.ActorSystem",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "RegistrationResponse",
+          "longName": "RegistrationResponse",
+          "fullName": "eigr.functions.protocol.RegistrationResponse",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "status",
+              "description": "",
+              "label": "",
+              "type": "RequestStatus",
+              "longType": "RequestStatus",
+              "fullType": "eigr.functions.protocol.RequestStatus",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "proxy_info",
+              "description": "",
+              "label": "",
+              "type": "ProxyInfo",
+              "longType": "ProxyInfo",
+              "fullType": "eigr.functions.protocol.ProxyInfo",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "RequestStatus",
+          "longName": "RequestStatus",
+          "fullName": "eigr.functions.protocol.RequestStatus",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "status",
+              "description": "",
+              "label": "",
+              "type": "Status",
+              "longType": "Status",
+              "fullType": "eigr.functions.protocol.Status",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "message",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "ServiceInfo",
+          "longName": "ServiceInfo",
+          "fullName": "eigr.functions.protocol.ServiceInfo",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "service_name",
+              "description": "The name of the actor system, eg, \"my-actor-system\".",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "service_version",
+              "description": "The version of the service.",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "service_runtime",
+              "description": "A description of the runtime for the service. Can be anything, but examples might be:\n- node v10.15.2\n- OpenJDK Runtime Environment 1.8.0_192-b12",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "support_library_name",
+              "description": "If using a support library, the name of that library, eg \"spawn-jvm\"",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "support_library_version",
+              "description": "The version of the support library being used.",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "protocol_major_version",
+              "description": "Spawn protocol major version accepted by the support library.",
+              "label": "",
+              "type": "int32",
+              "longType": "int32",
+              "fullType": "int32",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "protocol_minor_version",
+              "description": "Spawn protocol minor version accepted by the support library.",
+              "label": "",
+              "type": "int32",
+              "longType": "int32",
+              "fullType": "int32",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        }
+      ],
+      "services": []
+    },
+    {
+      "name": "google/protobuf/any.proto",
+      "description": "",
+      "package": "google.protobuf",
+      "hasEnums": false,
+      "hasExtensions": false,
+      "hasMessages": true,
+      "hasServices": false,
+      "enums": [],
+      "extensions": [],
+      "messages": [
+        {
+          "name": "Any",
+          "longName": "Any",
+          "fullName": "google.protobuf.Any",
+          "description": "`Any` contains an arbitrary serialized protocol buffer message along with a\nURL that describes the type of the serialized message.\n\nProtobuf library provides support to pack/unpack Any values in the form\nof utility functions or additional generated methods of the Any type.\n\nExample 1: Pack and unpack a message in C++.\n\n    Foo foo = ...;\n    Any any;\n    any.PackFrom(foo);\n    ...\n    if (any.UnpackTo(\u0026foo)) {\n      ...\n    }\n\nExample 2: Pack and unpack a message in Java.\n\n    Foo foo = ...;\n    Any any = Any.pack(foo);\n    ...\n    if (any.is(Foo.class)) {\n      foo = any.unpack(Foo.class);\n    }\n\n Example 3: Pack and unpack a message in Python.\n\n    foo = Foo(...)\n    any = Any()\n    any.Pack(foo)\n    ...\n    if any.Is(Foo.DESCRIPTOR):\n      any.Unpack(foo)\n      ...\n\n Example 4: Pack and unpack a message in Go\n\n     foo := \u0026pb.Foo{...}\n     any, err := anypb.New(foo)\n     if err != nil {\n       ...\n     }\n     ...\n     foo := \u0026pb.Foo{}\n     if err := any.UnmarshalTo(foo); err != nil {\n       ...\n     }\n\nThe pack methods provided by protobuf library will by default use\n'type.googleapis.com/full.type.name' as the type URL and the unpack\nmethods only use the fully qualified type name after the last '/'\nin the type URL, for example \"foo.bar.com/x/y.z\" will yield type\nname \"y.z\".\n\n\nJSON\n====\nThe JSON representation of an `Any` value uses the regular\nrepresentation of the deserialized, embedded message, with an\nadditional field `@type` which contains the type URL. Example:\n\n    package google.profile;\n    message Person {\n      string first_name = 1;\n      string last_name = 2;\n    }\n\n    {\n      \"@type\": \"type.googleapis.com/google.profile.Person\",\n      \"firstName\": \u003cstring\u003e,\n      \"lastName\": \u003cstring\u003e\n    }\n\nIf the embedded message type is well-known and has a custom JSON\nrepresentation, that representation will be embedded adding a field\n`value` which holds the custom JSON in addition to the `@type`\nfield. Example (for message [google.protobuf.Duration][]):\n\n    {\n      \"@type\": \"type.googleapis.com/google.protobuf.Duration\",\n      \"value\": \"1.212s\"\n    }",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "type_url",
+              "description": "A URL/resource name that uniquely identifies the type of the serialized\nprotocol buffer message. This string must contain at least\none \"/\" character. The last segment of the URL's path must represent\nthe fully qualified name of the type (as in\n`path/google.protobuf.Duration`). The name should be in a canonical form\n(e.g., leading \".\" is not accepted).\n\nIn practice, teams usually precompile into the binary all types that they\nexpect it to use in the context of Any. However, for URLs which use the\nscheme `http`, `https`, or no scheme, one can optionally set up a type\nserver that maps type URLs to message definitions as follows:\n\n* If no scheme is provided, `https` is assumed.\n* An HTTP GET on the URL must yield a [google.protobuf.Type][]\n  value in binary format, or produce an error.\n* Applications are allowed to cache lookup results based on the\n  URL, or have them precompiled into a binary to avoid any\n  lookup. Therefore, binary compatibility needs to be preserved\n  on changes to types. (Use versioned type names to manage\n  breaking changes.)\n\nNote: this functionality is not currently available in the official\nprotobuf release, and it is not used for type URLs beginning with\ntype.googleapis.com.\n\nSchemes other than `http`, `https` (or the empty scheme) might be\nused with implementation specific semantics.",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "value",
+              "description": "Must be a valid serialized protocol buffer of the above specified type.",
+              "label": "",
+              "type": "bytes",
+              "longType": "bytes",
+              "fullType": "bytes",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        }
+      ],
+      "services": []
+    }
+  ],
+  "scalarValueTypes": [
+    {
+      "protoType": "double",
+      "notes": "",
+      "cppType": "double",
+      "csType": "double",
+      "goType": "float64",
+      "javaType": "double",
+      "phpType": "float",
+      "pythonType": "float",
+      "rubyType": "Float"
+    },
+    {
+      "protoType": "float",
+      "notes": "",
+      "cppType": "float",
+      "csType": "float",
+      "goType": "float32",
+      "javaType": "float",
+      "phpType": "float",
+      "pythonType": "float",
+      "rubyType": "Float"
+    },
+    {
+      "protoType": "int32",
+      "notes": "Uses variable-length encoding. Inefficient for encoding negative numbers – if your field is likely to have negative values, use sint32 instead.",
+      "cppType": "int32",
+      "csType": "int",
+      "goType": "int32",
+      "javaType": "int",
+      "phpType": "integer",
+      "pythonType": "int",
+      "rubyType": "Bignum or Fixnum (as required)"
+    },
+    {
+      "protoType": "int64",
+      "notes": "Uses variable-length encoding. Inefficient for encoding negative numbers – if your field is likely to have negative values, use sint64 instead.",
+      "cppType": "int64",
+      "csType": "long",
+      "goType": "int64",
+      "javaType": "long",
+      "phpType": "integer/string",
+      "pythonType": "int/long",
+      "rubyType": "Bignum"
+    },
+    {
+      "protoType": "uint32",
+      "notes": "Uses variable-length encoding.",
+      "cppType": "uint32",
+      "csType": "uint",
+      "goType": "uint32",
+      "javaType": "int",
+      "phpType": "integer",
+      "pythonType": "int/long",
+      "rubyType": "Bignum or Fixnum (as required)"
+    },
+    {
+      "protoType": "uint64",
+      "notes": "Uses variable-length encoding.",
+      "cppType": "uint64",
+      "csType": "ulong",
+      "goType": "uint64",
+      "javaType": "long",
+      "phpType": "integer/string",
+      "pythonType": "int/long",
+      "rubyType": "Bignum or Fixnum (as required)"
+    },
+    {
+      "protoType": "sint32",
+      "notes": "Uses variable-length encoding. Signed int value. These more efficiently encode negative numbers than regular int32s.",
+      "cppType": "int32",
+      "csType": "int",
+      "goType": "int32",
+      "javaType": "int",
+      "phpType": "integer",
+      "pythonType": "int",
+      "rubyType": "Bignum or Fixnum (as required)"
+    },
+    {
+      "protoType": "sint64",
+      "notes": "Uses variable-length encoding. Signed int value. These more efficiently encode negative numbers than regular int64s.",
+      "cppType": "int64",
+      "csType": "long",
+      "goType": "int64",
+      "javaType": "long",
+      "phpType": "integer/string",
+      "pythonType": "int/long",
+      "rubyType": "Bignum"
+    },
+    {
+      "protoType": "fixed32",
+      "notes": "Always four bytes. More efficient than uint32 if values are often greater than 2^28.",
+      "cppType": "uint32",
+      "csType": "uint",
+      "goType": "uint32",
+      "javaType": "int",
+      "phpType": "integer",
+      "pythonType": "int",
+      "rubyType": "Bignum or Fixnum (as required)"
+    },
+    {
+      "protoType": "fixed64",
+      "notes": "Always eight bytes. More efficient than uint64 if values are often greater than 2^56.",
+      "cppType": "uint64",
+      "csType": "ulong",
+      "goType": "uint64",
+      "javaType": "long",
+      "phpType": "integer/string",
+      "pythonType": "int/long",
+      "rubyType": "Bignum"
+    },
+    {
+      "protoType": "sfixed32",
+      "notes": "Always four bytes.",
+      "cppType": "int32",
+      "csType": "int",
+      "goType": "int32",
+      "javaType": "int",
+      "phpType": "integer",
+      "pythonType": "int",
+      "rubyType": "Bignum or Fixnum (as required)"
+    },
+    {
+      "protoType": "sfixed64",
+      "notes": "Always eight bytes.",
+      "cppType": "int64",
+      "csType": "long",
+      "goType": "int64",
+      "javaType": "long",
+      "phpType": "integer/string",
+      "pythonType": "int/long",
+      "rubyType": "Bignum"
+    },
+    {
+      "protoType": "bool",
+      "notes": "",
+      "cppType": "bool",
+      "csType": "bool",
+      "goType": "bool",
+      "javaType": "boolean",
+      "phpType": "boolean",
+      "pythonType": "boolean",
+      "rubyType": "TrueClass/FalseClass"
+    },
+    {
+      "protoType": "string",
+      "notes": "A string must always contain UTF-8 encoded or 7-bit ASCII text.",
+      "cppType": "string",
+      "csType": "string",
+      "goType": "string",
+      "javaType": "String",
+      "phpType": "string",
+      "pythonType": "str/unicode",
+      "rubyType": "String (UTF-8)"
+    },
+    {
+      "protoType": "bytes",
+      "notes": "May contain any arbitrary sequence of bytes.",
+      "cppType": "string",
+      "csType": "ByteString",
+      "goType": "[]byte",
+      "javaType": "ByteString",
+      "phpType": "string",
+      "pythonType": "str",
+      "rubyType": "String (ASCII-8BIT)"
+    }
+  ]
+}

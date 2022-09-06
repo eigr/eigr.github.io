@@ -45,11 +45,11 @@ module.exports = {
                     position: 'right',
                 },
                 {
-                    to: 'protodocs/cloudstate/entity.proto',
+                    to: 'protodocs/eigr/functions/protocol/actors/protocol.proto',
                     activeBasePath: './protodocs',
-                    label: 'gRPC Proxy-Protocol',
+                    label: 'Spawn Protocol',
                     position: 'left',
-                }
+                },
             ],
         },
         footer: {
@@ -118,7 +118,7 @@ module.exports = {
             'docusaurus-protobuffet',
             {
                 protobuffet: {
-                    fileDescriptorsPath: './cloudstate-protocols-0.6.0/fixtures/proto_workspace.json',
+                    fileDescriptorsPath: './spawn-protocol-0.1.0/fixtures/proto_workspace.json',
                     protoDocsPath: './protodocs',
                     sidebarPath: './sidebarsProtodocs.js'
                 },

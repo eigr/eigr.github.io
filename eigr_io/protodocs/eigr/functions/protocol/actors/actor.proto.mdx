@@ -1,0 +1,58 @@
+---
+title: actor.proto
+hide_title: true
+---
+
+import { ProtoMessage, ProtoServiceMethod, ProtoEnum } from '@theme/ProtoFile';
+
+## `actor.proto`
+_**path** eigr/functions/protocol/actors/actor.proto_
+
+_**package** eigr.functions.protocol.actors_
+
+
+
+---
+
+## Messages
+
+
+### `Actor`
+<ProtoMessage key={0} message={{"name":"Actor","longName":"Actor","fullName":"eigr.functions.protocol.actors.Actor","description":"","hasExtensions":false,"hasFields":true,"hasOneofs":false,"extensions":[],"fields":[{"name":"name","description":"","label":"","type":"string","longType":"string","fullType":"string","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":""},{"name":"persistent","description":"","label":"","type":"bool","longType":"bool","fullType":"bool","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":""},{"name":"state","description":"","label":"","type":"ActorState","longType":"ActorState","fullType":"eigr.functions.protocol.actors.ActorState","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":"","typeLink":"/protodocs/eigr/functions/protocol/actors/actor.proto#actorstate"},{"name":"snapshot_strategy","description":"","label":"","type":"ActorSnapshotStrategy","longType":"ActorSnapshotStrategy","fullType":"eigr.functions.protocol.actors.ActorSnapshotStrategy","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":"","typeLink":"/protodocs/eigr/functions/protocol/actors/actor.proto#actorsnapshotstrategy"},{"name":"deactivate_strategy","description":"","label":"","type":"ActorDeactivateStrategy","longType":"ActorDeactivateStrategy","fullType":"eigr.functions.protocol.actors.ActorDeactivateStrategy","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":"","typeLink":"/protodocs/eigr/functions/protocol/actors/actor.proto#actordeactivatestrategy"}]}} />
+
+
+### `ActorDeactivateStrategy`
+<ProtoMessage key={1} message={{"name":"ActorDeactivateStrategy","longName":"ActorDeactivateStrategy","fullName":"eigr.functions.protocol.actors.ActorDeactivateStrategy","description":"A strategy which a user function's entity is passivated.","hasExtensions":false,"hasFields":true,"hasOneofs":true,"extensions":[],"fields":[{"name":"timeout","description":"the timeout strategy.","label":"","type":"TimeoutStrategy","longType":"TimeoutStrategy","fullType":"eigr.functions.protocol.actors.TimeoutStrategy","ismap":false,"isoneof":true,"oneofdecl":"strategy","defaultValue":"","typeLink":"/protodocs/eigr/functions/protocol/actors/actor.proto#timeoutstrategy"}]}} />
+
+
+### `ActorSnapshotStrategy`
+<ProtoMessage key={2} message={{"name":"ActorSnapshotStrategy","longName":"ActorSnapshotStrategy","fullName":"eigr.functions.protocol.actors.ActorSnapshotStrategy","description":"A strategy for save state.","hasExtensions":false,"hasFields":true,"hasOneofs":true,"extensions":[],"fields":[{"name":"timeout","description":"the timeout strategy.","label":"","type":"TimeoutStrategy","longType":"TimeoutStrategy","fullType":"eigr.functions.protocol.actors.TimeoutStrategy","ismap":false,"isoneof":true,"oneofdecl":"strategy","defaultValue":"","typeLink":"/protodocs/eigr/functions/protocol/actors/actor.proto#timeoutstrategy"}]}} />
+
+
+### `ActorState`
+<ProtoMessage key={3} message={{"name":"ActorState","longName":"ActorState","fullName":"eigr.functions.protocol.actors.ActorState","description":"","hasExtensions":false,"hasFields":true,"hasOneofs":false,"extensions":[],"fields":[{"name":"tags","description":"","label":"repeated","type":"TagsEntry","longType":"ActorState.TagsEntry","fullType":"eigr.functions.protocol.actors.ActorState.TagsEntry","ismap":true,"isoneof":false,"oneofdecl":"","defaultValue":"","typeLink":"/protodocs/eigr/functions/protocol/actors/actor.proto#actorstatetagsentry"},{"name":"state","description":"","label":"","type":"Any","longType":"google.protobuf.Any","fullType":"google.protobuf.Any","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":"","typeLink":"/protodocs/google/protobuf/any.proto#any"}]}} />
+
+
+### `ActorState.TagsEntry`
+<ProtoMessage key={4} message={{"name":"TagsEntry","longName":"ActorState.TagsEntry","fullName":"eigr.functions.protocol.actors.ActorState.TagsEntry","description":"","hasExtensions":false,"hasFields":true,"hasOneofs":false,"extensions":[],"fields":[{"name":"key","description":"","label":"","type":"string","longType":"string","fullType":"string","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":""},{"name":"value","description":"","label":"","type":"string","longType":"string","fullType":"string","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":""}]}} />
+
+
+### `ActorSystem`
+<ProtoMessage key={5} message={{"name":"ActorSystem","longName":"ActorSystem","fullName":"eigr.functions.protocol.actors.ActorSystem","description":"","hasExtensions":false,"hasFields":true,"hasOneofs":false,"extensions":[],"fields":[{"name":"name","description":"","label":"","type":"string","longType":"string","fullType":"string","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":""},{"name":"registry","description":"","label":"","type":"Registry","longType":"Registry","fullType":"eigr.functions.protocol.actors.Registry","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":"","typeLink":"/protodocs/eigr/functions/protocol/actors/actor.proto#registry"}]}} />
+
+
+### `Registry`
+<ProtoMessage key={6} message={{"name":"Registry","longName":"Registry","fullName":"eigr.functions.protocol.actors.Registry","description":"","hasExtensions":false,"hasFields":true,"hasOneofs":false,"extensions":[],"fields":[{"name":"actors","description":"","label":"repeated","type":"ActorsEntry","longType":"Registry.ActorsEntry","fullType":"eigr.functions.protocol.actors.Registry.ActorsEntry","ismap":true,"isoneof":false,"oneofdecl":"","defaultValue":"","typeLink":"/protodocs/eigr/functions/protocol/actors/actor.proto#registryactorsentry"}]}} />
+
+
+### `Registry.ActorsEntry`
+<ProtoMessage key={7} message={{"name":"ActorsEntry","longName":"Registry.ActorsEntry","fullName":"eigr.functions.protocol.actors.Registry.ActorsEntry","description":"","hasExtensions":false,"hasFields":true,"hasOneofs":false,"extensions":[],"fields":[{"name":"key","description":"","label":"","type":"string","longType":"string","fullType":"string","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":""},{"name":"value","description":"","label":"","type":"Actor","longType":"Actor","fullType":"eigr.functions.protocol.actors.Actor","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":"","typeLink":"/protodocs/eigr/functions/protocol/actors/actor.proto#actor"}]}} />
+
+
+### `TimeoutStrategy`
+<ProtoMessage key={8} message={{"name":"TimeoutStrategy","longName":"TimeoutStrategy","fullName":"eigr.functions.protocol.actors.TimeoutStrategy","description":"A strategy based on a timeout.","hasExtensions":false,"hasFields":true,"hasOneofs":false,"extensions":[],"fields":[{"name":"timeout","description":"The timeout in millis","label":"","type":"int64","longType":"int64","fullType":"int64","ismap":false,"isoneof":false,"oneofdecl":"","defaultValue":""}]}} />
+
+---
+
+
+  

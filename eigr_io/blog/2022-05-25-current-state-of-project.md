@@ -1,6 +1,6 @@
 ---
 slug: "current-status-of-the-project"
-title: "May 2022 – Current Status of the Project"
+title: "May 2022 – Status of the Project"
 authors: [sleipnir]
 tags: [serverless, cloudstate, eigr-functions, project, status]
 draft: "false"

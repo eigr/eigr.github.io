@@ -28,9 +28,8 @@ export default function HomepageFeatures() {
             Svg: require(colorMode === 'dark' ? '../../static/img/state_dark.svg' : '../../static/img/state.svg').default,
             description: (
                 <>
-                    Eigr Functions embraces a model of <a
-                    href="/docs/concepts/inversion-of-state/">'Inversion of
-                    State'</a>.
+                    Eigr Spawn embraces the Erlang <a
+                    href="/docs/concepts/inversion-of-state/">'Process Model'</a>.
                 </>
             ),
         },
@@ -39,8 +38,8 @@ export default function HomepageFeatures() {
             Svg: require(colorMode === 'dark' ? '../../static/img/protocol_dark.svg' : '../../static/img/protocol.svg').default,
             description: (
                 <>
-                    Eigr Functions is based on the <a
-                    href="/protodocs/cloudstate/entity.proto/">Cloudstate
+                    Eigr Spawn is based on the <a
+                    href="/protodocs/eigr/functions/protocol/actors/protocol.proto/">Spawn
                     Protocol</a>.
                 </>
             ),
