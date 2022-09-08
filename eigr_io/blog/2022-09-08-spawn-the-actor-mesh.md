@@ -17,6 +17,10 @@ having also solved the stateful aspect of it by using a then promising new proco
 some re-priorization with the project as a whole, the core OSS community moved on to build eigr.io and discover our
 ideas under this new umbrella organization https://eigr.io/.
 
+## The Actor Mesh
+
+![The Actor Mesh](/img/the_actor_mesh.svg "The Actor Mesh")
+
 Over the last couple of months, Spawn has been shaped by our vision to have a simpler and more focused way to bring an
 actor system to a polyglot environment, where the way of how components can interact like Actors and Processes do, is
 not that well known in other languages. eigr/Massa always was about to solve the challenge of stateful serverless, like
@@ -30,6 +34,8 @@ This has been the work of ours lead by Adriano with help from Wesley and Elias; 
 bit in discussions and presenting our project a two occasions over the last year. I'm looking forward to see Spawn
 growing into something really cool, special and useful. There is still a lot of work ahead of us and we're very exited
 to see how we can collaborate and grow as a project.
+
+## The Future of Eigr is based on Spawn
 
 We are 100% focused on making Spawn a robust, scalable, dynamic and expandable platform, taking us far beyond what
 we imagined we were capable of in the initial Cloudstate project and with our previous implementation of Massa.
