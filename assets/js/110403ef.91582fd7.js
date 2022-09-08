@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkeigr_io=self.webpackChunkeigr_io||[]).push([[3443],{5687:function(e){e.exports=JSON.parse('{"label":"project","permalink":"/blog/tags/project","allTagsPath":"/blog/tags","count":2}')}}]);
