@@ -18,8 +18,8 @@ function HomepageHeader() {
                 <div className={styles.buttons}>
                     <Link
                         className="button button--secondary button--lg"
-                        to="/docs/projects-functions/eigr-massa/">
-                        Get Started with the "Massa Service-Proxy"
+                        to="/docs/projects-spawn/spawn-introduction/">
+                        Get Started with Spawn"
                     </Link>
                 </div>
             </div>
