@@ -21,7 +21,7 @@ procotol for a multitude of programming languages, we constantly iterated on ide
 scale and also being usable on many places not only on backend services. At the time we discovered the serverless space,
 having also solved the stateful aspect of it by using a then promising new procotol and concept called Cloudstate. After
 some re-priorization with the project as a whole, the core OSS community moved on to build eigr.io and discover our
-ideas under this new umbrella organization <a href="https://eigr.io/" target="_blank" rel="noopener noreferrer">https://eigr.io/</a>.</p><p>Over the last couple of months, Spawn has been shaped by our vision to have a simpler and more focused way to bring an
+ideas under this new umbrella organization <a href="https://eigr.io/" target="_blank" rel="noopener noreferrer">https://eigr.io/</a>.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-actor-mesh">The Actor Mesh<a class="hash-link" href="#the-actor-mesh" title="Direct link to heading">​</a></h2><p><img loading="lazy" alt="The Actor Mesh" src="/assets/images/the_actor_mesh-3aae72fac204ff9c446b417d147d69ba.svg" title="The Actor Mesh" width="260" height="274" class="img_ev3q"></p><p>Over the last couple of months, Spawn has been shaped by our vision to have a simpler and more focused way to bring an
 actor system to a polyglot environment, where the way of how components can interact like Actors and Processes do, is
 not that well known in other languages. eigr/Massa always was about to solve the challenge of stateful serverless, like
 it took the vision from its originating project. But at the same time Massa also tried always to solve two things at the
@@ -31,7 +31,7 @@ the stateful aspect of serverless on top of it. In this regard, we focus now on 
 perhaps one for other problems to solve.</p><p>This has been the work of ours lead by Adriano with help from Wesley and Elias; beside that I was able to participate a
 bit in discussions and presenting our project a two occasions over the last year. I'm looking forward to see Spawn
 growing into something really cool, special and useful. There is still a lot of work ahead of us and we're very exited
-to see how we can collaborate and grow as a project.</p><p>We are 100% focused on making Spawn a robust, scalable, dynamic and expandable platform, taking us far beyond what
+to see how we can collaborate and grow as a project.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-future-of-eigr-is-based-on-spawn">The Future of Eigr is based on Spawn<a class="hash-link" href="#the-future-of-eigr-is-based-on-spawn" title="Direct link to heading">​</a></h2><p>We are 100% focused on making Spawn a robust, scalable, dynamic and expandable platform, taking us far beyond what
 we imagined we were capable of in the initial Cloudstate project and with our previous implementation of Massa.
 Massa has served us brilliantly as a means of experimentation, and now I feel deeply that we are ready to accomplish
 whatever we set out to do.</p><p>We invite everyone who is here to download and try Spawn and that we are ready to welcome those who want to contribute,
