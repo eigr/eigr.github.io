@@ -89,7 +89,7 @@ Spawn defines some custom Resources for the user to interact with the API for de
   functioning of the actor cluster and the parameters of the persistent storage connection for a
   given system. Multiple ActorSystems can be defined but remember that they must be
   referenced equally in the Actor Host Functions. Examples of this CRD can be found in the
-  [examples/k8s folder](examples/k8s/system.yaml).
+  [examples/k8s folder](https://github.com/eigr/spawn/tree/main/examples/k8s/system.yaml).
 
 * **ActorNode CRD:** A ActorNode is a cluster member application. An ActorNode, by
   definition, is a Kubernetes Deployment and will contain two containers, one containing the
@@ -97,12 +97,12 @@ Spawn defines some custom Resources for the user to interact with the API for de
   responsible for connecting to the proxies cluster via Distributed Erlang and also for providing
   all the necessary abstractions for the functioning of the system such as state management,
   activation, and passivation of actors, among other infrastructure tasks. Examples of this CRD
-  can be found in the [examples/k8s folder](examples/k8s/node.yaml).
+  can be found in the [examples/k8s folder](https://github.com/eigr/spawn/tree/main/examples/k8s/node.yaml).
 
 * **Activator CRD:** Activator CRD defines any means of inputting supported events such as
   queues, topics, HTTP, or grpc endpoints and maps these events to the appropriate actor to
   handle them. Examples of this CRD can be found in the [examples/k8s
-  folder](examples/k8s/activators/amqp.yaml).
+  folder](https://github.com/eigr/spawn/tree/main/examples/k8s/activators/amqp.yaml).
 
 ## SDKs
 
@@ -180,7 +180,8 @@ super simple [HTTP stack](https://github.com/eigr-labs/spawn/blob/main/docs/prot
 to allow a heterogeneous layer of communication between different services which can, in
 turn, be implemented in any language that supports the gRPC protocol.
 
-The Spawn protocol itself is described [here](https://github.com/eigr-labs/spawn/blob/main/apps/protos/priv/protos/eigr/functions/protocol/actors/protocol.proto).
+The Spawn protocol itself is described [here](/protodocs/eigr/functions/protocol/actors/protocol.proto/) and as [*.proto](https://github.com/eigr-labs/spawn/blob/main/apps/protos/priv/protos/eigr/functions/protocol/actors/protocol.proto) 
+file.
 
 ## Installation
 
