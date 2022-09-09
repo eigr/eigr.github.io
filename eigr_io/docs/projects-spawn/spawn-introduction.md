@@ -141,13 +141,10 @@ most current applications.
 
 For more information about the Actor Model, see the following links:
 
-https://en.wikipedia.org/wiki/Actor_model
-
-https://codesync.global/media/almost-actors-comparing-pony-language-to-beam-languages-erlang-elixir/
-
-https://www.infoworld.com/article/2077999/understanding-actor-concurrency--part-1--actors-in-erlang.html
-
-https://doc.akka.io/docs/akka/current/general/actors.html
+- https://en.wikipedia.org/wiki/Actor_model
+- https://codesync.global/media/almost-actors-comparing-pony-language-to-beam-languages-erlang-elixir
+- https://www.infoworld.com/article/2077999/understanding-actor-concurrency--part-1--actors-in-erlang.html
+- https://doc.akka.io/docs/akka/current/general/actors.html
 
 
 ### The Sidecar Pattern
@@ -163,20 +160,16 @@ communication proxy mechanism. This benefits distributed applications with compl
 integration requirements and applications that rely on external business integrations.
 
 For more information about the Sidecar Pattern, see the following links:
-
-https://www.techtarget.com/searchapparchitecture/tip/The-role-of-sidecars-in-microservices-architecture
-
-https://docs.microsoft.com/en-us/azure/architecture/patterns/sidecar
-
-https://www.youtube.com/watch?v=j7JKkbAiWuI
-
-https://medium.com/nerd-for-tech/microservice-design-pattern-sidecar-sidekick-pattern-dbcea9bed783
+- https://www.techtarget.com/searchapparchitecture/tip/The-role-of-sidecars-in-microservices-architecture
+- https://docs.microsoft.com/en-us/azure/architecture/patterns/sidecar
+- https://www.youtube.com/watch?v=j7JKkbAiWuI
+- https://medium.com/nerd-for-tech/microservice-design-pattern-sidecar-sidekick-pattern-dbcea9bed783
 
 
 ### The Protocol
 
 Spawn is based on [Protocol Buffers](https://developers.google.com/protocol-buffers) and a
-super simple [HTTP stack](https://github.com/eigr-labs/spawn/blob/main/docs/protocol.md)
+super simple [HTTP stack](https://github.com/eigr/spawn/blob/main/docs/protocol.md)
 to allow a heterogeneous layer of communication between different services which can, in
 turn, be implemented in any language that supports the gRPC protocol.
 
@@ -204,7 +197,7 @@ Start by defining a basic springboot maven project with the following ***pom.xml
     <artifactId>spawn-springboot-examples</artifactId>
     <version>0.1.9</version>
     <name>spawn-springboot-examples</name>
-    <url>http://www.example.com</url>
+    <url>https://www.example.com</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -398,7 +391,6 @@ import java.util.Optional;
 @Log4j2
 @ActorEntity(name = "joe", stateType = MyState.class, snapshotTimeout = 10000, deactivatedTimeout = 50000)
 public class JoeActor {
-
     @Command
     public Value get(ActorContext<MyState> context) {
         log.info("Received invocation. Context: {}", context);

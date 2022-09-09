@@ -1,6 +1,6 @@
 ---
 slug: "spawn-the-actor-mesh"
-title: "Welcome Spawn – The Actor Mesh"
+title: "Hello Spawn! – The Actor Mesh"
 authors: [sleipnir, marcellanz]
 tags: [serverless, cloudstate, eigr-functions, project, status]
 draft: "false"
