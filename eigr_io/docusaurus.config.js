@@ -9,7 +9,7 @@ module.exports = {
     baseUrl: '/',
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
-    favicon: 'icon/favicon.ico?v=2',
+    favicon: 'icon/eigr_flat.ico?v=3',
     organizationName: 'eigr',
     projectName: 'eigr.github.io',
     trailingSlash: true,
