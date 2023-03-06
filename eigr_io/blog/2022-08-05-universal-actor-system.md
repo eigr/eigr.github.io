@@ -8,11 +8,12 @@ draft: "true"
 
 #  Actor Model
 
-My name is Adriano, I'm a software engineer, I'm 40 years old, I'm Brazilian, and I've been in the technology area for over 20 years on different fronts and having worked in a long list of companies, I'm also the co-founder of the Eigr project together with [@marcellanz](https://github.com/marcellanz) and [@guyso](https://github.com/ralphlaude), previously the three of us were core members of the [Cloudstate](https://cloudstate.io/) project and mainly worked on the supporting SDKs, but we also participated in the central development of Cloudstate technology and collaborated a lot on the development mainly of its protocol.
+The actors model is a mathematical model for concurrent computing and was [originally described](http://www.eighty-twenty.org/files/Hewitt,%20Bishop,%20Steiger%20-%201973%20-%20A%20universal%20modular%20ACTOR%20formalism%20for%20artificial%20intelligence.pdf) by Professor  [Carl Hewitt](https://en.wikipedia.org/wiki/Carl_Hewitt) back in the 70's ([let's say the golden age of programming](https://www.youtube.com/watch?v=-I_jE0l7sYQ)). This model in turn was inspired by physics and obtained its influences from programming languages such as [Lisp](https://en.wikipedia.org/wiki/Lisp_(programming_language)), [Smalltalk](https://en.wikipedia.org/wiki/Smalltalk), [Simula](https://en.wikipedia.org/wiki/Simula) and also from other areas such as networks and microprocessors.
+An Actor is basically a fundamental unit for computation and relies on [message passing](https://en.wikipedia.org/wiki/Message_passing) to interact with other actors. In response to a message Actors can do one of three things:
 
-I see that many of you have just arrived here and that's why I think it's important to give an overview of what we do and talk a little about the current status of the project.
-
-Well, let's go!
+1. Create a finite number of new Actors.
+2. Send a finite number of messages to other Actors.
+3. Determine how to respond to the next message received.
 
 ## Overview:
 
