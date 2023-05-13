@@ -49,6 +49,11 @@ In simple terms, what we here in the Eigr community believe is that developers, 
 
 Now let's introduce our Spawn technology and try to explore a little bit of how it can help us go further.
 
+Spawn is primarily based on two very powerful abstractions, the Sidecar pattern and the Actor Model. The former allows you to plant an application's components in a separate process or container providing isolation and encapsulation. This pattern enables applications to be composed of heterogeneous technologies and components, while allowing this separate process to handle the infrastructure layers without affecting the evolution of your business code. In turn, the second is a fascinating and relatively simple alternative for the development of distributed and concurrent systems. This model allows you to decompose your system into small units, called actors, that communicate only by passing messages. Actors encapsulate state and behavior in a single unit, and are lock-free, that is, when programming with actors you are free of semaphore, mutex and any type of synchronizing code.
+
+However, it goes beyond the basics of the Actor Model by exposing several software patterns in a simplified way for the developer. Spawn is also domain oriented to your business, allowing you to focus directly on the business problem, while the Spawn runtime handles things like state management and persistence, caching, inter-process calls, scalability, cluster management, scaling up and down, integration with external middleware, among many other non-functional requirements that software usually needs to achieve its final goals. 
+Spawn is also a polyglot platform, allowing you to write Actors in different languages and allowing them to communicate with each other in a totally transparent way without the need to define REST or RPC interfaces between your Actors. Being based on the powerful [Erlang technology](https://www.wired.com/2015/09/whatsapp-serves-900-million-users-50-engineers/) you get the [best of what the Erlang Virtual Machine is capable of providing]() without giving up your natural domain language, be it Java, Typescript, Elixir, or another.
+
 TODO
 
 ## Conclusion
