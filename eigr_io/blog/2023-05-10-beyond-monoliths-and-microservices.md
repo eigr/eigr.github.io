@@ -55,6 +55,10 @@ However, it goes beyond the basics of the Actor Model by exposing several softwa
 Spawn is also a polyglot platform, allowing you to write Actors in different languages and allowing them to communicate with each other in a totally transparent way without the need to define REST or RPC interfaces between your Actors. Being based on the powerful [Erlang technology](https://www.wired.com/2015/09/whatsapp-serves-900-million-users-50-engineers/) you get the best of what the, [battle tested]((https://elixir-lang.org/blog/2020/10/08/real-time-communication-at-scale-with-elixir-at-discord/)), [Erlang Virtual Machine is capable of providing](https://serokell.io/blog/introduction-to-erlang) without giving up your natural domain language, be it  [Java, Typescript, Elixir](https://github.com/eigr/spawn#sdks), or another.
 
 
+Now that we have a basic idea about Spawn we can move on to how it can help us move beyond the discussion of Monoliths and Microservices.
+
+## Services, Applications, and Granularity
+
 TODO
 
 ## Conclusion
