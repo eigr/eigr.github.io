@@ -49,9 +49,10 @@ In simple terms, what we here in the Eigr community believe is that developers, 
 
 Now let's introduce our Spawn technology and try to explore a little bit of how it can help us go further.
 
-[Spawn](https://github.com/eigr/spawn) is primarily based on two very powerful abstractions, the [Sidecar Pattern](https://thenewstack.io/operators-and-sidecars-are-the-new-model-for-software-delivery/) and the [[Actor Model](https://www.brianstorti.com/the-actor-model/). The former allows you to plant an application's components in a separate process or container providing isolation and encapsulation. This pattern enables applications to be composed of heterogeneous technologies and components, while allowing this separate process to handle the infrastructure layers without affecting the evolution of your business code. In turn, the second is a fascinating and relatively simple alternative for the development of distributed and concurrent systems. This model allows you to decompose your system into small units, called actors, that communicate only by passing messages. Actors encapsulate state and behavior in a single unit, and are lock-free, that is, when programming with actors you are free of semaphore, mutex and any type of synchronizing code.
+[Spawn](https://github.com/eigr/spawn) is primarily based on three very powerful abstractions, the [Sidecar Pattern](https://thenewstack.io/operators-and-sidecars-are-the-new-model-for-software-delivery/), the [[Actor Model](https://www.brianstorti.com/the-actor-model/) and the [Serverless](https://www2.eecs.berkeley.edu/Pubs/TechRpts/2019/EECS-2019-3.pdf). The former allows you to plant an application's components in a separate process or container providing isolation and encapsulation. This pattern enables applications to be composed of heterogeneous technologies and components, while allowing this separate process to handle the infrastructure layers without affecting the evolution of your business code. In turn, the second is a fascinating and relatively simple alternative for the development of distributed and concurrent systems. This model allows you to decompose your system into small units, called actors, that communicate only by passing messages. Actors encapsulate state and behavior in a single unit, and are lock-free, that is, when programming with actors you are free of semaphore, mutex and any type of synchronizing code. And finally Serverless lets developers focus on their code without worrying about the infrastructure. Using Kubernetes as an orchestrator for our serverless workloads we can provide a managed platform without forcing the developer to be tied to any existing public cloud offerings. Lock free! 
 
 However, it goes beyond the basics of the Actor Model by exposing several software patterns in a simplified way for the developer. Spawn is also domain oriented to your business, allowing you to focus directly on the business problem, while the Spawn runtime handles things like state management and persistence, caching, inter-process calls, scalability, cluster management, scaling up and down, integration with external middleware, among many other non-functional requirements that software usually needs to achieve its final goals. 
+
 Spawn is also a polyglot platform, allowing you to write Actors in different languages and allowing them to communicate with each other in a totally transparent way without the need to define REST or RPC interfaces between your Actors. Being based on the powerful [Erlang technology](https://www.wired.com/2015/09/whatsapp-serves-900-million-users-50-engineers/) you get the best of what the, [battle tested]((https://elixir-lang.org/blog/2020/10/08/real-time-communication-at-scale-with-elixir-at-discord/)), [Erlang Virtual Machine is capable of providing](https://serokell.io/blog/introduction-to-erlang) without giving up your natural domain language, be it  [Java, Typescript, Elixir](https://github.com/eigr/spawn#sdks), or another.
 
 
@@ -59,7 +60,20 @@ Now that we have a basic idea about Spawn we can move on to how it can help us m
 
 ## Services, Applications, and Granularity
 
-TODO
+To understand how Spawn can help us move the discussion forward, we first need to understand how Spawn organizes its deployable components.
+The most basic unit of Spawn is the Actor, it is through Actors that developers can express their domain problems and as we said before the Actor is responsible for encapsulating the state and its associated behavior in itself.
+
+![Actors](/img/actors.jpg "Actors")    
+
+That said, a Spawn application in a simplified way is nothing more than a series of Actors organized in an implantation unit that we can call service or application, but which in our terminology we call ActorHost. An ActorHost is the deployable unit which is made up of the host container (where the developer works) plus the proxy container which is where the actors actually perform their tasks.
+
+![ActorHost](/img/actor-host.jpg "Actor Host")
+
+You can have hundreds or even thousands of actors running on a single ActorHost and that in turn can have multiple replicas running on a cluster. As Spawn Actors are activated only when there is work to be done and are deactivated after a period of inactivity, the workloads are distributed among different replicas of the same ActorHost. From the developer's point of view, it doesn't matter because the only thing he needs to be able to send a message to an actor is his name. No complicated APIs with additional worries like service discovery, circuit breakers or anything else.
+
+![Replicas](/img/actor-host-replicas.jpg "Actor Host Distribution")
+
+
 
 ## Conclusion
 
