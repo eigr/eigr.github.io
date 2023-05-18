@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkeigr_io=self.webpackChunkeigr_io||[]).push([[3840],{1674:function(e){e.exports=JSON.parse('{"label":"design","permalink":"/blog/tags/design","allTagsPath":"/blog/tags","count":1}')}}]);

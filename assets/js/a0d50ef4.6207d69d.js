@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkeigr_io=self.webpackChunkeigr_io||[]).push([[2626],{3525:function(e){e.exports=JSON.parse('{"label":"architect","permalink":"/blog/tags/architect","allTagsPath":"/blog/tags","count":1}')}}]);
