@@ -109,9 +109,8 @@ And the SDK can be installed in your Elixir project with:
 ```
 
 Having that defined, the same for `Calling` or `Casting` a process in a GenServer, we do it with `invoke`.
-As we defined that our Actor, we can use maps as payload or protobufs.
 
-However we **recommend**, to use protobufs as payload and also the state definition.
+Passing any message we want in the payload attribute, it needs to be a map (that can be encoded to JSON) or a protobuf.
 
 ```Elixir
 iex(1)> SpawnSdk.invoke("incrementor", system: "my-system", command: "add", payload: %{value: 1})
@@ -126,6 +125,8 @@ iex(2)> SpawnSdk.invoke(
 {:ok, %{total: 2}}
 ```
 
+> **_NOTE_**: We **recommend**, to use protobufs as payload and also the state definition, with: `state_type: Protos.YourStateType`, however for this example for the sake of simplicity we are using JSON.
+
 Reading this code example, you probably had some questions:
 
 1. Where does `"my-system"` comes from?
@@ -135,7 +136,7 @@ Reading this code example, you probably had some questions:
 5. Why not just use a GenServer?
 6. What does this have to do with a distributed system?
 
-Lets answer those in the following sections:
+Let's answer those in the following sections:
 
 ## Actor System
 
