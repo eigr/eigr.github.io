@@ -67,6 +67,8 @@ defmodule IncrementorActor do
     defstruct [total: 0]
   end
 
+  defact init(%Context{} = ctx), do: Value.noreply_state!(ctx.state || %State{})
+
   defact add(%{value: value}, %Context{} = ctx) do
     new_total = ctx.state.total + value
 
@@ -132,9 +134,9 @@ Reading this code example, you probably had some questions:
 1. Where does `"my-system"` comes from?
 2. Why is it a `Sdk`?
 3. How do I run it?
-4. How does it keep the state behind the scenes?
-5. Why not just use a GenServer?
-6. What does this have to do with a distributed system?
+4. Why not just use a GenServer?
+5. How does it keep the state behind the scenes?
+6. How is this related with distributed systems?
 
 Let's answer those in the following sections:
 
@@ -239,10 +241,28 @@ the pods starting that should handle the clustering and all the heavy insfrastru
 
 (WIP)
 
-## Why not use a GenServer and handle clustering by myself?
+## Why not just use a GenServer and handle clustering by myself?
+
+If you choose to go down that path, you would need to address the following challenges:
+
+- Ensuring proper handling of connections between multiple nodes in your Erlang cluster.
+- Ensuring reliable and synchronized data rollouts to avoid message or state loss during instances rolling out.
+- Implementing effective persistence mechanisms to recover data in the event of netsplit scenarios, preventing data loss.
+- Managing the process lifecycle to ensure predictable recovery and maintain a consistent state in case of errors.
+- Designing a well-defined API that integrates your processes seamlessly with other systems, ensuring message synchronization.
+- Establishing a reliable distribution mechanism for sending messages to actors within your own edge, with the ability to synchronize them later.
+- Mitigating process queue bottlenecks to optimize performance and prevent delays.
+- Ensuring atomicity in a distributed system, maintaining data consistency and integrity.
+
+Or, you could let Spawn do that stuff for you.
+
+## How is this related with distributed systems?
 
 (WIP)
 
-## Why is this a distributed system?
+## Conclusion
 
-(WIP)
+This is supposed to be a very practical, hands on usage of Spawn, for more information about the foundation and concepts of the platform, see:
+
+- [Spawn Full Documentation](https://github.com/eigr/spawn)
+- [Beyond Monoliths and Microservices](https://eigr.io/blog/beyond-monoliths-and-microservices/)
