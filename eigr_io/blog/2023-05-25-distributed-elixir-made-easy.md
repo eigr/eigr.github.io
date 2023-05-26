@@ -10,7 +10,7 @@ Have you ever had that brilliant idea while using Elixir? You know, the one wher
 
 In many production environments that use Elixir, Kubernetes often comes into play. But here's the thing, using Kubernetes with Erlang can sometimes be quite challenging. The complex infrastructure work that comes along with it can make your cool idea of using GenServer or gen_statem less and less appealing.
 
-Wouldn't it be awesome if you could care less about dealing with all that infrastructure stuff and instead focus more on implementing the domain-specific logic you need? Imagine having the flexibility to make important tweaks to your infrastructure while still being able to dive deep into your domain and create something remarkable.
+Wouldn't it be awesome if you could care less about dealing with all that infrastructure stuff and instead focus more on implementing the domain-specific logic you need? Imagine having to worry only about your domain code while still having the flexibility to control and make important tweaks to your infrastructure.
 
 ## Here comes [**Spawn**](https://github.com/eigr/spawn)
 
@@ -235,7 +235,7 @@ spec:
 ```
 
 Just by applying this configuration, and having a container that has the application with the example we wrote in the start of the article, we should see
-the pods starting that should handle the clustering and all the heavy insfrastructure work for you.
+the instances starting that should handle the clustering and all the heavy insfrastructure work for you.
 
 ## How do we handle the state changes?
 
