@@ -253,8 +253,12 @@ If you choose to go down that path, you would need to address the following chal
 - Establishing a reliable distribution mechanism for sending messages to actors within your own edge, with the ability to synchronize them later.
 - Mitigating process queue bottlenecks to optimize performance and prevent delays.
 - Ensuring atomicity in a distributed system, maintaining data consistency and integrity.
+- Ensuring that you can concentrate on your domain-specific code without being burdened by unnecessary complexities and boilerplate.
+- Implementing seamless integration patterns, including process pipelines, customized activators, workflows, and effective management of side effects, among others.
+- Developing and managing infrastructure code related to brokers, caching, and other components.
 
-Or, you could let Spawn do that stuff for you.
+Alternatively, you could let Spawn do that stuff for you.
+While it may initially seem like overkill for a simple problem, it can save you from falling down the rabbit hole as your requirements grow more complex. By utilizing Spawn, you can offload the burden of managing these intricacies and focus on solving your problem at hand.
 
 ## How is this related with distributed systems?
 
