@@ -39,9 +39,7 @@ When studying this scenario, we realize that many of these current problems belo
 
 The actor model on which Spawn is based can solve almost all the problems on this list, with
 Scalability, resilience, fault tolerance, and state management by far the top success stories of
-different known actor model implementations. So what we needed to do was add Integration
-
-Services, fast, business-oriented delivery, distributed computing, and polyglot services to the
+different known actor model implementations. So what we needed to do was add Integration Services, fast, business-oriented delivery, distributed computing, and polyglot services to the
 recipe so we could revolutionize software development as we know it today.
 
 That's precisely what we did with our platform called Eigr Functions Spawn.
