@@ -8,11 +8,11 @@ draft: "false"
 
 Hello Elixir enthusiasts! 🚀 As the tech landscape evolves, so should our tools and approaches to development. Today, I'm excited to introduce you to a significant advancement in Elixir development that can reshape how we build distributed systems – I present to you Spawn.
 
-### The Elixir Dilemma
+## The Elixir Dilemma
 
 We've all been there – struck by that stroke of genius while working with Elixir. The allure of in-memory state storage, backed by the reliability of Erlang/OTP, seems like a dream come true. But reality hits hard, especially in the realm of production environments where Kubernetes often plays a pivotal role. Managing multiple servers autonomously, especially in distributed systems, can quickly turn our dream into a complex nightmare.
 
-### Enter Spawn: A New Approach to Actors
+## Enter Spawn: A New Approach to Actors
 
 [**Spawn**](https://github.com/eigr/spawn) is not just another framework; it's a paradigm shift in how we implement code. Imagine a world where you can care less about the underlying infrastructure and instead focus on crafting the domain-specific logic that truly matters. That's precisely what Spawn brings to the table.
 
@@ -135,7 +135,7 @@ iex(1)> SpawnSdk.invoke("incrementor", system: "spawn-system", action: "add", pa
 
 > **_NOTE_**: We **recommend** to use protobufs as payload and also the state definition, with: `state_type: Protos.YourStateType`, however for this example for the sake of simplicity we are using JSON.
 
-### Unpacking the Magic: Answers to Your Questions
+## Unpacking the Magic: Answers to Your Questions
 
 1. What exactly is "spawn-system"?
 
@@ -193,7 +193,7 @@ console.log(response)
 
 This way, we can interact with each actor globally, across different Systems and ActorHosts, while still maintaining the same state handling mechanism. And the best part? We can achieve all of this without the need for transactions, locks, or any additional infrastructure to support sequential state write changes of that nature.
 
-## That sounds magical, how do I run it?
+### That sounds magical, how do I run it?
 
 In development mode for Elixir, you can take advantage of using Spawn as a lib, you'll be able to use all the features you wan't in a single runtime.
 
