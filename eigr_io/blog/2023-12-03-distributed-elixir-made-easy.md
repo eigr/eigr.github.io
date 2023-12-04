@@ -116,6 +116,13 @@ And the SDK can be installed in your Elixir project with:
 ]
 ```
 
+When using a statestore, you need to define a statestore key in `config.exs` or using `SPAWN_STATESTORE_KEY` environment variable to make sure your actor state is properly encrypted.
+> **NOTE:** Its **recommended** to use a very safe key in handled in the environment for this key.
+
+```ELIXIR
+config :spawn_statestores, statestore_key: "secure_database_key"
+```
+
 Having that defined, the same for `Calling` or `Casting` a process in a GenServer, we do it with `invoke`.
 
 Passing any message we want in the payload attribute, it needs to be a struct or map that can be encoded to JSON or a protobuf struct.
