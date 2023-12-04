@@ -281,7 +281,7 @@ Beyond the facade of extensive configurations lies a treasure trove of advantage
 
 Spawn emerges as the driving force behind a newfound sense of agility and innovation. It liberates you from the burdensome aspects of infrastructure management, allowing you to redirect your focus towards what truly matters – crafting innovative solutions. Step into a future where complexities dissolve, and your journey into agile and innovative Elixir development begins with a resounding hello! 
 
-If you choose to go down that path, you would need to address the following challenges:
+If you choose to go down that path, you will need to face at least the following challenges:
 
 - Ensuring proper handling of connections between multiple nodes in your Erlang cluster.
 - Ensuring reliable and synchronized data rollouts to avoid message or state loss during instances rolling out.
