@@ -8,7 +8,7 @@ draft: "false"
 
 Hello Elixir enthusiasts! 🚀 As the tech landscape evolves, so should our tools and approaches to development. Today, I'm excited to introduce you to a significant advancement in Elixir development that can reshape how we build distributed systems – I present to you Spawn.
 
-## The Elixir Dilemma
+## The Elixir Actors Dilemma
 
 We've all been there – struck by that stroke of genius while working with Elixir. The allure of in-memory state storage, backed by the reliability of Erlang/OTP, seems like a dream come true. But reality hits hard, especially in the realm of production environments where Kubernetes often plays a pivotal role. Managing multiple servers autonomously, especially in distributed systems, can quickly turn our dream into a complex nightmare.
 
