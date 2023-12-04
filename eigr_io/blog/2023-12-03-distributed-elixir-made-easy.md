@@ -1,22 +1,23 @@
 ---
 slug: "distributed-elixir-made-easy-with-spawn"
 title: "Distributed Elixir made easy with Spawn"
-authors: [eliasdarruda]
-tags: [spawn, serverless, eigr-functions, elixir, distributed]
+authors: [eliasdarruda, sleipnir]
+tags: [spawn, serverless, elixir, distributed, durable computing]
 draft: "false"
 ---
 
-Have you ever had that brilliant idea while using Elixir? The one you tought that storing some state in memory would be super cool because of the consistency and all the goodness that Erlang/OTP brings. But then, reality hit you hard, and it turned out to be way more complex than you initially imagined.
+Hello Elixir enthusiasts! 🚀 As the tech landscape evolves, so should our tools and approaches to development. Today, I'm excited to introduce you to a significant advancement in Elixir development that can reshape how we build distributed systems – I present to you Spawn.
 
-In many production environments that use Elixir, Kubernetes often comes into play. But here's the thing, using Kubernetes with Elixir can sometimes be quite challenging. The complex infrastructure work that comes along with it can make your cool idea of storing state in memory less and less appealing.
+### The Elixir Dilemma
 
-Wouldn't it be awesome if you could care less about dealing with all that infrastructure and instead focus more on implementing the domain-specific logic you need? Imagine having to worry only about your domain code while still having the flexibility to control and make important tweaks to your infrastructure.
+We've all been there – struck by that stroke of genius while working with Elixir. The allure of in-memory state storage, backed by the reliability of Erlang/OTP, seems like a dream come true. But reality hits hard, especially in the realm of production environments where Kubernetes often plays a pivotal role. Managing multiple servers autonomously, especially in distributed systems, can quickly turn our dream into a complex nightmare.
 
-# I'm talking about [**Spawn**](https://github.com/eigr/spawn)
+### Enter Spawn: A New Approach to Actors
 
-A framework that can change the way you implement code.
+[**Spawn**](https://github.com/eigr/spawn) is not just another framework; it's a paradigm shift in how we implement code. Imagine a world where you can care less about the underlying infrastructure and instead focus on crafting the domain-specific logic that truly matters. That's precisely what Spawn brings to the table.
 
-Lets talk code and start with a quick example, comparing a regular **GenServer** and a **Spawn Actor** using [_Spawn Elixir SDK_](https://github.com/eigr/spawn/tree/main/spawn_sdk/spawn_sdk):
+Let's delve into a quick comparison between a traditional GenServer approach and the innovative Spawn Actor using the [***Spawn Elixir SDK***](https://github.com/eigr/spawn/tree/main/spawn_sdk/spawn_sdk).
+
 
 ### Consider a GenServer that does the following:
 
@@ -134,17 +135,31 @@ iex(1)> SpawnSdk.invoke("incrementor", system: "spawn-system", action: "add", pa
 
 > **_NOTE_**: We **recommend** to use protobufs as payload and also the state definition, with: `state_type: Protos.YourStateType`, however for this example for the sake of simplicity we are using JSON.
 
-Reading this code example, you probably had some questions:
+### Unpacking the Magic: Answers to Your Questions
 
-1. What exactly `"spawn-system"` means?
-2. Why is it a `Sdk`?
+1. What exactly is "spawn-system"?
+
+Spawn operates as a platform that manages infrastructure for you. "spawn-system" is a configuration entity encapsulating multiple actors within a meaningful context.
+
+2. Why is it an SDK?
+
+Spawn embraces a multi-language approach. SDKs allow different actors, even in different languages, to register with Spawn. For instance, you could have Elixir and NodeJS actors running the same logic seamlessly.
+
 3. How do I run it?
-4. How do we handle the state persistence?
+
+In development, you can use Spawn as a lib. For production, use Kubernetes CRDs provided by Spawn for easy and scalable deployment.
+
+4. How do we handle state persistence?
+
+Spawn intelligently handles state persistence through well-defined timeouts and snapshot mechanisms, ensuring reliability even during rollouts.
+
 5. Why not just use a GenServer?
 
-Let's answer those in the following sections:
+Managing a distributed system with GenServer requires tackling numerous challenges. Spawn abstracts away these complexities, allowing you to focus on your domain logic without getting lost in infrastructure intricacies.
 
-## Actor System
+Two items above deserve a little more comment:
+
+### Actor System
 
 Spawn is a platform that also handles infrastructure for you, we run on top of kubernetes and have defined some [**Kubernetes CRDs**](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) that helps you configure the clustering and lifecycle of your actors.
 
@@ -152,7 +167,7 @@ A system is an entity that encapsulates multiple Actors in a context that makes 
 
 We can configure one using the pre-defined Spawn CRDs, and we will also be configuring here which persistent database we are going to use to hold our Actors state.
 
-## SDKs
+### SDKs
 
 We can have multiple actors in the same system, with different SDKs registering those actors.
 We call each deployment that uses an SDK an "ActorHost."
@@ -246,19 +261,25 @@ spec:
 Just by applying this configuration, and having a container that has the application with the example we wrote in the start of the article, we should see
 the instances starting that should handle the clustering and all the heavy insfrastructure work for you.
 
-## How do we handle the state persistence?
+## Managing State Resilience with Spawn
 
-For each actor, you can set up a snapshot_timeout and a deactivate_timeout
+In the realm of Spawn, we prioritize the resilience of your application's state. Each actor in Spawn comes with configurable parameters, namely the snapshot_timeout and deactivate_timeout. Let's delve into these settings:
 
-- **deactivate_timeout** is how much time in ms you want your actor to be hot in memory
-- **snapshot_timeout** is how often you want to save snapshots of your state in your storage
+- **deactivate_timeout** determines the duration (in milliseconds) your actor remains actively in memory, even when not in use.
 
-After the actor is deactivated, either by the timeout or a k8s rollout we are correctly handling the lifecycle of each process
-and saving the state in the configured persistent storage.
+- **snapshot_timeout** how frequently snapshots of your actor's state are saved in your persistent storage.
 
-We tuned our CRDs and signal handling in a way that you won't be losing data in rollouts or net-splits.
+The magic unfolds after an actor is deactivated, triggered either by the specified timeout or during a Kubernetes rollout. In this scenario, Spawn meticulously manages the lifecycle of each process, ensuring that the state is gracefully saved in the configured persistent storage.
 
-## Why not just use a GenServer and handle clustering by myself?
+Here's the key assurance: even in the face of failures, crashes, or net-splits, Spawn guarantees that the state of your application will always revert to the last valid state. This means if an instance fails, another node seamlessly takes over from where it left off, ensuring the continuity and integrity of your application's data. Our meticulous tuning of Custom Resource Definitions (CRDs) and signal handling ensures that you won't lose data during rollouts or network partitions.
+
+With Spawn, you can confidently embrace a resilient state management model, where the reliability and consistency of your application's data are at the forefront of our design philosophy. 
+
+## Unleashing Gains in Agility and Innovation with Spawn
+
+Beyond the facade of extensive configurations lies a treasure trove of advantages awaiting exploration. Spawn not only simplifies but significantly enriches your development experience. Imagine bidding farewell to the complexities of defining Kubernetes resources, the intricacies of rollouts, the considerations of HPA, and the worries of scalability, network configurations, and system integrity assessments.
+
+Spawn emerges as the driving force behind a newfound sense of agility and innovation. It liberates you from the burdensome aspects of infrastructure management, allowing you to redirect your focus towards what truly matters – crafting innovative solutions. Step into a future where complexities dissolve, and your journey into agile and innovative Elixir development begins with a resounding hello! 
 
 If you choose to go down that path, you would need to address the following challenges:
 
@@ -274,12 +295,8 @@ If you choose to go down that path, you would need to address the following chal
 - Implementing seamless integration patterns, including process pipelines, customized activators, workflows, and effective management of side effects, among others.
 - Developing and managing infrastructure code related to brokers, caching, and other components.
 
-Alternatively, you could let Spawn do that stuff for you.
-While it may initially seem like overkill for a simple problem, it can save you from falling down the rabbit hole as your requirements grow more complex. By utilizing Spawn, you can offload the burden of managing these intricacies and focus on solving your problem at hand.
-
 ## Conclusion
 
-This is supposed to be a very practical, hands on usage of Spawn, for more information about the foundation and concepts of the platform, see:
+This is more than just a practical example; it's an invitation to explore the full potential of Spawn. For a deeper dive into the concepts and foundations, refer to our [Spawn Full Documentation](https://github.com/eigr/spawn) and our insightful article [Beyond Monoliths and Microservices](https://eigr.io/blog/beyond-monoliths-and-microservices/).
 
-- [Spawn Full Documentation](https://github.com/eigr/spawn)
-- [Beyond Monoliths and Microservices](https://eigr.io/blog/beyond-monoliths-and-microservices/)
+Ready to elevate your Elixir development experience? Embrace the future with Spawn. Happy coding! 🚀✨
