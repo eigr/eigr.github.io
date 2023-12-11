@@ -118,7 +118,7 @@ And the SDK can be installed in your Elixir project with:
 ```
 
 When using a statestore, you need to define a statestore key in `config.exs` or using `SPAWN_STATESTORE_KEY` environment variable to make sure your actor state is properly encrypted.
-> **NOTE:** Its **recommended** to use a very safe key in handled in the environment for this key.
+> **NOTE:** It is **recommended** to securely store the key in the environment where it is being used.
 
 ```ELIXIR
 config :spawn_statestores, statestore_key: "secure_database_key"
