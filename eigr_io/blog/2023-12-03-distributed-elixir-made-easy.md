@@ -16,8 +16,7 @@ We've all been there – struck by that stroke of genius while working with Elix
 
 [**Spawn**](https://github.com/eigr/spawn) is not just another framework; it's a paradigm shift in how we implement code. Imagine a world where you can care less about the underlying infrastructure and instead focus on crafting the domain-specific logic that truly matters. That's precisely what Spawn brings to the table.
 
-Let's delve into a quick comparison between a traditional GenServer approach and the innovative Spawn Actor using the [***Spawn Elixir SDK***](https://github.com/eigr/spawn/tree/main/spawn_sdk/spawn_sdk).
-
+Let's delve into a quick comparison between a traditional GenServer approach and the innovative Spawn Actor using the [**_Spawn Elixir SDK_**](https://github.com/eigr/spawn/tree/main/spawn_sdk/spawn_sdk).
 
 ### Consider a GenServer that does the following:
 
@@ -58,7 +57,7 @@ Our process defined by the `GenServer`, we call it an _Actor_.
 defmodule IncrementorActor do
   use SpawnSdk.Actor,
     name: "incrementor",
-    kind: :unamed,
+    kind: :unnamed,
     state_type: :json,
     deactivate_timeout: 30_000,
     snapshot_timeout: 10_000
@@ -109,15 +108,16 @@ And the SDK can be installed in your Elixir project with:
 
 ```ELIXIR
 [
-  {:spawn_sdk, "~> 1.0.0"},
+  {:spawn_sdk, "~> 1.1"},
   # if using stateful actors
-  # {:spawn_statestores_mysql, "~> 1.0.0"}
-  # {:spawn_statestores_postgres, "~> 1.0.0"}
+  # {:spawn_statestores_mysql, "~> 1.1"}
+  # {:spawn_statestores_postgres, "~> 1.1"}
   # ... others
 ]
 ```
 
 When using a statestore, you need to define a statestore key in `config.exs` or using `SPAWN_STATESTORE_KEY` environment variable to make sure your actor state is properly encrypted.
+
 > **NOTE:** It is **recommended** to securely store the key in the environment where it is being used.
 
 ```ELIXIR
@@ -202,7 +202,7 @@ However for production we **recommend** using our CRDs set up for you.
 First of all you need to install our k8s CRD with the following manifest (using kubectl):
 
 ```BASH
-kubectl create ns eigr-functions && curl -L https://github.com/eigr/spawn/releases/download/v1.0.0/manifest.yaml | kubectl apply -f -
+kubectl create ns eigr-functions && curl -L https://github.com/eigr/spawn/releases/download/v1.1.1/manifest.yaml | kubectl apply -f -
 ```
 
 > **_NOTE:_** You need to inform the desired release version. Check our github to see the latest one released.
@@ -273,13 +273,13 @@ The magic unfolds after an actor is deactivated, triggered either by the specifi
 
 Here's the key assurance: even in the face of failures, crashes, or net-splits, Spawn guarantees that the state of your application will always revert to the last valid state. This means if an instance fails, another node seamlessly takes over from where it left off, ensuring the continuity and integrity of your application's data. Our meticulous tuning of Custom Resource Definitions (CRDs) and signal handling ensures that you won't lose data during rollouts or network partitions.
 
-With Spawn, you can confidently embrace a resilient state management model, where the reliability and consistency of your application's data are at the forefront of our design philosophy. 
+With Spawn, you can confidently embrace a resilient state management model, where the reliability and consistency of your application's data are at the forefront of our design philosophy.
 
 ## Unleashing Gains in Agility and Innovation with Spawn
 
 Beyond the facade of extensive configurations lies a treasure trove of advantages awaiting exploration. Spawn not only simplifies but significantly enriches your development experience. Imagine bidding farewell to the complexities of defining Kubernetes resources, the intricacies of rollouts, the considerations of HPA, and the worries of scalability, network configurations, and system integrity assessments.
 
-Spawn emerges as the driving force behind a newfound sense of agility and innovation. It liberates you from the burdensome aspects of infrastructure management, allowing you to redirect your focus towards what truly matters – crafting innovative solutions. Step into a future where complexities dissolve, and your journey into agile and innovative Elixir development begins with a resounding hello! 
+Spawn emerges as the driving force behind a newfound sense of agility and innovation. It liberates you from the burdensome aspects of infrastructure management, allowing you to redirect your focus towards what truly matters – crafting innovative solutions. Step into a future where complexities dissolve, and your journey into agile and innovative Elixir development begins with a resounding hello!
 
 If you choose to go down that path, you will need to face at least the following challenges:
 
