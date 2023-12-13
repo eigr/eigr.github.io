@@ -57,7 +57,7 @@ Our process defined by the `GenServer`, we call it an _Actor_.
 defmodule IncrementorActor do
   use SpawnSdk.Actor,
     name: "incrementor",
-    kind: :unnamed,
+    kind: :named,
     state_type: :json,
     deactivate_timeout: 30_000,
     snapshot_timeout: 10_000
