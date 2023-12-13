@@ -21,7 +21,7 @@ Let's delve into a quick comparison between a traditional GenServer approach and
 
 ### Consider a GenServer that does the following:
 
-```ELIXIR
+```elixir
 defmodule Incrementor do
   use GenServer
 
@@ -41,7 +41,7 @@ end
 
 If we execute it, as you probably now already, we can add a specified value to the total stored in memory, and calling add will always return the total amount stored in memory.
 
-```Elixir
+```elixir
 iex(1)> {:ok, pid} = GenServer.start_link(Incrementor, [])
 iex(2)> GenServer.call(pid, {:add, 1})
 {:ok, %{total: 1}}
@@ -54,7 +54,7 @@ iex(3)> GenServer.call(pid, {:add, 1})
 
 Our process defined by the `GenServer`, we call it an _Actor_.
 
-```ELIXIR
+```elixir
 defmodule IncrementorActor do
   use SpawnSdk.Actor,
     name: "incrementor",
@@ -82,7 +82,7 @@ end
 
 Our application would look like:
 
-```ELIXIR
+```elixir
 defmodule Example.Application do
   @moduledoc false
   use Application
@@ -107,7 +107,7 @@ end
 
 And the SDK can be installed in your Elixir project with:
 
-```ELIXIR
+```elixir
 [
   {:spawn_sdk, "~> 1.0.0"},
   # if using stateful actors
@@ -120,7 +120,7 @@ And the SDK can be installed in your Elixir project with:
 When using a statestore, you need to define a statestore key in `config.exs` or using `SPAWN_STATESTORE_KEY` environment variable to make sure your actor state is properly encrypted.
 > **NOTE:** It is **recommended** to securely store the key in the environment where it is being used.
 
-```ELIXIR
+```elixir
 config :spawn_statestores, statestore_key: "secure_database_key"
 ```
 
@@ -128,7 +128,7 @@ Having that defined, the same for `Calling` or `Casting` a process in a GenServe
 
 Passing any message we want in the payload attribute, it needs to be a struct or map that can be encoded to JSON or a protobuf struct.
 
-```Elixir
+```elixir
 iex(1)> SpawnSdk.invoke("incrementor", system: "spawn-system", action: "add", payload: %{value: 1})
 {:ok, %{total: 1}}
 ```
@@ -178,7 +178,7 @@ You can even invoke an actor registered in a different system or in the same sys
 
 For instance, if we wanted to invoke the same actor we wrote but in a [NodeJS ActorHost](https://github.com/eigr/spawn-node-sdk), it would look like this:
 
-```TS
+```ts
 import spawn from '@eigr/spawn-sdk'
 
 const response = await spawn.invoke('incrementor', {
@@ -201,7 +201,7 @@ However for production we **recommend** using our CRDs set up for you.
 
 First of all you need to install our k8s CRD with the following manifest (using kubectl):
 
-```BASH
+```bash
 kubectl create ns eigr-functions && curl -L https://github.com/eigr/spawn/releases/download/v1.0.0/manifest.yaml | kubectl apply -f -
 ```
 
@@ -259,7 +259,7 @@ spec:
 ```
 
 Just by applying this configuration, and having a container that has the application with the example we wrote in the start of the article, we should see
-the instances starting that should handle the clustering and all the heavy insfrastructure work for you.
+the instances starting that should handle the clustering and all the heavy infrastructure work for you.
 
 ## Managing State Resilience with Spawn
 
