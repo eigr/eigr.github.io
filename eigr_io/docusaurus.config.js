@@ -91,6 +91,7 @@ module.exports = {
         prism: {
             theme: lightCodeTheme,
             darkTheme: darkCodeTheme,
+            additionalLanguages: ['elixir', 'java', 'protobuf'],
         },
     },
     presets: [
