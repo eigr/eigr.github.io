@@ -91,6 +91,7 @@ const config: Config = {
         prism: {
             theme: prismThemes.github,
             darkTheme: prismThemes.dracula,
+            additionalLanguages: ['elixir', 'java', 'protobuf'],
         },
     } satisfies Preset.ThemeConfig,
     presets: [
