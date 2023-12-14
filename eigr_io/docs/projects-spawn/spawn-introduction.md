@@ -549,14 +549,14 @@ spec:
 This file will be responsible for deploying your host function and actors in the cluster.
 Now that the files have been defined, we can apply them to the cluster:
 
-```shell
+```bash
 kubectl apply -f system.yaml
 kubectl apply -f node.yaml
 ```
 
 After that, just check your actors with:
 
-```shell
+```bash
 kubectl get actornodes
 ```
 
@@ -566,13 +566,13 @@ kubectl get actornodes
 
 Tests:
 
-```shell
+```bash
 make test
 ```
 
 Run:
 
-```shell
+```bash
 make build run-proxy-local
 ```
 
