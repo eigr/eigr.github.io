@@ -10,7 +10,7 @@ In recent times, the eigr community had the privilege of exploring a new additio
 
 It may seem peculiar that we express satisfaction with Flame, considering that Spawn also operates in the Serverless space. However, after more than four years of dedicated work and pioneering discussions on topics like Stateful Serverless and durable computing, we recognize that attention is now turning to concepts we championed from the outset. Additionally, Flame is built on the Erlang virtual machine, making it a distant relative and, in a sense, an ally in our journey.
 
-We are genuinely excited about Flame, actively [contributing to its ecosystem](https://github.com/eigr-labs/flame-k8s) and collaboratively engaging with its community of developers and users. Leveraging our expertise in Kubernetes, we are even developing a backend for Flame in this area, inviting everyone to join us in this joint endeavor.
+We are genuinely excited about Flame, actively contributing to its ecosystem and [collaboratively engaging with its community of developers](https://github.com/phoenixframework/flame/issues/9) and users. Leveraging our expertise in Kubernetes, we are even developing a [backend](https://github.com/eigr-labs/flame-k8s) for Flame in this area, inviting everyone to join us in this joint endeavor.
 
 ## Spawn vs. Flame: Exploring Differences and Complementarities
 
