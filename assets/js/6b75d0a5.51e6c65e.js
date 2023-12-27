@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkeigr_io=self.webpackChunkeigr_io||[]).push([[1428],{440:function(e){e.exports=JSON.parse('{"label":"FLAME","permalink":"/blog/tags/flame","allTagsPath":"/blog/tags","count":1}')}}]);
