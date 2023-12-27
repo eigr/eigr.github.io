@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkeigr_io=self.webpackChunkeigr_io||[]).push([[781],{8822:function(e){e.exports=JSON.parse('{"permalink":"/blog/tags/elixir","page":1,"postsPerPage":10,"totalPages":1,"totalCount":2,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
