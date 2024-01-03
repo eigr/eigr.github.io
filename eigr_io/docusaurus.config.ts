@@ -1,8 +1,8 @@
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+import {themes as prismThemes} from 'prism-react-renderer';
+import type {Config} from '@docusaurus/types';
+import type * as Preset from '@docusaurus/preset-classic';
 
-/** @type {import('@docusaurus/types').DocusaurusConfig} */
-module.exports = {
+const config: Config = {
     title: 'eigr.io',
     tagline: 'A Serverless Runtime on the BEAM',
     url: 'https://eigr.io',
@@ -89,17 +89,17 @@ module.exports = {
             copyright: `Copyright © ${new Date().getFullYear()} – eigr.io | graphics design by <a href="https://ursulahitz.com">ursulahitz.com</a>`,
         },
         prism: {
-            theme: lightCodeTheme,
-            darkTheme: darkCodeTheme,
+            theme: prismThemes.github,
+            darkTheme: prismThemes.dracula,
             additionalLanguages: ['elixir', 'java', 'protobuf'],
         },
-    },
+    } satisfies Preset.ThemeConfig,
     presets: [
         [
             '@docusaurus/preset-classic',
             {
                 docs: {
-                    sidebarPath: require.resolve('./sidebars.js'),
+                    sidebarPath: require.resolve('./sidebars.ts'),
                     // Please change this to your repo.
                     editUrl:
                         'https://github.com/eigr/eigr.github.io/edit/main/website/',
@@ -113,7 +113,7 @@ module.exports = {
                 theme: {
                     customCss: require.resolve('./src/css/custom.css'),
                 },
-            },
+            } satisfies Preset.Options,
         ],
         [
             'docusaurus-protobuffet',
@@ -131,3 +131,5 @@ module.exports = {
         ],
     ],
 };
+
+export default config;

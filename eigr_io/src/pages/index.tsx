@@ -19,7 +19,7 @@ function HomepageHeader() {
                     <Link
                         className="button button--secondary button--lg"
                         to="https://eigr.io/docs/projects-spawn/spawn-introduction/">
-                        Get Started with Spawn"
+                        Get Started with Spawn
                     </Link>
                 </div>
             </div>
